@@ -1,8 +1,7 @@
 body {
-  background-image: url('../assets/popup/background.jpg');
+  background-image: url('../assets/popup/background.png');
   background-position: center;
   background-size: cover;
-  height: 4100px;
 }
 
 * {
@@ -39,7 +38,7 @@ body {
   width: 730px;
 
   animation-name: fadeIn;
-  animation-duration: 2s; 
+  animation-duration: 2s;
 }
 
 .key {
@@ -263,6 +262,28 @@ hr {
 
 .basic {
   height: 1157px;
+  position: relative;
+}
+
+.ornament1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.ornament2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 40px;
+}
+
+.ornament3 {
+  position: absolute;
+  right: 30px;
+  top: 0;
 }
 
 .section-image {
@@ -392,6 +413,15 @@ hr {
   margin: 32px 25px 56px 25px;
 }
 
+.monthly-commission svg {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.monthly-commission .desc {
+  display: flex;
+}
+
 .sub-2 {
   text-align: left;
 }
@@ -410,43 +440,57 @@ h3 {
   color: #818487;
 }
 
+.sub-1 p, .sub-2 p, .sub-1 svg {
+    margin-top: 10px;
+}
+
 .sub-2 span {
   font-size: 22px;
   font-weight: 600;
   color: #343537;
 }
 
+/* WOW COMMISSION */
+.wow {
+  height: 584px;
+  position: relative;
+}
+
+.wow .ornament1 {
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.wow .ornament2 {
+  position: absolute;
+  left: 93.5%;
+  top: 30%;
+}
+
 .wow-commission {
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  justify-content: space-between;
-  margin: 32px 25px 56px 25px;
+  margin: 0 40px 56px 10px;
 }
 
-.wow-commission .sub-2 {
-  text-align: right;
-}
-
-.wow-commission .sub-1 h5 {
-  font-size: 14px;
-  font-weight: 400;
-  color: #818487;
-}
-
-.wow-commission .sub-1 p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #2a5580;
-}
-
-.wow-commission .sub-2 h5 {
+.wow-commission .row h4 {
   font-size: 18px;
   font-weight: 400;
   color: #343537;
 }
 
-.wow-commission .sub-2 h3 {
+.wow-commission .row p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #818487;
+}
+
+.wow-commission .row h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2a5580;
+}
+
+.wow-commission .row h5 {
   font-size: 22px;
   font-weight: 600;
   color: #343537;

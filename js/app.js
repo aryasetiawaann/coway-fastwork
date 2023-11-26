@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const totalStormCoreCommission = calculateCommission(stormCoreValue, stormCoreSingle, stormCoreDouble);
 
       paket = stormNeoValue + stormOmbakValue + stormCoreValue;
-      totalPaket.innerText = paket + ' Unit';
+      totalPaket.innerText = paket + ' Paket';
 
       // SALES POINT CALCULATION
       salesPointWow = paket * 2;
