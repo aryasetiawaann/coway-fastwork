@@ -39,7 +39,7 @@ body {
   width: 730px;
 
   animation-name: fadeIn;
-  animation-duration: 2s; /* Atur durasi animasi */
+  animation-duration: 2s; 
 }
 
 .key {
@@ -47,13 +47,6 @@ body {
   position: absolute;
   top: 0;
 }
-
-/* .card-top {
-  background-image: url('../assets/Ornament 150.png');
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
 
 .card-top {
   width: 100%;
@@ -320,7 +313,6 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 12px;
   padding-left: 14px;
   width: 100%;
 }
@@ -359,7 +351,7 @@ hr {
 }
 
 .total-line {
-  margin: 20px 25px;
+  margin: 20px 25px 15px 25px;
   border: 1px dashed #ededed;
 }
 
