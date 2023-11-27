@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komisi</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="pop" style="display: none">
+      <div class="card">
+        <img class="key" src="assets/popup/Password.png" alt="" srcset="" />
+        <div class="card-top">
+          <img class="bg-card-top" src="assets/popup/Ornament 150.png" alt="" />
+        </div>
+        <div class="card-bottom">
+          <h3>Masukkan Password 🙊</h3>
+          <h5>Harap masukkan password untuk menggunakan Simulasi Komisi Health Planner Professional</h5>
+          <input type="password" placeholder="input password" id="password" />
+          <button type="submit" class="submit-button" id="button-submit">Submit Password</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="header">
+        <div class="Group1">
+          <div class="Ellipse13"></div>
+          <div class="Ellipse12"></div>
+        </div>
+        <h1>Simulasi Komisi</h1>
+        <h3>Health Planner Professional</h3>
+        <div class="tag">
+          <p>🌊 Pemurni Air</p>
+          <span>•</span>
+          <p>🍃 Pemurni Udara</p>
+        </div>
+      </div>
+
+      <div class="basic">
+        <img class="ornament1" src="assets/form/basic/ornament1.png" alt="" />
+        <img class="ornament2" src="assets/form/basic/ornament2.png" alt="" />
+        <img class="ornament3" src="assets/form/basic/ornament3.png" alt="" />
+
+        <img class="section-image" src="assets/form/basic.png" alt="" />
+        <h5 class="title">BASIC REGULAR COMMISSION</h5>
+
+        <div class="content">
+          <hr class="top-line" />
+          <div class="head">
+            <p>Nama Produk</p>
+            <p>Total Unit</p>
+          </div>
+          <hr />
+
+          <h5 class="category">1. WATER PURIFIER</h5>
+          <div class="body">
+            <div class="container-row">
+              <div class="row">
+                <h5>Neo Plus</h5>
+                <input type="number" placeholder="0" id="neo" />
+              </div>
+              <div class="row">
+                <h5>Villaem II</h5>
+                <input type="number" placeholder="0" id="villaem" />
+              </div>
+              <div class="row">
+                <h5>Ombak</h5>
+                <input type="number" placeholder="0" id="ombak" />
+              </div>
+              <div class="row">
+                <h5>Core</h5>
+                <input type="number" placeholder="0" id="core" />
+              </div>
+            </div>
+          </div>
+
+          <hr class="total-line" />
+
+          <div class="basic-total">
+            <div class="container-row">
+              <div class="row">
+                <p>Total Unit Water Purifier</p>
+                <h3 class="unit" id="water-unit">0 Unit</h3>
+              </div>
+              <div class="row">
+                <p>Komisi Water Purifier</p>
+                <h3 class="commission" id="water-commission">Rp 0</h3>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+        </div>
+
+        <div class="content">
+          <h5 class="category">2. AIR PURIFIER</h5>
+          <div class="body">
+            <div class="container-row">
+              <div class="row">
+                <h5>Storm</h5>
+                <input type="number" id="storm" placeholder="0" />
+              </div>
+              <div class="row">
+                <h5>Tornado</h5>
+                <input type="number" id="tornado" placeholder="0" />
+              </div>
+              <div class="row">
+                <h5>Noble</h5>
+                <input type="number" id="noble" placeholder="0" />
+              </div>
+            </div>
+          </div>
+          <hr class="total-line" />
+          <div class="basic-total">
+            <div class="container-row">
+              <div class="row">
+                <p>Total Unit Water Purifier</p>
+                <h3 class="unit" id="air-unit">0 Unit</h3>
+              </div>
+              <div class="row">
+                <p>Komisi Water Purifier</p>
+                <h3 class="commission" id="air-commission">Rp 0</h3>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="monthly-commission">
+            <div class="sub-1">
+              <h5>Total Komisi Basic Regular</h5>
+              <div class="desc">
+                <svg viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.2 6.98652C14.2 10.7421 11.1555 13.7865 7.40001 13.7865C3.64447 13.7865 0.600006 10.7421 0.600006 6.98652C0.600006 3.23099 3.64447 0.186523 7.40001 0.186523C11.1555 0.186523 14.2 3.23099 14.2 6.98652ZM5.60001 6.38652C5.60001 6.05515 5.86864 5.78652 6.20001 5.78652H6.40271C7.29836 5.78652 7.96367 6.61591 7.76937 7.49023L7.40206 9.14314C7.37431 9.26804 7.46935 9.38652 7.5973 9.38652H7.80001C8.13138 9.38652 8.40001 9.65515 8.40001 9.98652C8.40001 10.3179 8.13138 10.5865 7.80001 10.5865H7.5973C6.70165 10.5865 6.03634 9.75714 6.23064 8.88282L6.59795 7.22991C6.62571 7.10501 6.53066 6.98652 6.40271 6.98652H6.20001C5.86864 6.98652 5.60001 6.71789 5.60001 6.38652ZM7.00001 4.18652C7.44183 4.18652 7.80001 3.82835 7.80001 3.38652C7.80001 2.9447 7.44183 2.58652 7.00001 2.58652C6.55818 2.58652 6.20001 2.9447 6.20001 3.38652C6.20001 3.82835 6.55818 4.18652 7.00001 4.18652Z"
+                    fill="#818487"
+                  />
+                </svg>
+                <p>Pencairan Setiap Tgl 20</p>
+              </div>
+            </div>
+            <div class="sub-2">
+              <h3><span id="total-basic">Rp 0</span> /bulan</h3>
+              <p>Selama 12 Bulan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wow">
+        <img class="ornament1" src="assets/form/wow/ornament1.png" alt="" />
+        <img class="ornament2" src="assets/form/wow/ornament2.png" alt="" />
+        
+        <img class="section-image" src="assets/form/wow.png" alt="" />
+        <h5 class="title">WOW STORM COMMISSION</h5>
+
+        <div class="content">
+          <hr class="top-line" />
+          <div class="head">
+            <p>Produk WOW Storm</p>
+            <p>Total Paket</p>
+          </div>
+          <hr />
+
+          <div class="body">
+            <div class="container-row">
+              <div class="row">
+                <h5>Strom + Neo Plus</h5>
+                <input type="number" placeholder="0" id="stormNeo" />
+              </div>
+              <div class="row">
+                <h5>Strom + Ombak</h5>
+                <input type="number" placeholder="0" id="stormOmbak" />
+              </div>
+              <div class="row">
+                <h5>Strom + Core</h5>
+                <input type="number" placeholder="0" id="stormCore" />
+              </div>
+            </div>
+          </div>
+
+          <hr class="total-line" />
+
+          <div class="wow-commission">
+            <div class="container-row">
+              <div class="row">
+                <p>Total Paket WOW Storm</p>
+                <h4 id="total-paket">0 Paket</h4>
+              </div>
+              <div class="row">
+                <h3>Komisi WOW Storm</h3>
+                <h5 id="total-wow">Rp 0</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sales">
+        <img class="section-image" src="assets/form/sales.png" alt="" />
+        <h5 class="title">SALES POINT</h5>
+        <p class="info">Pencairan Setiap Tanggal 7</p>
+
+        <div class="content">
+          <hr class="top-line" />
+          <div class="body">
+            <div class="total-point">
+              <p>Total Sales Point</p>
+              <h5 id="sales-point">0</h5>
+            </div>
+
+            <div class="sales-commission">
+              <h5>Komisi Total Sales Point</h5>
+              <h3 id="sales-total">Rp 0</h3>
+            </div>
+            <div class="desc">
+              <div class="desc-content">
+                <svg viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.2 6.98652C14.2 10.7421 11.1555 13.7865 7.40001 13.7865C3.64447 13.7865 0.600006 10.7421 0.600006 6.98652C0.600006 3.23099 3.64447 0.186523 7.40001 0.186523C11.1555 0.186523 14.2 3.23099 14.2 6.98652ZM5.60001 6.38652C5.60001 6.05515 5.86864 5.78652 6.20001 5.78652H6.40271C7.29836 5.78652 7.96367 6.61591 7.76937 7.49023L7.40206 9.14314C7.37431 9.26804 7.46935 9.38652 7.5973 9.38652H7.80001C8.13138 9.38652 8.40001 9.65515 8.40001 9.98652C8.40001 10.3179 8.13138 10.5865 7.80001 10.5865H7.5973C6.70165 10.5865 6.03634 9.75714 6.23064 8.88282L6.59795 7.22991C6.62571 7.10501 6.53066 6.98652 6.40271 6.98652H6.20001C5.86864 6.98652 5.60001 6.71789 5.60001 6.38652ZM7.00001 4.18652C7.44183 4.18652 7.80001 3.82835 7.80001 3.38652C7.80001 2.9447 7.44183 2.58652 7.00001 2.58652C6.55818 2.58652 6.20001 2.9447 6.20001 3.38652C6.20001 3.82835 6.55818 4.18652 7.00001 4.18652Z"
+                    fill="#818487"
+                  />
+                </svg>
+
+                <p>Jika ada penjualan WOW Storm, pencairan setiap tanggal 7, jika tidak ada penjualan WOW Storm maka pencairan setiap tanggal 20</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="performance">
+        <img class="section-image" src="assets/form/performance.png" alt="" />
+        <h5 class="title">BONUS PERFORMANCE TEAM</h5>
+        <p class="info">Pencairan Setiap Tanggal 20</p>
+
+        <div class="content">
+          <hr class="top-line" />
+          <div class="head">
+            <p>Nama Bonus</p>
+            <p>Active HP</p>
+            <p>Incentive</p>
+          </div>
+          <hr />
+
+          <div class="body">
+            <div class="performance-product">
+              <h5>Active Health Planner</h5>
+              <h5>3</h5>
+              <h4>Rp 1.500.000</h4>
+            </div>
+
+            <div class="desc">
+              <svg class="info-logo" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.2 6.98652C14.2 10.7421 11.1555 13.7865 7.40001 13.7865C3.64447 13.7865 0.600006 10.7421 0.600006 6.98652C0.600006 3.23099 3.64447 0.186523 7.40001 0.186523C11.1555 0.186523 14.2 3.23099 14.2 6.98652ZM5.60001 6.38652C5.60001 6.05515 5.86864 5.78652 6.20001 5.78652H6.40271C7.29836 5.78652 7.96367 6.61591 7.76937 7.49023L7.40206 9.14314C7.37431 9.26804 7.46935 9.38652 7.5973 9.38652H7.80001C8.13138 9.38652 8.40001 9.65515 8.40001 9.98652C8.40001 10.3179 8.13138 10.5865 7.80001 10.5865H7.5973C6.70165 10.5865 6.03634 9.75714 6.23064 8.88282L6.59795 7.22991C6.62571 7.10501 6.53066 6.98652 6.40271 6.98652H6.20001C5.86864 6.98652 5.60001 6.71789 5.60001 6.38652ZM7.00001 4.18652C7.44183 4.18652 7.80001 3.82835 7.80001 3.38652C7.80001 2.9447 7.44183 2.58652 7.00001 2.58652C6.55818 2.58652 6.20001 2.9447 6.20001 3.38652C6.20001 3.82835 6.55818 4.18652 7.00001 4.18652Z"
+                  fill="#818487"
+                />
+              </svg>
+              <p>Maksimal bonus hanya untuk 3 Health Planner aktif</p>
+            </div>
+          </div>
+
+          <hr class="total-line" />
+
+          <div class="performance-commission">
+            <h5>Total Bonus Performance Team</h5>
+            <h3>Rp 1.500.000</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="total">
+        <img class="section-image" src="assets/form/total.png" alt="" />
+        <h5 class="title">TOTAL POINT</h5>
+        <div class="content">
+          <hr class="top-line" />
+          <div class="body">
+            <div class="detail">
+              <div class="sub-1">
+                <p>Komisi Basic Reguler</p>
+                <p>Komisi WOW Storm</p>
+                <p>Komisi Sales Point</p>
+                <p>Bonus Performance Team</p>
+              </div>
+              <div class="sub-2">
+                <p id="final-basic">Rp 0</p>
+                <p id="final-wow">Rp 0</p>
+                <p id="final-sales">Rp 0</p>
+                <p id="final-performance">Rp 0</p>
+              </div>
+            </div>
+
+            <hr class="total-line" />
+
+            <div class="total-commission">
+              <h5>Komisi Total Total Point</h5>
+              <div class="sub">
+                <h3 id="final-total">Rp 0</h3>
+                <p>Bulan Ke 2 s/d 12 : <span id="final-monthly">Rp 0</span></p>
+              </div>
+            </div>
+
+            <div class="desc">
+              <svg class="info-logo" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.2 6.98652C14.2 10.7421 11.1555 13.7865 7.40001 13.7865C3.64447 13.7865 0.600006 10.7421 0.600006 6.98652C0.600006 3.23099 3.64447 0.186523 7.40001 0.186523C11.1555 0.186523 14.2 3.23099 14.2 6.98652ZM5.60001 6.38652C5.60001 6.05515 5.86864 5.78652 6.20001 5.78652H6.40271C7.29836 5.78652 7.96367 6.61591 7.76937 7.49023L7.40206 9.14314C7.37431 9.26804 7.46935 9.38652 7.5973 9.38652H7.80001C8.13138 9.38652 8.40001 9.65515 8.40001 9.98652C8.40001 10.3179 8.13138 10.5865 7.80001 10.5865H7.5973C6.70165 10.5865 6.03634 9.75714 6.23064 8.88282L6.59795 7.22991C6.62571 7.10501 6.53066 6.98652 6.40271 6.98652H6.20001C5.86864 6.98652 5.60001 6.71789 5.60001 6.38652ZM7.00001 4.18652C7.44183 4.18652 7.80001 3.82835 7.80001 3.38652C7.80001 2.9447 7.44183 2.58652 7.00001 2.58652C6.55818 2.58652 6.20001 2.9447 6.20001 3.38652C6.20001 3.82835 6.55818 4.18652 7.00001 4.18652Z"
+                  fill="#818487"
+                />
+              </svg>
+
+              <p>Syarat untuk pencairan komisi, Health Planner Wajib Mengikuti Halo Coway Minimal 3x baik offline dan online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
