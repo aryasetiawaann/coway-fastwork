@@ -1,11 +1,11 @@
 body {
-  background-image: url('../assets/popup/background.png');
+  background-image: url("../assets/popup/background.png");
   background-position: center;
   background-size: cover;
 }
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -35,28 +35,31 @@ body {
   align-items: center;
   margin-top: 230px;
   margin-bottom: 160px;
-  width: 730px;
+  /* width: 730px; */
+  width: 630px;
+  height: 500px;
   animation-name: fadeIn;
   animation-duration: 2s;
   position: relative;
 }
 
 .key {
-  width: 514px;
+  width: 414px;
   position: absolute;
-  bottom: 410px;
+  bottom: 310px;
 }
 
 .card-top {
+  overflow: hidden;
   width: 100%;
 }
 
 .bg-card-top {
-  width: 730px;
+  width: 630px;
 }
 
 .card-bottom {
-  margin-top: 30px;
+  margin-top: 15px;
   width: 85%;
   display: flex;
   flex-direction: column;
@@ -65,28 +68,28 @@ body {
 }
 
 .card-bottom h3 {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 500;
   color: #002244;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .card-bottom h5 {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 400;
   color: #57595c;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 38px;
 }
 
 .card-bottom input {
-  width: 350px;
-  height: 52px;
+  width: 310px;
+  height: 42px;
   background-color: #f2f5f7;
   border: none;
   border-radius: 40px;
   text-align: center;
-  font-size: 18px;
+  font-size: 13px;
   color: #818487;
 }
 
@@ -98,7 +101,7 @@ body {
   color: white;
   border-radius: 40px;
   border: none;
-  margin-top: 48px;
+  margin-top: 20px;
   margin-bottom: 25px;
 }
 
@@ -985,8 +988,9 @@ h3 {
     width: 100px;
   }
 
-  .sales-dashed-img, .sales-circle-img {
-    top:unset;
+  .sales-dashed-img,
+  .sales-circle-img {
+    top: unset;
     bottom: -50px;
     right: 0;
     transform: rotate(70deg);
@@ -1027,7 +1031,7 @@ h3 {
     align-items: center;
     text-align: center;
   }
-  
+
   .sales .body {
     display: flex;
     flex-direction: column-reverse;
@@ -1035,7 +1039,7 @@ h3 {
 
   .sales-commission {
     flex-direction: column;
-    
+
     align-items: center;
   }
 
@@ -1074,6 +1078,10 @@ h3 {
     text-align: start;
   }
 
+  .desc-content svg {
+    width: 40px !important;
+  }
+
   .card {
     background-color: white;
     border-radius: 40px;
@@ -1093,10 +1101,69 @@ h3 {
   .key {
     width: 200px;
     position: absolute;
-    bottom: 410px;
+    bottom: 210px;
   }
 
-  .desc-content svg{
-    width: 40px !important;
+  .card-top {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pop {
+    backdrop-filter: blur(0);
+    backdrop-filter: brightness(90%);
+  }
+
+  .bg-card-top {
+    width: 295px;
+  }
+
+  .card-bottom {
+    margin-top: 15px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-bottom h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #002244;
+    margin-bottom: 10px;
+  }
+
+  .card-bottom h5 {
+    font-size: 9px;
+    font-weight: 400;
+    color: #57595c;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .card-bottom input {
+    width: 150px;
+    height: 25px;
+    background-color: #f2f5f7;
+    border: none;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 8px;
+    color: #818487;
+  }
+
+  .card-bottom button {
+    width: 86px;
+    height: 20px;
+    background-color: #2a5580;
+    font-size: 7px;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
