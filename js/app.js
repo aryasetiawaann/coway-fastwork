@@ -251,7 +251,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // SALES POINT
-
   let totalSalesCommission = 0;
   const countSalesPoint = () => {
     const salesPointTotal = document.getElementById('sales-point');
