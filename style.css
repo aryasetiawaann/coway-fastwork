@@ -407,6 +407,18 @@ hr {
   margin-left: 60px;
 }
 
+.basic select {
+  width: 120px;
+  height: 40px;
+  margin-left: 22px;
+  border-radius: 20px;
+  padding-left: 8px;
+  background-color: #f2f5f7;
+  color: #343537;
+  font-weight: 300;
+  font-size: 16px;
+}
+
 #performance {
   width: 56px;
   height: 38px;
@@ -461,13 +473,21 @@ hr {
   margin: 32px 25px 56px 25px;
 }
 
-.monthly-commission svg {
+.monthly-commission svg, .cash-commission svg {
   width: 20px;
   margin-right: 10px;
 }
 
-.monthly-commission .desc {
+.monthly-commission .desc, .cash-commission .desc {
   display: flex;
+}
+
+.cash-commission {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 25px 56px 25px;
 }
 
 .sub-2 {

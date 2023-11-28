@@ -14,7 +14,7 @@
   </head>
   <body>
     <!-- POP UP PASSWORD START -->
-    <div class="pop">
+    <div class="pop" style="display: none;" >
       <div class="card">
         <img class="key" src="assets/popup/Password.png" alt="" srcset="" />
         <div class="card-top">
@@ -104,7 +104,7 @@
 
           <!-- CATEGORY -->
           <h5 class="category">1. WATER PURIFIER</h5>
-          <select name="pembayaran" id="pembayaran-water">
+          <select name="pembayaran" id="pembayaran-water" class="pembayaran">
             <option value="cicilan">Cicilan</option>
             <option value="tunai">Tunai</option>
           </select>
@@ -156,7 +156,7 @@
         <div class="content">
           <!-- CATEGORY -->
           <h5 class="category">2. AIR PURIFIER</h5>
-          <select name="pembayaran" id="pembayaran-air">
+          <select name="pembayaran" id="pembayaran-air" class="pembayaran">
             <option value="cicilan">Cicilan</option>
             <option value="tunai">Tunai</option>
           </select>
@@ -205,7 +205,7 @@
         <div class="content" id="cicilan">
           <div class="monthly-commission">
             <div class="sub-1">
-              <h5>Total Komisi Basic Regular</h5>
+              <h5>Total Komisi Basic Regular Cicilan</h5>
               <div class="desc">
                 <svg viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -219,16 +219,16 @@
               </div>
             </div>
             <div class="sub-2">
-              <h3><span id="total-basic">Rp 0</span> /bulan</h3>
+              <h3><span id="total-basic-cicilan">Rp 0</span> /bulan</h3>
               <p>Selama 12 Bulan</p>
             </div>
           </div>
         </div>
         
         <div class="content" id="tunai">
-          <div class="monthly-commission">
+          <div class="cash-commission">
             <div class="sub-1">
-              <h5>Total Komisi Basic Regular</h5>
+              <h5>Total Komisi Basic Regular Tunai</h5>
               <div class="desc">
                 <svg viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -242,7 +242,7 @@
               </div>
             </div>
             <div class="sub-2">
-              <h3><span id="total-basic">Rp 0</span></h3>
+              <h3><span id="total-basic-tunai">Rp 0</span></h3>
             </div>
           </div>
         </div>
@@ -359,7 +359,7 @@
           <div class="body">
             <div class="performance-product">
               <h5>Active Health Planner</h5>
-              <input type="number" max="3" min="0" id="performance" />
+              <input type="number" max="3" min="0" id="performance" placeholder="0"/>
               <h4 id="performance-incentive">Rp 0</h4>
             </div>
 
