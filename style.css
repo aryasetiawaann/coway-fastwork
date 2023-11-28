@@ -1113,7 +1113,7 @@ h3 {
 
   .pop {
     backdrop-filter: blur(0);
-    backdrop-filter: brightness(90%);
+    backdrop-filter: brightness(30%);
   }
 
   .bg-card-top {
@@ -1165,5 +1165,9 @@ h3 {
     border: none;
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+
+  .total .desc svg {
+    width: 40px !important;
   }
 }
