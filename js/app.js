@@ -1,57 +1,57 @@
 window.onload = function () {
-  var card = document.querySelector('.card');
-  card.classList.remove('hidden');
+  var card = document.querySelector(".card");
+  card.classList.remove("hidden");
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-  const input = document.getElementById('password');
-  const submit = document.getElementById('button-submit');
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("password");
+  const submit = document.getElementById("button-submit");
 
-  submit.addEventListener('click', function (e) {
+  submit.addEventListener("click", function (e) {
     const password = input.value;
 
-    if (password === '12345678') {
-      var card = document.querySelector('.card');
-      var pop = document.querySelector('.pop');
-      card.classList.add('hide');
-      pop.classList.add('hide');
+    if (password === "12345678") {
+      var card = document.querySelector(".card");
+      var pop = document.querySelector(".pop");
+      card.classList.add("hide");
+      pop.classList.add("hide");
     } else {
-      alert('salah');
+      alert("salah");
     }
   });
 
-  input.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') {
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
       const password = input.value;
 
-      if (password === '12345678') {
-        var card = document.querySelector('.card');
-        var pop = document.querySelector('.pop');
-        card.classList.add('hide');
-        pop.classList.add('hide');
+      if (password === "12345678") {
+        var card = document.querySelector(".card");
+        var pop = document.querySelector(".pop");
+        card.classList.add("hide");
+        pop.classList.add("hide");
       } else {
-        alert('salah');
+        alert("salah");
       }
     }
   });
 
   // INIT TOTAL BASIC COMMISSION
-  const basicComission = document.getElementById('total-basic');
+  const basicComission = document.getElementById("total-basic");
   let totalBasicComission = 0;
 
   // TOTAL BASIC COMMISSION CALCULATION
   const updateBasicCommission = (totalWater, totalAir) => {
     totalBasicComission = totalWater + totalAir;
-    basicComission.innerText = 'Rp ' + totalBasicComission.toLocaleString('id-ID');
+    basicComission.innerText = "Rp " + totalBasicComission.toLocaleString("id-ID");
 
     total();
   };
 
   // INIT RESULT & INPUT
-  const waterUnit = document.getElementById('water-unit');
-  const waterCommission = document.getElementById('water-commission');
-  const airUnit = document.getElementById('air-unit');
-  const airCommission = document.getElementById('air-commission');
+  const waterUnit = document.getElementById("water-unit");
+  const waterCommission = document.getElementById("water-commission");
+  const airUnit = document.getElementById("air-unit");
+  const airCommission = document.getElementById("air-commission");
   const basicInput = document.querySelectorAll('.container input[type="number"]');
 
   // INIT VALUE
@@ -79,24 +79,24 @@ document.addEventListener('DOMContentLoaded', function () {
   let totalUnitWater = 0;
 
   basicInput.forEach((input) => {
-    input.addEventListener('input', function (event) {
+    input.addEventListener("input", function (event) {
       const value = parseInt(event.target.value);
       const newValue = isNaN(value) ? 0 : value;
 
       // GET QUANTITY PRODUCT
-      if (event.target.id === 'neo') {
+      if (event.target.id === "neo") {
         neoValue = newValue;
-      } else if (event.target.id === 'villaem') {
+      } else if (event.target.id === "villaem") {
         villaemValue = newValue;
-      } else if (event.target.id === 'ombak') {
+      } else if (event.target.id === "ombak") {
         ombakValue = newValue;
-      } else if (event.target.id === 'core') {
+      } else if (event.target.id === "core") {
         coreValue = newValue;
-      } else if (event.target.id === 'storm') {
+      } else if (event.target.id === "storm") {
         stormValue = newValue;
-      } else if (event.target.id === 'tornado') {
+      } else if (event.target.id === "tornado") {
         tornadoValue = newValue;
-      } else if (event.target.id === 'noble') {
+      } else if (event.target.id === "noble") {
         nobleValue = newValue;
       }
 
@@ -116,10 +116,10 @@ document.addEventListener('DOMContentLoaded', function () {
         percentWater = 400 / 100;
       }
 
-      let totalWater = ((neoValue * neoCommisson + villaemValue * villaemCommisson + ombakValue * ombakCommisson + coreValue * coreCommisson) * percentWater) / 12;
+      let totalWater = Math.round(((neoValue * neoCommisson + villaemValue * villaemCommisson + ombakValue * ombakCommisson + coreValue * coreCommisson) * percentWater) / 12);
 
-      waterUnit.innerText = totalUnitWater + ' Unit';
-      waterCommission.innerText = 'Rp ' + totalWater.toLocaleString('id-ID');
+      waterUnit.innerText = totalUnitWater + " Unit";
+      waterCommission.innerText = "Rp " + totalWater.toLocaleString("id-ID");
 
       // AIR CALCULATION
       totalUnitAir = stormValue + tornadoValue + nobleValue;
@@ -139,8 +139,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let totalAir = ((stormValue * stormCommisson + tornadoValue * tornadoCommisson + nobleValue * nobleCommisson) * percentAir) / 12;
 
-      airUnit.innerText = totalUnitAir + ' Unit';
-      airCommission.innerText = 'Rp ' + totalAir.toLocaleString('id-ID');
+      airUnit.innerText = totalUnitAir + " Unit";
+      airCommission.innerText = "Rp " + totalAir.toLocaleString("id-ID");
 
       updateBasicCommission(totalWater, totalAir);
       countSalesPoint();
@@ -151,8 +151,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // WOW COMISSION
   const wowInput = document.querySelectorAll('.wow input[type="number"]');
-  const wowCommission = document.getElementById('total-wow');
-  const totalPaket = document.getElementById('total-paket');
+  const wowCommission = document.getElementById("total-wow");
+  const totalPaket = document.getElementById("total-paket");
 
   // INIT QIANTITY
   let stormNeoValue = 0;
@@ -176,16 +176,16 @@ document.addEventListener('DOMContentLoaded', function () {
   let totalCommissionWow = 0;
 
   wowInput.forEach((input) => {
-    input.addEventListener('input', function (event) {
+    input.addEventListener("input", function (event) {
       const value = parseInt(event.target.value);
       const newValue = isNaN(value) ? 0 : value;
 
       // GET QUANTITY PRODUCT
-      if (event.target.id === 'stormNeo') {
+      if (event.target.id === "stormNeo") {
         stormNeoValue = newValue;
-      } else if (event.target.id === 'stormOmbak') {
+      } else if (event.target.id === "stormOmbak") {
         stormOmbakValue = newValue;
-      } else if (event.target.id === 'stormCore') {
+      } else if (event.target.id === "stormCore") {
         stormCoreValue = newValue;
       }
 
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const totalStormCoreCommission = calculateCommission(stormCoreValue, stormCoreSingle, stormCoreDouble);
 
       paket = stormNeoValue + stormOmbakValue + stormCoreValue;
-      totalPaket.innerText = paket + ' Paket';
+      totalPaket.innerText = paket + " Paket";
 
       // SALES POINT CALCULATION
       salesPointWow = paket * 2;
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       totalCommissionWow = totalStormNeoCommission + totalStormOmbakCommission + totalStormCoreCommission - minusComission;
 
-      wowCommission.innerText = 'Rp ' + totalCommissionWow.toLocaleString('id-ID');
+      wowCommission.innerText = "Rp " + totalCommissionWow.toLocaleString("id-ID");
 
       countSalesPoint();
       total();
@@ -253,10 +253,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // SALES POINT
   let totalSalesCommission = 0;
   const countSalesPoint = () => {
-    const salesPointTotal = document.getElementById('sales-point');
-    const salesCommission = document.getElementById('sales-total');
+    const salesPointTotal = document.getElementById("sales-point");
+    const salesCommission = document.getElementById("sales-total");
     let salesPointBasic = totalUnitAir + totalUnitWater;
-    
+
     if (salesPointWow >= 7) {
       salesPointTotal.innerText = 0;
       salesPointBasic = 0;
@@ -282,22 +282,63 @@ document.addEventListener('DOMContentLoaded', function () {
       totalSalesCommission = 10000000;
     }
 
-    salesCommission.innerText = 'Rp ' + totalSalesCommission.toLocaleString('id-ID');
+    salesCommission.innerText = "Rp " + totalSalesCommission.toLocaleString("id-ID");
   };
 
+  //BONUS PERFORMANCE CALCULATION
+
+  let totalTeam = 0;
+  const inputTeam = document.getElementById("performance");
+  const incentiveTeam = document.getElementById("performance-incentive");
+  const totaltextTeam = document.getElementById("performance-total");
+
+  inputTeam.addEventListener("input", function (event) {
+    const value = parseInt(event.target.value);
+    const newValue = isNaN(value) ? 0 : value;
+
+    
+    if (newValue === 1) {
+      incentiveTeam.innerText = "Rp 500.000";
+      totaltextTeam.innerText = "Rp 500.000";
+      totalTeam = 500000;
+    } else if (newValue === 2) {
+      incentiveTeam.innerText = "Rp 1.000.000";
+      totaltextTeam.innerText = "Rp 1.000.000";
+      totalTeam = 1000000;
+    } else if (newValue === 3) {
+      incentiveTeam.innerText = "Rp 1.500.000";
+      totaltextTeam.innerText = "Rp 1.500.000";
+      totalTeam = 1500000;
+    } else if (newValue > 3 || newValue < 0) {
+      inputTeam.value = 3;
+      incentiveTeam.innerText = "Rp 1.500.000";
+      totaltextTeam.innerText = "Rp 1.500.000";
+      totalTeam = 1500000;
+    } else if (newValue == 0 || newValue == null) {
+      inputTeam.value = 0;
+      incentiveTeam.innerText = "Rp 0";
+      totaltextTeam.innerText = "Rp 0";
+      totalTeam = 0;
+    }
+
+    total();
+  });
+
+  const teamIncentive = document.getElementById("performance-incentive");
   // TOTAL COMMISSION
   const total = () => {
-    const basic = document.getElementById('final-basic');
-    const wow = document.getElementById('final-wow');
-    const sales = document.getElementById('final-sales');
-    const performance = document.getElementById('final-performance');
-    const total = document.getElementById('final-total');
-    const monthly = document.getElementById('final-monthly');
-    
-    basic.innerHTML = 'Rp ' + totalBasicComission.toLocaleString('id-ID');
-    monthly.innerHTML = 'Rp ' + totalBasicComission.toLocaleString('id-ID');
-    wow.innerHTML = 'Rp ' + totalCommissionWow.toLocaleString('id-ID');
-    sales.innerHTML = 'Rp ' + totalSalesCommission.toLocaleString('id-ID');
-    total.innerHTML = 'Rp ' + (totalBasicComission + totalCommissionWow + totalSalesCommission).toLocaleString('id-ID');
+    const basic = document.getElementById("final-basic");
+    const wow = document.getElementById("final-wow");
+    const sales = document.getElementById("final-sales");
+    const performance = document.getElementById("final-performance");
+    const total = document.getElementById("final-total");
+    const monthly = document.getElementById("final-monthly");
+
+    basic.innerHTML = "Rp " + totalBasicComission.toLocaleString("id-ID");
+    monthly.innerHTML = "Rp " + totalBasicComission.toLocaleString("id-ID");
+    wow.innerHTML = "Rp " + totalCommissionWow.toLocaleString("id-ID");
+    sales.innerHTML = "Rp " + totalSalesCommission.toLocaleString("id-ID");
+    performance.innerHTML = "Rp " + totalTeam.toLocaleString("id-ID");
+    total.innerHTML = "Rp " + (totalBasicComission + totalCommissionWow + totalSalesCommission + totalTeam).toLocaleString("id-ID");
   };
 });

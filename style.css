@@ -298,7 +298,6 @@ hr {
 }
 
 .basic {
-  height: 1157px;
   position: relative;
 }
 
@@ -406,6 +405,18 @@ hr {
   font-size: 14px;
   font-weight: 300;
   margin-left: 60px;
+}
+
+#performance {
+  width: 56px;
+  height: 38px;
+  border-radius: 40px;
+  background-color: #f2f5f7;
+  border: 1px #9a9c9f solid;
+  text-align: center;
+  color: #343537;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .total-line {
@@ -975,7 +986,7 @@ h3 {
   }
 
   .wow .ornament2 {
-    left: 90.5%;
+    left: 92.5%;
     top: -52px;
     transform: rotate(-70deg);
   }
