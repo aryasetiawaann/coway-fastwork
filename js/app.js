@@ -35,43 +35,96 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  const basicComission = document.getElementById('total-basic-cicilan');
+  const basicComission2 = document.getElementById('total-basic-tunai');
+
+  let nilaiTunai = 0;
+  let nilaiCicilan = 0;
+
+  const setWater = (totalWater) => {
+    const select = document.getElementById('pembayaran-water');
+
+    select.addEventListener('change', function (event) {
+      const value = event.target.value;
+
+      if (value === 'tunai') {
+        nilaiTunai -= totalWater;
+        totalCicilan -= totalWater;
+        nilaiTunai += totalWater;
+      } else if (value === 'cicilan') {
+        nilaiTunai -= totalWater;
+        nilaiCicilan -= totalWater;
+        nilaiCicilan += totalWater;
+      }
+
+      return totalWater;
+    });
+  };
+
+  const setAir = (totalAir) => {
+    const select = document.getElementById('pembayaran-air');
+
+    select.addEventListener('change', function (event) {
+      const value = event.target.value;
+
+      if (value === 'tunai') {
+        nilaiTunai -= totalAir;
+        totalCicilan -= totalAir;
+        nilaiTunai += totalAir;
+      } else if (value === 'cicilan') {
+        nilaiTunai -= totalAir;
+        nilaiCicilan -= totalAir;
+        nilaiCicilan += totalAir;
+      }
+
+      return totalAir;
+    });
+  };
+
+  const basicTotal = (totalAir, totalWater) => {
+    setWater(totalWater);
+    setAir(totalAir);
+
+    basicComission.innerText = nilaiCicilan;
+    basicComission2.innerText = nilaiTunai;
+  };
+
   // INIT TOTAL BASIC COMMISSION
-  const basicComissionCicilan = document.getElementById('total-basic-cicilan');
-  const basicComissionCash = document.getElementById('total-basic-cash');
-  const allInput = document.querySelectorAll('.content select');
+
+  const allSelects = document.querySelectorAll('select');
+
   let totalBasicComission = 0;
   let tunai = 0;
   let cicilan = 0;
 
   // TOTAL BASIC COMMISSION CALCULATION
-  const updateBasicCommission = (totalWater, totalAir) => {
-    allInput.forEach((select) => {
-      select.addEventListener('change', function (event) {
-        const value = event.target.value;
-        const payment = event.target.id;
+  const updateBasicCommission = (totalAir, totalWater) => {
+    const value1 = document.querySelector('#pembayaran-air').value;
+    const value2 = document.querySelector('#pembayaran-water').value;
 
-        console.log(payment);
-
-        if (payment === 'pembayaran-water') {
-          if (value === 'tunai') {
-            tunai += totalWater;
-            basicComissionCash.innerText = 'Rp ' + tunai.toLocaleString('id-ID');
-            console.log('object');
-          } else if (value === 'cicilan') {
-            basicComissionCicilan.innerText = 'Rp ' + totalWater.toLocaleString('id-ID');
-            cicilan += totalWater;
-          }
-        } else if (payment === 'pembayaran-air') {
-          if (value === 'tunai') {
-            // basicComissionCash.innerText = 'Rp ' + totalAir.toLocaleString('id-ID');
-            tunai += totalWater;
-          } else if (value === 'cicilan') {
-            // basicComissionCicilan.innerText = 'Rp ' + totalAir.toLocaleString('id-ID');
-            cicilan += totalWater;
-          }
-        }
-      });
-    });
+    if (value1 == 'tunai' && value2 == 'tunai') {
+      tunai = totalWater + totalAir;
+      basicComission2.innerText = tunai.toLocaleString('id-ID');
+      basicComission.innerText = 0;
+    } else if (value1 == 'cicilan' && value2 == 'cicilan') {
+      cicilan = totalWater + totalAir;
+      basicComission.innerText = cicilan.toLocaleString('id-ID');
+      basicComission2.innerText = 0;
+    } else if (value1 == 'cicilan' && value2 == 'tunai') {
+      tunai = totalWater;
+      cicilan = totalAir;
+      basicComission.innerText = cicilan.toLocaleString('id-ID');
+      basicComission2.innerText = tunai.toLocaleString('id-ID');
+      basicComission.innerText = 0;
+      basicComission2.innerText = 0;
+    }else if(value2 == 'cicilan' && value1 == 'tunai'){
+      tunai = totalAir;
+      cicilan = totalWater;
+      basicComission.innerText = cicilan.toLocaleString('id-ID');
+      basicComission2.innerText = tunai.toLocaleString('id-ID');
+      basicComission.innerText = 0;
+      basicComission2.innerText = 0;
+    }
 
     total();
   };
@@ -166,12 +219,13 @@ document.addEventListener('DOMContentLoaded', function () {
         percentAir = 200 / 100;
       }
 
-      let totalAir = ((stormValue * stormCommisson + tornadoValue * tornadoCommisson + nobleValue * nobleCommisson) * percentAir) / 12;
+      let totalAir = Math.round(((stormValue * stormCommisson + tornadoValue * tornadoCommisson + nobleValue * nobleCommisson) * percentAir) / 12);
 
       airUnit.innerText = totalUnitAir + ' Unit';
       airCommission.innerText = 'Rp ' + totalAir.toLocaleString('id-ID');
 
-      updateBasicCommission(totalWater, totalAir);
+      updateBasicCommission(totalAir, totalWater);
+      // basicTotal(totalAir, totalWater);
       countSalesPoint();
 
       total();

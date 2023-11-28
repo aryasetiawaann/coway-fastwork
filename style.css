@@ -1056,6 +1056,13 @@ h3 {
     justify-content: center;
   }
 
+  .cash-commission{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
   .performance-commission {
     flex-direction: column;
     justify-content: center;
@@ -1168,14 +1175,14 @@ h3 {
   }
 
   .card-bottom h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     color: #002244;
     margin-bottom: 10px;
   }
 
   .card-bottom h5 {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 400;
     color: #57595c;
     text-align: center;
@@ -1189,7 +1196,7 @@ h3 {
     border: none;
     border-radius: 40px;
     text-align: center;
-    font-size: 8px;
+    font-size: 11px;
     color: #818487;
   }
 
@@ -1197,7 +1204,7 @@ h3 {
     width: 86px;
     height: 20px;
     background-color: #2a5580;
-    font-size: 7px;
+    font-size: 9px;
     color: white;
     border-radius: 40px;
     border: none;
