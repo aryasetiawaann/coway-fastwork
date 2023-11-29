@@ -104,10 +104,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (value1 == 'tunai' && value2 == 'tunai') {
       tunai = totalWater + totalAir;
+      cicilan = 0;
       basicComission2.innerText = tunai.toLocaleString('id-ID');
       basicComission.innerText = 0;
     } else if (value1 == 'cicilan' && value2 == 'cicilan') {
       cicilan = (totalWater + totalAir) / 12;
+      tunai = 0;
       basicComission.innerText = cicilan.toLocaleString('id-ID');
       basicComission2.innerText = 0;
     } else if (value1 == 'cicilan' && value2 == 'tunai') {
@@ -122,18 +124,22 @@ document.addEventListener('DOMContentLoaded', function () {
       basicComission2.innerText = tunai.toLocaleString('id-ID');
     } else if (value1 == 'cicilan') {
       cicilan = Math.round(totalAir / 12);
+      tunai = 0;
       basicComission.innerText = cicilan.toLocaleString('id-ID');
       basicComission2.innerText = 0;
     } else if (value2 == 'cicilan') {
       cicilan = Math.round(totalWater / 12);
+      tunai = 0;
       basicComission.innerText = cicilan.toLocaleString('id-ID');
       basicComission2.innerText = 0;
     } else if (value1 == 'tunai') {
       tunai = totalAir;
+      cicilan = 0;
       basicComission2.innerText = tunai.toLocaleString('id-ID');
       basicComission.innerText = 0;
     } else if (value2 == 'tunai') {
       tunai = totalWater;
+      cicilan = 0;
       basicComission2.innerText = tunai.toLocaleString('id-ID');
       basicComission.innerText = 0;
     }
