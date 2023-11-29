@@ -35,65 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // INIT TOTAL BASIC COMMISSION
   const basicComission = document.getElementById('total-basic-cicilan');
   const basicComission2 = document.getElementById('total-basic-tunai');
 
-  let nilaiTunai = 0;
-  let nilaiCicilan = 0;
-
-  const setWater = (totalWater) => {
-    const select = document.getElementById('pembayaran-water');
-
-    select.addEventListener('change', function (event) {
-      const value = event.target.value;
-
-      if (value === 'tunai') {
-        nilaiTunai -= totalWater;
-        totalCicilan -= totalWater;
-        nilaiTunai += totalWater;
-      } else if (value === 'cicilan') {
-        nilaiTunai -= totalWater;
-        nilaiCicilan -= totalWater;
-        nilaiCicilan += totalWater;
-      }
-
-      return totalWater;
-    });
-  };
-
-  const setAir = (totalAir) => {
-    const select = document.getElementById('pembayaran-air');
-
-    select.addEventListener('change', function (event) {
-      const value = event.target.value;
-
-      if (value === 'tunai') {
-        nilaiTunai -= totalAir;
-        totalCicilan -= totalAir;
-        nilaiTunai += totalAir;
-      } else if (value === 'cicilan') {
-        nilaiTunai -= totalAir;
-        nilaiCicilan -= totalAir;
-        nilaiCicilan += totalAir;
-      }
-
-      return totalAir;
-    });
-  };
-
-  const basicTotal = (totalAir, totalWater) => {
-    setWater(totalWater);
-    setAir(totalAir);
-
-    basicComission.innerText = nilaiCicilan;
-    basicComission2.innerText = nilaiTunai;
-  };
-
-  // INIT TOTAL BASIC COMMISSION
-
-  const allSelects = document.querySelectorAll('select');
-
-  let totalBasicComission = 0;
   let tunai = 0;
   let cicilan = 0;
 
@@ -261,7 +206,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // WOW COMISSION
-  const wowInput = document.querySelectorAll('.wow input[type="number"]');
   const wowCommission = document.getElementById('total-wow');
   const totalPaket = document.getElementById('total-paket');
 
@@ -504,7 +448,7 @@ document.addEventListener('DOMContentLoaded', function () {
         salesPointTotal.innerText = salesPointBasic;
 
         poinNow = salesPointBasic;
-      }else if (salesPointWow == 0) {
+      } else if (salesPointWow == 0) {
         if (salesPointBasic > 7) {
           salesPointBasic = 7;
 
