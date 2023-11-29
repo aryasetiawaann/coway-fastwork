@@ -500,9 +500,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let poinNow = 0;
 
     if (salesPointBasic > 0) {
-      if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic < pointMax) {
+      if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic <= 5) {
         poinNow = salesPointBasic;
-      } else if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic > pointMax) {
+        salesPointTotal.innerText = salesPointBasic;
+      } else if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic > 5 && salesPointBasic < pointMax) {
+          salesPointTotal.innerText = pointMax - salesPointWow;
+          poinNow = pointMax - salesPointWow;
+      }else if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic >= pointMax) {
         salesPointTotal.innerText = pointMax - salesPointWow;
         poinNow = pointMax - salesPointWow;
       } else if (salesPointWow > 0 && salesPointBasic < salesPointWow) {
