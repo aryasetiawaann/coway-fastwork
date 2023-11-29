@@ -240,8 +240,9 @@ document.addEventListener('DOMContentLoaded', function () {
       airUnit.innerText = totalUnitAir + ' Unit';
       airCommission.innerText = 'Rp ' + totalAir.toLocaleString('id-ID');
 
-      updateBasicCommission(totalAir, totalWater);
       countSalesPoint();
+      updateBasicCommission(totalAir, totalWater);
+      // countSalesPoint();
     });
   });
 
@@ -489,28 +490,56 @@ document.addEventListener('DOMContentLoaded', function () {
     const salesCommission = document.getElementById('sales-total');
     let salesPointBasic = totalUnitAir + totalUnitWater;
 
-    if (salesPointWow >= 7) {
+    let pointMax = 7;
+    let poinNow = 0;
+
+    if (salesPointBasic > 0) {
+      if (salesPointWow > 0 && salesPointBasic > salesPointWow) {
+        salesPointTotal.innerText = pointMax - salesPointWow;
+        poinNow = pointMax - salesPointWow;
+
+      } else if (salesPointWow > 0 && salesPointBasic < salesPointWow) {
+        salesPointTotal.innerText = salesPointBasic;
+
+        poinNow = salesPointBasic;  
+      } else if (salesPointWow > 0 && salesPointBasic == salesPointWow) {
+        salesPointTotal.innerText = salesPointBasic - 1;
+
+        poinNow = salesPointBasic - 1;
+      } else if (salesPointWow == 0) {
+        if (salesPointBasic > 7) {
+          salesPointBasic = 7;
+
+          salesPointTotal.innerText = salesPointBasic;
+
+          poinNow = salesPointBasic;
+        } else {
+          salesPointTotal.innerText = salesPointBasic;
+
+          poinNow = salesPointBasic;
+        }
+      }
+    } else {
       salesPointTotal.innerText = 0;
-      salesPointBasic = 0;
-    } else if (salesPointWow < 7) {
-      salesPointTotal.innerText = salesPointBasic;
+
+      poinNow = 0;
     }
 
-    if (salesPointBasic == 0) {
+    if (poinNow == 0) {
       totalSalesCommission = 0;
-    } else if (salesPointBasic == 1) {
+    } else if (poinNow == 1) {
       totalSalesCommission = 1000000;
-    } else if (salesPointBasic == 2) {
+    } else if (poinNow == 2) {
       totalSalesCommission = 2500000;
-    } else if (salesPointBasic == 3) {
+    } else if (poinNow == 3) {
       totalSalesCommission = 4000000;
-    } else if (salesPointBasic == 4) {
+    } else if (poinNow == 4) {
       totalSalesCommission = 5000000;
-    } else if (salesPointBasic == 5) {
+    } else if (poinNow == 5) {
       totalSalesCommission = 7000000;
-    } else if (salesPointBasic == 6) {
+    } else if (poinNow == 6) {
       totalSalesCommission = 7000000;
-    } else if (salesPointBasic >= 7) {
+    } else if (poinNow >= 7) {
       totalSalesCommission = 10000000;
     }
 
