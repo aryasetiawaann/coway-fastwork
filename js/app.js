@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   submit.addEventListener('click', function (e) {
     const password = input.value;
 
-    if (password === '12345678') {
+    if (password === 'bismillah') { 
       var card = document.querySelector('.card');
       var pop = document.querySelector('.pop');
       card.classList.add('hide');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Enter') {
       const password = input.value;
 
-      if (password === '12345678') {
+      if (password === 'bismillah') {
         var card = document.querySelector('.card');
         var pop = document.querySelector('.pop');
         card.classList.add('hide');
