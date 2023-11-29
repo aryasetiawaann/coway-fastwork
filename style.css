@@ -1,5 +1,9 @@
 body {
+<<<<<<< Updated upstream
   background-image: url('/komisi/assets/popup/background.png');
+=======
+  background-image: url('/assets/popup/background.png');
+>>>>>>> Stashed changes
   background-position: center;
   background-size: cover;
 }
