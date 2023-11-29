@@ -120,9 +120,25 @@ document.addEventListener("DOMContentLoaded", function () {
       cicilan = Math.round(totalWater / 12);
       basicComission.innerText = cicilan.toLocaleString("id-ID");
       basicComission2.innerText = tunai.toLocaleString("id-ID");
+    } else if (value1 == "cicilan") {
+      cicilan = Math.round(totalAir / 12);
+      basicComission.innerText = cicilan.toLocaleString("id-ID");
+      basicComission2.innerText = 0;
+    } else if (value2 == "cicilan") {
+      cicilan = Math.round(totalWater / 12);
+      basicComission.innerText = cicilan.toLocaleString("id-ID");
+      basicComission2.innerText = 0;
+    } else if (value1 == "tunai") {
+      tunai = totalAir;
+      basicComission2.innerText = tunai.toLocaleString("id-ID");
+      basicComission.innerText = 0;
+    } else if (value2 == "tunai") {
+      tunai = totalWater;
+      basicComission2.innerText = tunai.toLocaleString("id-ID");
+      basicComission.innerText = 0;
     }
 
-    total();
+    // total();
   };
 
   // INIT RESULT & INPUT
