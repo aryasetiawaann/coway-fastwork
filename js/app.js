@@ -107,17 +107,17 @@ document.addEventListener("DOMContentLoaded", function () {
       basicComission2.innerText = tunai.toLocaleString("id-ID");
       basicComission.innerText = 0;
     } else if (value1 == "cicilan" && value2 == "cicilan") {
-      cicilan = totalWater + totalAir;
+      cicilan = (totalWater + totalAir) / 12;
       basicComission.innerText = cicilan.toLocaleString("id-ID");
       basicComission2.innerText = 0;
     } else if (value1 == "cicilan" && value2 == "tunai") {
       tunai = totalWater;
-      cicilan = totalAir;
+      cicilan = Math.round(totalAir / 12);
       basicComission.innerText = cicilan.toLocaleString("id-ID");
       basicComission2.innerText = tunai.toLocaleString("id-ID");
     } else if (value2 == "cicilan" && value1 == "tunai") {
       tunai = totalAir;
-      cicilan = totalWater;
+      cicilan = Math.round(totalWater / 12);
       basicComission.innerText = cicilan.toLocaleString("id-ID");
       basicComission2.innerText = tunai.toLocaleString("id-ID");
     }
@@ -196,7 +196,8 @@ document.addEventListener("DOMContentLoaded", function () {
         percentWater = 400 / 100;
       }
 
-      totalWater = Math.round(((neoValue * neoCommisson + villaemValue * villaemCommisson + ombakValue * ombakCommisson + coreValue * coreCommisson) * percentWater) / 12);
+      // totalWater = Math.round(((neoValue * neoCommisson + villaemValue * villaemCommisson + ombakValue * ombakCommisson + coreValue * coreCommisson) * percentWater) / 12);
+      totalWater = Math.round((neoValue * neoCommisson + villaemValue * villaemCommisson + ombakValue * ombakCommisson + coreValue * coreCommisson) * percentWater);
 
       waterUnit.innerText = totalUnitWater + " Unit";
       waterCommission.innerText = "Rp " + totalWater.toLocaleString("id-ID");
@@ -217,7 +218,8 @@ document.addEventListener("DOMContentLoaded", function () {
         percentAir = 200 / 100;
       }
 
-      totalAir = Math.round(((stormValue * stormCommisson + tornadoValue * tornadoCommisson + nobleValue * nobleCommisson) * percentAir) / 12);
+      // totalAir = Math.round(((stormValue * stormCommisson + tornadoValue * tornadoCommisson + nobleValue * nobleCommisson) * percentAir) / 12);
+      totalAir = Math.round((stormValue * stormCommisson + tornadoValue * tornadoCommisson + nobleValue * nobleCommisson) * percentAir);
 
       airUnit.innerText = totalUnitAir + " Unit";
       airCommission.innerText = "Rp " + totalAir.toLocaleString("id-ID");
