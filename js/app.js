@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
       basicComission.innerText = 0;
     }
 
-    // total();
+    total();
   };
 
   // INIT RESULT & INPUT
@@ -241,10 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
       airCommission.innerText = "Rp " + totalAir.toLocaleString("id-ID");
 
       updateBasicCommission(totalAir, totalWater);
-      // basicTotal(totalAir, totalWater);
       countSalesPoint();
-
-      total();
     });
   });
 
@@ -432,18 +429,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const teamIncentive = document.getElementById("performance-incentive");
   // TOTAL COMMISSION
   const total = () => {
-    const basic = document.getElementById("final-basic");
+    const basicCicilan = document.getElementById("final-basic-cicilan");
+    const basicTunai = document.getElementById("final-basic-tunai");
     const wow = document.getElementById("final-wow");
     const sales = document.getElementById("final-sales");
     const performance = document.getElementById("final-performance");
     const total = document.getElementById("final-total");
     const monthly = document.getElementById("final-monthly");
+    // let totalMonthly = tunai + cicilan;
 
-    basic.innerHTML = "Rp " + totalBasicComission.toLocaleString("id-ID");
-    monthly.innerHTML = "Rp " + totalBasicComission.toLocaleString("id-ID");
+    basicCicilan.innerHTML = "Rp " + cicilan.toLocaleString("id-ID");
+    basicTunai.innerHTML = "Rp " + tunai.toLocaleString("id-ID");
+    monthly.innerHTML = "Rp " + cicilan.toLocaleString("id-ID");
     wow.innerHTML = "Rp " + totalCommissionWow.toLocaleString("id-ID");
     sales.innerHTML = "Rp " + totalSalesCommission.toLocaleString("id-ID");
     performance.innerHTML = "Rp " + totalTeam.toLocaleString("id-ID");
-    total.innerHTML = "Rp " + (totalBasicComission + totalCommissionWow + totalSalesCommission + totalTeam).toLocaleString("id-ID");
+    total.innerHTML = "Rp " + (cicilan + tunai + totalCommissionWow + totalSalesCommission + totalTeam).toLocaleString("id-ID");
   };
 });
