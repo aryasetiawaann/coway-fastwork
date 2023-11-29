@@ -601,6 +601,6 @@ document.addEventListener('DOMContentLoaded', function () {
     wow.innerHTML = 'Rp ' + totalCommissionWow.toLocaleString('id-ID');
     sales.innerHTML = 'Rp ' + totalSalesCommission.toLocaleString('id-ID');
     performance.innerHTML = 'Rp ' + totalTeam.toLocaleString('id-ID');
-    total.innerHTML = 'Rp ' + (cicilan + tunai + totalCommissionWow + totalSalesCommission + totalTeam).toLocaleString('id-ID');
+    total.innerHTML = 'Rp ' + Math.round(cicilan + tunai + totalCommissionWow + totalSalesCommission + totalTeam).toLocaleString('id-ID');
   };
 });

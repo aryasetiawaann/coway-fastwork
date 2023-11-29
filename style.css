@@ -903,7 +903,6 @@ h3 {
 
   .container {
     overflow-x: hidden;
-    padding-left: 5px;
   }
 
   .header,
@@ -1122,6 +1121,10 @@ h3 {
 
   .detail .sub-1 {
     text-align: start;
+  }
+
+  .detail .container-row {
+    padding-left: 5px;
   }
 
   .desc-content svg {
