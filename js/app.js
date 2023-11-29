@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   submit.addEventListener('click', function (e) {
     const password = input.value;
 
-    if (password === 'bismillah') { 
+    if (password === 'bismillah') {
       var card = document.querySelector('.card');
       var pop = document.querySelector('.pop');
       card.classList.add('hide');
@@ -133,18 +133,53 @@ document.addEventListener('DOMContentLoaded', function () {
       // GET QUANTITY PRODUCT
       if (event.target.id === 'neo') {
         neoValue = newValue;
+
+        if (value < 0) {
+          input.value = 0;
+          neoValue = 0;
+        }
       } else if (event.target.id === 'villaem') {
         villaemValue = newValue;
+
+        if (value < 0) {
+          input.value = 0;
+          villaemValue = 0;
+        }
       } else if (event.target.id === 'ombak') {
         ombakValue = newValue;
+
+        if (value < 0) {
+          input.value = 0;
+          ombakValue = 0;
+        }
       } else if (event.target.id === 'core') {
         coreValue = newValue;
+
+        if (value < 0) {
+          input.value = 0;
+          coreValue = 0;
+        }
       } else if (event.target.id === 'storm') {
         stormValue = newValue;
+
+        if (value < 0) {
+          input.value = 0;
+          stormValue = 0;
+        }
       } else if (event.target.id === 'tornado') {
         tornadoValue = newValue;
+
+        if (value < 0) {
+          input.value = 0;
+          tornadoValue = 0;
+        }
       } else if (event.target.id === 'noble') {
         nobleValue = newValue;
+
+        if (value < 0) {
+          input.value = 0;
+          nobleValue = 0;
+        }
       }
 
       // WATER CALCULATION
