@@ -494,14 +494,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let poinNow = 0;
 
     if (salesPointBasic > 0) {
-      if (salesPointWow > 0 && salesPointBasic > salesPointWow) {
+      if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic < pointMax) {
+        poinNow = salesPointBasic;
+      } else if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic > pointMax) {
         salesPointTotal.innerText = pointMax - salesPointWow;
         poinNow = pointMax - salesPointWow;
-
       } else if (salesPointWow > 0 && salesPointBasic < salesPointWow) {
         salesPointTotal.innerText = salesPointBasic;
 
-        poinNow = salesPointBasic;  
+        poinNow = salesPointBasic;
       } else if (salesPointWow > 0 && salesPointBasic == salesPointWow) {
         salesPointTotal.innerText = salesPointBasic - 1;
 
