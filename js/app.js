@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
       basicComission2.innerText = tunai.toLocaleString('id-ID');
       basicComission.innerText = 0;
     } else if (value1 == 'cicilan' && value2 == 'cicilan') {
-      cicilan = (totalWater + totalAir) / 12;
+      cicilan = Math.round((totalWater + totalAir) / 12);
       tunai = 0;
       basicComission.innerText = cicilan.toLocaleString('id-ID');
       basicComission2.innerText = 0;
@@ -285,26 +285,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //
   let totalCommissionWow = 0;
-
-  // wowInput.forEach((input) => {
-  //   input.addEventListener("input", function (event) {
-  //     const value = parseInt(event.target.value);
-  //     const newValue = isNaN(value) ? 0 : value;
-
-  //     // GET QUANTITY PRODUCT
-  //     if (event.target.id === "stormNeo") {
-  //       stormNeoValue = newValue;
-  //     } else if (event.target.id === "stormOmbak") {
-  //       stormOmbakValue = newValue;
-  //     } else if (event.target.id === "stormCore") {
-  //       stormCoreValue = newValue;
-  //     }
-
-  //     let paket = stormNeoValue + stormOmbakValue + stormCoreValue;
-
-  //     if(paket >= 2) {
-  //       wowInput.disable;
-  //     }
 
   const stormNeoInput = document.getElementById('stormNeo');
   const stormOmbakInput = document.getElementById('stormOmbak');
@@ -500,9 +480,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let poinNow = 0;
 
     if (salesPointBasic > 0) {
-      if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic <= 5) {
+      if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic < 5) {
         poinNow = salesPointBasic;
         salesPointTotal.innerText = salesPointBasic;
+      } else if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic == 5) {
+        poinNow = pointMax - salesPointWow;
+        salesPointTotal.innerText = pointMax - salesPointWow;
       } else if (salesPointWow > 0 && salesPointBasic > salesPointWow && salesPointBasic > 5) {
         salesPointTotal.innerText = pointMax - salesPointWow;
         poinNow = pointMax - salesPointWow;
@@ -513,11 +496,15 @@ document.addEventListener('DOMContentLoaded', function () {
         salesPointTotal.innerText = salesPointBasic;
 
         poinNow = salesPointBasic;
-      } else if (salesPointWow > 0 && salesPointBasic == salesPointWow) {
+      } else if (salesPointWow > 0 && salesPointBasic == 4) {
         salesPointTotal.innerText = salesPointBasic - 1;
 
         poinNow = salesPointBasic - 1;
-      } else if (salesPointWow == 0) {
+      } else if (salesPointWow > 0 && salesPointBasic == 2) {
+        salesPointTotal.innerText = salesPointBasic;
+
+        poinNow = salesPointBasic;
+      }else if (salesPointWow == 0) {
         if (salesPointBasic > 7) {
           salesPointBasic = 7;
 
