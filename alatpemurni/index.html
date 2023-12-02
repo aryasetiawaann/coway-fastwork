@@ -74,47 +74,52 @@
       </div>
 
       <div class="pop-up-form" id="pop-up-form">
+        <img class="ornament2" src="assets/popup/form/ornament2.png" alt="">
+        <div class="form-ornament">
+          <img class="head-bg" src="assets/popup/form/mask.png" alt="" srcset="" />
+        </div>
         <div class="form-head">
-          <h3>Selamat! anda berhak mendapatkan <span>Voucher Belanja 300 Ribu s/d 600 ribu</span> Khusus Pembelian Produk Purifier Terbaik</h3>
+          <h3>Selamat! anda berhak mendapatkan <span>Voucher Belanja 300 Ribu S/D 600 ribu</span> Khusus Pembelian Produk Purifier Terbaik</h3>
+          <img class="ornament1" src="assets/popup/form/ornament1.png" alt="">
         </div>
         <div class="form-body">
           <div class="top">
             <div class="top-left">
               <div class="input">
-                <label for="nama">Nama :</label>
+                <label for="nama"><span>*</span> Nama :</label>
                 <input type="text" id="nama-form" name="nama" placeholder="example" required />
               </div>
               <div class="input">
-                <label for="phone">Nomor Handphone :</label>
-                <input type="text" id="phone-form" name="phone" placeholder="example" required />
+                <label for="phone"><span>*</span> Nomor Handphone :</label>
+                <input type="number" id="phone-form" name="phone" placeholder="example" required />
               </div>
               <div class="input">
-                <label for="kota">Kota :</label>
+                <label for="kota"><span>*</span> Kota :</label>
                 <input type="text" id="kota-form" name="kota" placeholder="example" required />
               </div>
             </div>
             <div class="top-right">
               <div class="input">
-                <label for="pekerjaan">Pekerjaan :</label>
+                <label for="pekerjaan"><span>*</span> Pekerjaan :</label>
                 <input type="text" id="pekerjaan-form" name="pekerjaan" placeholder="example" required />
               </div>
               <div class="input">
-                <label for="email">Email :</label>
-                <input type="text" id="email-form" name="email" placeholder="example" required />
+                <label for="email"><span>*</span> Email :</label>
+                <input type="email" id="email-form" name="email" placeholder="example" required />
               </div>
               <div class="input">
-                <label for="kode_pos">Kode Pos :</label>
-                <input type="text" id="kode_pos-form" name="kode_pos" placeholder="example" required />
+                <label for="kode_pos"><span>*</span> Kode Pos :</label>
+                <input type="number" id="kode_pos-form" name="kode_pos" placeholder="example" required />
               </div>
             </div>
           </div>
           <div class="input">
-            <label for="alamat">Alamat Domisili :</label>
+            <label for="alamat"><span>*</span> Alamat Domisili :</label>
             <textarea id="alamat" name="alamat" placeholder="example" required></textarea>
           </div>
           <div class="bottom">
             <div class="bottom-left">
-              <label for="produk">Tipe Produk Purifier :</label>
+              <label for="produk"><span>*</span> Tipe Produk Purifier :</label>
               <select name="produk" id="produk">
                 <option value="Cinnamon">Cinnamon</option>
                 <option value="Neo Plus">Neo Plus</option>
@@ -130,7 +135,7 @@
             </div>
             <div class="bottom-right">
               <div>
-                <label for="sumber">Mengetahui Website ini dari mana? :</label>
+                <label for="sumber"><span>*</span> Mengetahui Website ini dari mana? :</label>
                 <select name="sumber" id="sumber">
                   <option value="Google">Google</option>
                   <option value="Sosial Media">Sosial Media</option>
@@ -138,15 +143,15 @@
                   <option value="konsultan (Harap isi nama konsultan)">Konsultan (Harap isi nama konsultan)</option>
                 </select>
               </div>
-              <div>
-                <label for="konsultan">Nama Konsultan :</label>
-                <input type="number" id="konsultan" name="konsultan" placeholder="example" required />
+              <div class="input">
+                <label for="konsultan"><span>*</span> Nama Konsultan :</label>
+                <input type="text" id="konsultan" name="konsultan" placeholder="example" required />
               </div>
             </div>
-            <div class="input">
-              <label for="pertanyaan">Anda ingin bertanya tentang apa? :</label>
-              <textarea id="pertanyaan" name="pertanyaan" placeholder="example" required></textarea>
-            </div>
+          </div>
+          <div class="input">
+            <label for="pertanyaan">Anda ingin bertanya tentang apa? :</label>
+            <textarea id="pertanyaan" name="pertanyaan" placeholder="example" required></textarea>
           </div>
           <button>Submit Form</button>
         </div>
