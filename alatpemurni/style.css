@@ -472,6 +472,7 @@ select {
   align-items: center;
   background: linear-gradient(180deg, rgba(28, 28, 28, 0.88) 0%, rgba(32, 32, 32, 0.4) 65.97%, rgba(35, 35, 35, 0) 100%);
   position: absolute;
+  z-index: 5;
   top: 0;
   left: 0;
   right: 0;
@@ -558,22 +559,26 @@ select {
   align-items: center;
 }
 
-.fakta-container h1{
+.fakta-container h1 {
   padding-top: 6rem;
   padding-bottom: 8rem;
   font-size: 1.5rem;
+  text-align: center;
   font-weight: 500;
-  color: #2A5580;
+  color: #2a5580;
 }
 
 .fakta-cardslist {
-  display: grid;
-  grid-template-columns: 15rem 15rem 15rem 15rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   column-gap: 1.5rem;
+  row-gap: 5rem;
 }
 
 .fakta-card {
   border-radius: 24px;
+  width: 15rem;
   position: relative;
   border: 1px solid #ededed;
 }
@@ -592,7 +597,7 @@ select {
   text-align: center;
 }
 
-.fakta-img-container img{
+.fakta-img-container img {
   width: 68%;
   margin: 1rem 0;
 }
@@ -601,4 +606,476 @@ select {
   padding: 1.5rem 1rem;
   padding-top: 4.5rem;
   text-align: center;
+}
+
+/* -------------- SOLUSI SECTION --------------  */
+.solusi-container {
+  width: 100%;
+}
+
+.solusi-top {
+  background: url("assets/solusi/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.solusi-top h2 {
+  text-align: center;
+  padding: 6rem 0;
+  color: #fff;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.solusi-water-list {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.solusi-water-list img {
+  width: 14rem;
+  height: 28rem;
+}
+
+.solusi-bottom {
+  padding: 0 10%;
+}
+
+.solusi-bottom h3 {
+  color: #579;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 3.84px;
+  text-transform: uppercase;
+}
+
+.solusi-bottom h2 {
+  color: #036;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.solusi-bottom hr {
+  margin: 1rem 0;
+}
+
+.solusi-cardlist {
+  margin-top: 4rem;
+  display: flex;
+  column-gap: 1.5rem;
+  row-gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.solusi-card {
+  width: 20rem;
+}
+
+.solusi-card-img-container {
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 1px solid #8fdee2;
+  border-radius: 100%;
+  text-align: center;
+}
+
+.solusi-card-img-container img {
+  margin: 1rem;
+  width: 50%;
+}
+
+.solusi-card h4 {
+  color: #343537;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  font-weight: 500;
+}
+
+.solusi-card p {
+  color: #57595c;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* -------------- PRODUK SECTION --------------  */
+.produk-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 15rem;
+  padding-top: 15rem;
+}
+
+.produk-card {
+  position: relative;
+  width: 17rem;
+}
+
+.produk-card-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  margin-top: -10rem;
+  width: 10rem;
+  height: 20rem;
+}
+
+.produk-card-desc {
+  padding: 1rem;
+  padding-top: 10rem;
+  text-align: center;
+}
+
+.produk-card-desc button {
+  border-radius: 40px;
+  margin-top: 3rem;
+  padding: 0.2rem 0.8rem;
+  border: 1px solid #ededed;
+  background-color: #fff;
+}
+
+.produk-card-desc h1 {
+  color: #343537;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.produk-card-desc hr {
+  border-color: #b4e9ec;
+  margin: 1rem 0;
+}
+
+.produk-or {
+  color: #686b6f;
+  font-size: 0.8rem;
+  padding: 1.5rem 0;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2.88px;
+  text-transform: uppercase;
+}
+
+.produk-harga,
+.produk-harga-2 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.produk-harga span,
+.produk-harga-2 span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 38px;
+}
+
+.produk-harga {
+  color: #1a9da5;
+}
+
+.produk-harga-2 {
+  color: #036;
+}
+
+.produk-card:first-child {
+  border-radius: 24px 0px 0px 24px;
+  background: linear-gradient(180deg, #ebf9fa 0%, rgba(235, 249, 250, 0) 100%);
+}
+
+.produk-card:nth-child(2) {
+  background: linear-gradient(180deg, #d2f2f4 0%, rgba(210, 242, 244, 0) 100%);
+}
+
+.produk-card:nth-child(3) {
+  background: linear-gradient(180deg, rgba(180, 233, 236, 0.8) 0%, rgba(180, 233, 236, 0) 100%);
+}
+
+.produk-card:last-child {
+  border-radius: 0px 24px 24px 0px;
+  background: linear-gradient(180deg, rgba(143, 222, 226, 0.72) 0%, rgba(143, 222, 226, 0) 100%);
+}
+
+.produk-spec {
+  padding: 0 1rem;
+}
+
+.produk-spec-row {
+  display: flex;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: #818487;
+}
+
+.produk-spec-row img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.produk-spec-row p {
+  width: 15ch;
+  text-align: start;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* -------------- SERVICE SECTION --------------  */
+.service-container {
+  margin: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-head {
+  text-align: center;
+  width: 55%;
+  margin-bottom: 2rem;
+}
+
+.service-head h3 {
+  font-size: 2rem;
+  color: var(--blue);
+  font-weight: var(--medium);
+}
+
+.service-head p {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #57595c;
+  font-weight: var(--reguler);
+}
+
+.service-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 6rem;
+}
+
+.service-card {
+  border-radius: 16px;
+  border: 1px solid #ededed;
+  height: 18.75rem;
+  width: 17.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-content .down {
+  margin-top: 12.5rem;
+}
+
+.service-card .card-content {
+  width: 70%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.service-path {
+  position: absolute;
+  z-index: 999;
+}
+
+.service-path .path1 {
+  position: relative;
+  left: 19rem;
+  top: 7.5rem;
+}
+
+.service-path .path2 {
+  position: relative;
+  left: 33rem;
+  top: 20rem;
+}
+
+.service-path .path3 {
+  position: relative;
+  left: 47.5rem;
+  top: 7.5rem;
+}
+
+
+
+/* -------------- FAQ SECTION --------------  */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12rem;
+}
+
+.faq-head {
+  text-align: center;
+}
+
+.faq-head p {
+  font-size: 0.75rem;
+  color: #557799;
+}
+
+.faq-head h3 {
+  font-size: 2.5rem;
+  color: var(--blue);
+  font-weight: var(--medium);
+  margin-bottom: 4rem;
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.faq-card {
+  border: 1px solid #ededed;
+  border-radius: 16px;
+  width: 60rem;
+  padding: 2rem 3rem 3rem 7rem;
+  position: relative;
+}
+
+.faq-card h3 {
+  font-size: 1.5rem;
+  font-weight: var(--semibold);
+  color: #343537;
+  margin-bottom: 2rem;
+}
+
+.faq-card p {
+  font-size: 1rem;
+  font-weight: var(--reguler);
+  color: #686b6f;
+}
+
+.faq-content ul {
+  margin-left: 20px;
+  color: #686b6f;
+}
+
+.faq-icon1,
+.faq-icon2,
+.faq-icon3 {
+  position: absolute;
+  border: 1px solid #ededed;
+  border-radius: 100px;
+  width: 5.5rem;
+  height: 5.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  left: -2.7rem;
+}
+
+.faq-icon1 {
+  top: 9rem;
+}
+
+.faq-icon2 {
+  top: 6rem;
+}
+.faq-icon3 {
+  top: 5rem;
+}
+
+/* -------------- FOOTER SECTION --------------  */
+footer {
+  margin-top: 10rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 6rem;
+}
+
+.footer-image {
+  display: flex;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+}
+
+footer img {
+  width: 50%;
+  margin: 0;
+}
+
+.footer-content {
+  position: absolute;
+  margin-top: 8rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content h3 {
+  color: white;
+  font-size: 2rem;
+  font-weight: var(--medium);
+}
+
+.footer-content p {
+  margin-top: 1rem;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: var(--reguler);
+}
+
+.footer-content button {
+  margin-top: 4rem;
+  background-color: white;
+  color: var(--blue);
+  font-size: 1.125rem;
+  font-weight: var(--reguler);
+  border: none;
+  border-radius: 40px;
+  width: 15.625rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.company {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: var(--reguler);
+  position: relative;
+  top: 20rem;
+}
+
+.contact {
+  background-color: var(--blue);
+  border-radius: 100px;
+  width: 4.5rem;
+  height: 4.5rem;
+  position: fixed;
+  z-index: 99999;
+  bottom: 3.125rem;
+  right: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h3 {
+  font-size: 2rem;
 }
