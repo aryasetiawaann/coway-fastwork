@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--poppins);
+}
+
+:root {
+  --m-alertnates: 'Montserrat Alternates', 'poppins';
+  --monserate: 'Montserrat', 'poppins';
+  --poppins: 'Poppins', sans-serif;
+  --reguler: 400;
+  --medium: 500;
+  --light: 300;
+  --semibold: 600;
+  --bold: 700;
+
+  --light-font: #686b6f;
+  --input-bg: #f2f5f7;
+  --blue: #003366;
+  --bluedark: #002244;
+  --lightblue: #2a5580;
+}
+
+img {
+  user-select: none;
+}
+
+body {
+  background-image: url('l1.png');
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+.content {
+  height: 300vh;
+}
+
+.bg-pop-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px);
+  position: fixed;
+  z-index: 99;
+}
+
+.pop-up {
+  position: absolute;
+  width: 690px;
+  height: 745px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  top: 130px;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+.pop-up-head {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.pop-up-head h5 {
+  font-family: var(--m-alertnates);
+  font-size: 32px;
+  font-weight: var(--light);
+  color: var(--light-font);
+}
+
+.pop-up-head h3 {
+  font-family: var(--m-alertnates);
+  font-weight: var(--bold);
+  font-size: 32px;
+  color: var(--blue);
+}
+
+.pop-up-head p {
+  font-family: var(--monserate);
+  font-weight: var(--reguler);
+  font-size: 16px;
+  color: var(--light-font);
+}
+
+.pop-up-body {
+  width: 75%;
+  margin-top: 43px;
+}
+
+.pop-up form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+}
+
+.pop-up .input {
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-up label {
+  font-size: 14px;
+  font-weight: var(--reguler);
+  color: var(--light-font);
+}
+
+.pop-up input {
+  width: 100%;
+  border: none;
+  border-radius: 40px;
+  background-color: var(--input-bg);
+  height: 44px;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.pop-up button {
+  width: 250px;
+  height: 44px;
+  border-radius: 40px;
+  background-color: var(--blue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--light);
+  border: none;
+  margin: 48px auto 0 auto;
+  position: relative;
+}
+
+.pop-up svg {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.pop-up button:hover {
+  cursor: pointer;
+  background-color: #004890;
+}
+
+.pop-up button:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+
+.pop-up-ornament {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: yellow; */
+}
+
+.pop-up-image {
+  position: absolute;
+  top: -120px;
+  left: 30%;
+}
+
+.pop-up .ornament1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 17px;
+}
+
+.pop-up .ornament2 {
+  position: absolute;
+  top: 33%;
+  left: 0;
+  border-top-right-radius: 17px;
+}
+
+.pop-up .ornament3 {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  border-bottom-left-radius: 17px;
+}
+
+.pop-up .ornament4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom-right-radius: 17px;
+}
+
+.pop-up-success {
+  position: absolute;
+  width: 730px;
+  height: 625px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  top: 130px;
+}
+
+.success-content {
+  position: relative;
+  text-align: center;
+  width: 80%;
+  margin-top: 230px;
+}
+
+.success-content h3 {
+  color: var(--bluedark);
+  font-weight: var(--medium);
+  font-size: 40px;
+}
+
+.success-content h5 {
+  color: #57595c;
+  font-weight: var(--reguler);
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.success-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.success-content p {
+  color: var(--blue);
+  font-weight: var(--light);
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.success-content a {
+  text-decoration: none;
+  background-color: var(--lightblue);
+  color: white;
+  font-weight: var(--light);
+  padding: 15px 30px;
+  border-radius: 40px;
+}
+
+.pop-up-success svg {
+  width: 18px;
+  color: var(--blue);
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.success-ornament {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.success-image {
+  position: absolute;
+  top: -110px;
+  left: 25%;
+}

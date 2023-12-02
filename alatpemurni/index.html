@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alat Pemurni Air</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="bg-pop-up" id="bg-pop-up">
+      <div class="pop-up" id="pop-up" style="display: none">
+        <div class="pop-up-ornament">
+          <img draggable="false" class="ornament1" src="assets/popup/ornament1.png" alt="ornament" />
+          <img draggable="false" class="ornament2" src="assets/popup/ornament2.png" alt="ornament" />
+          <img draggable="false" class="ornament3" src="assets/popup/ornament3.png" alt="ornament" />
+          <img draggable="false" class="ornament4" src="assets/popup/ornament4.png" alt="ornament" />
+          <img draggable="false" class="pop-up-image" src="assets/popup/pop-image.png" alt="ornament" />
+        </div>
+        <div class="pop-up-head">
+          <h5>Anda Berhak Mendapatkan</h5>
+          <h3>Voucher Belanja Senilai 300k!</h3>
+          <p>Yuk Isi Form Dibawah Ini Untuk Mendapatkan Voucher</p>
+        </div>
+        <div class="pop-up-body">
+          <form action="" method="post">
+            <div class="input">
+              <label for="nama">Nama :</label>
+              <input type="text" id="nama" name="nama" placeholder="example" required />
+            </div>
+            <div class="input">
+              <label for="pekerjaan">Pekerjaan :</label>
+              <input type="text" id="pekerjaan" name="pekerjaan" placeholder="example" required />
+            </div>
+            <div class="input">
+              <label for="phone">WhatsApp :</label>
+              <input type="number" id="phone" name="phone" placeholder="ex. 08123456" required />
+            </div>
+            <button type="button" id="voucher">
+              Kirim Form
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pop-up-success" id="pop-up-success" style="display: none">
+        <div class="success-ornament">
+          <img draggable="false" class="ornament" src="assets/popup/success/ornament.png" alt="ornament" />
+          <img draggable="false" class="success-image" src="assets/popup/success/success-image.png" alt="ornament" />
+        </div>
+        <div class="success-content">
+          <h3>Form Berhasil Dikirim 🎉</h3>
+          <h5>Terima kasih telah mengirimkan form kepada kami. Mohon tunggu informasi dari kami dan harap pastikan Nomor WhatsApp Anda aktif</h5>
+          <div class="success-info">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <p>Silahkan baca kembali info yang ada pada Website selagi menunggu</p>
+          </div>
+          <a href="/">Kembali ke Website</a>
+        </div>
+      </div>
+
+      <div class="pop-up-form" id="pop-up-form">
+        <div class="form-head">
+          <h3>Selamat! anda berhak mendapatkan <span>Voucher Belanja 300 Ribu s/d 600 ribu</span> Khusus Pembelian Produk Purifier Terbaik</h3>
+        </div>
+        <div class="form-body">
+          <div class="top">
+            <div class="top-left">
+              <div class="input">
+                <label for="nama">Nama :</label>
+                <input type="text" id="nama-form" name="nama" placeholder="example" required />
+              </div>
+              <div class="input">
+                <label for="phone">Nomor Handphone :</label>
+                <input type="text" id="phone-form" name="phone" placeholder="example" required />
+              </div>
+              <div class="input">
+                <label for="kota">Kota :</label>
+                <input type="text" id="kota-form" name="kota" placeholder="example" required />
+              </div>
+            </div>
+            <div class="top-right">
+              <div class="input">
+                <label for="pekerjaan">Pekerjaan :</label>
+                <input type="text" id="pekerjaan-form" name="pekerjaan" placeholder="example" required />
+              </div>
+              <div class="input">
+                <label for="email">Email :</label>
+                <input type="text" id="email-form" name="email" placeholder="example" required />
+              </div>
+              <div class="input">
+                <label for="kode_pos">Kode Pos :</label>
+                <input type="text" id="kode_pos-form" name="kode_pos" placeholder="example" required />
+              </div>
+            </div>
+          </div>
+          <div class="input">
+            <label for="alamat">Alamat Domisili :</label>
+            <textarea id="alamat" name="alamat" placeholder="example" required></textarea>
+          </div>
+          <div class="bottom">
+            <div class="bottom-left">
+              <label for="produk">Tipe Produk Purifier :</label>
+              <select name="produk" id="produk">
+                <option value="Cinnamon">Cinnamon</option>
+                <option value="Neo Plus">Neo Plus</option>
+                <option value="Villaem II">Villaem II</option>
+                <option value="Ombak">Ombak</option>
+                <option value="Core">Core</option>
+                <option value="Storm">Storm</option>
+                <option value="Tornado">Tornado</option>
+                <option value="WOW Storm Neo">WOW Storm Neo</option>
+                <option value="WOW Storm Core">WOW Storm Core</option>
+                <option value="WOW Storm Ombak">WOW Storm Ombak</option>
+              </select>
+            </div>
+            <div class="bottom-right">
+              <div>
+                <label for="sumber">Mengetahui Website ini dari mana? :</label>
+                <select name="sumber" id="sumber">
+                  <option value="Google">Google</option>
+                  <option value="Sosial Media">Sosial Media</option>
+                  <option value="Broadcast/Pameran/Flyer">Broadcast/Pameran/Flyer</option>
+                  <option value="konsultan (Harap isi nama konsultan)">Konsultan (Harap isi nama konsultan)</option>
+                </select>
+              </div>
+              <div>
+                <label for="konsultan">Nama Konsultan :</label>
+                <input type="number" id="konsultan" name="konsultan" placeholder="example" required />
+              </div>
+            </div>
+            <div class="input">
+              <label for="pertanyaan">Anda ingin bertanya tentang apa? :</label>
+              <textarea id="pertanyaan" name="pertanyaan" placeholder="example" required></textarea>
+            </div>
+          </div>
+          <button>Submit Form</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <h3>hi</h3>
+    </div>
+  </body>
+</html>
