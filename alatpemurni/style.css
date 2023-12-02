@@ -4,10 +4,15 @@
   font-family: var(--poppins);
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 :root {
-  --m-alertnates: 'Montserrat Alternates', 'poppins';
-  --monserate: 'Montserrat', 'poppins';
-  --poppins: 'Poppins', sans-serif;
+  --m-alertnates: "Montserrat Alternates", "poppins";
+  --monserate: "Montserrat", "poppins";
+  --poppins: "Poppins", sans-serif;
   --reguler: 400;
   --medium: 500;
   --light: 300;
@@ -25,10 +30,6 @@ img {
   user-select: none;
 }
 
-body {
-  background-image: url('l1.png');
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -42,10 +43,6 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 1s ease;
-}
-
-.content {
-  height: 300vh;
 }
 
 .bg-pop-up {
@@ -362,16 +359,16 @@ body {
 .form-body .top {
   display: flex;
   justify-content: space-between;
-  align-items: center;    
+  align-items: center;
 }
 
 .form-body .top-left {
   width: 45%;
-} 
+}
 
 .form-body .top-right {
   width: 45%;
-} 
+}
 
 .form-body .input {
   display: flex;
@@ -379,7 +376,8 @@ body {
   margin-top: 35px;
 }
 
-.form-body input, select {
+.form-body input,
+select {
   width: 100%;
   border: none;
   border-radius: 40px;
@@ -431,9 +429,8 @@ body {
 }
 
 .form-body span {
-  color: #E74C3C;
+  color: #e74c3c;
 }
-
 
 .pop-up-form::-webkit-scrollbar {
   width: 8px;
@@ -456,6 +453,152 @@ body {
 }
 
 .pop-up-form::-webkit-scrollbar-thumb:hover {
-  background-color:  #555;
+  background-color: #555;
 }
 
+/* -------------- HERO SECTION -------------- */
+
+.hero-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  height: 5.5rem;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(28, 28, 28, 0.88) 0%, rgba(32, 32, 32, 0.4) 65.97%, rgba(35, 35, 35, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar img {
+  width: 6rem;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin-right: 3rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0;
+}
+
+.hero-img {
+  display: flex;
+}
+
+.hero-img img {
+  width: 50%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-shade,
+.hero-vector {
+  position: absolute;
+  width: 100%;
+}
+
+.hero-shade {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0.46%, rgba(255, 255, 255, 0.56) 21.37%, #fff 42.73%);
+  height: 23.5rem;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero-vector {
+  bottom: 0;
+  z-index: 2;
+}
+
+.hero-desc {
+  position: absolute;
+  width: 80%;
+  bottom: 0;
+  z-index: 3;
+  text-align: center;
+}
+
+.hero-desc h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #343537;
+}
+
+.hero-desc p {
+  font-size: 1.1rem;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* -------------- FAKTA SECTION --------------  */
+
+.fakta-container {
+  width: 100%;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fakta-container h1{
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #2A5580;
+}
+
+.fakta-cardslist {
+  display: grid;
+  grid-template-columns: 15rem 15rem 15rem 15rem;
+  column-gap: 1.5rem;
+}
+
+.fakta-card {
+  border-radius: 24px;
+  position: relative;
+  border: 1px solid #ededed;
+}
+
+.fakta-img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: -3rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.fakta-img-container img{
+  width: 68%;
+  margin: 1rem 0;
+}
+
+.fakta-card-desc {
+  padding: 1.5rem 1rem;
+  padding-top: 4.5rem;
+  text-align: center;
+}
