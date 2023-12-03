@@ -11,9 +11,9 @@ a {
 }
 
 :root {
-  --m-alertnates: "Montserrat Alternates", "poppins";
-  --monserate: "Montserrat", "poppins";
-  --poppins: "Poppins", sans-serif;
+  --m-alertnates: 'Montserrat Alternates', 'poppins';
+  --monserate: 'Montserrat', 'poppins';
+  --poppins: 'Poppins', sans-serif;
   --reguler: 400;
   --medium: 500;
   --light: 300;
@@ -615,7 +615,7 @@ select {
 }
 
 .solusi-top {
-  background: url("assets/solusi/background.png");
+  background: url('assets/solusi/background.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -839,7 +839,7 @@ select {
 }
 
 .solusiudara-top {
-  background: url("assets/solusiudara/background.png");
+  background: url('assets/solusiudara/background.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1032,7 +1032,7 @@ h5 {
 }
 
 .why-cardlist {
-  background: url("assets/why/elements.png");
+  background: url('assets/why/elements.png');
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
@@ -1040,7 +1040,6 @@ h5 {
   justify-content: center;
   gap: 1.5rem;
   padding: 3rem 10%;
-  
 }
 
 .why-card {
@@ -1075,13 +1074,13 @@ h5 {
   padding: 10rem 0;
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }
 
 .combo-head {
   text-align: center;
   width: 60%;
-  margin-bottom: 2rem;  
+  margin-bottom: 2rem;
 }
 
 .combo-head p {
@@ -1105,7 +1104,7 @@ h5 {
   gap: 3rem;
   width: 60%;
   margin-top: 5rem;
-} 
+}
 
 .combo-card {
   text-align: center;
@@ -1116,7 +1115,7 @@ h5 {
 }
 
 .combo-card p {
-  color: #686B6F;
+  color: #686b6f;
   font-weight: var(--reguler);
   font-size: 1.125rem;
   margin-top: 2rem;
@@ -1134,7 +1133,7 @@ h5 {
   background-color: white;
   border-radius: 40px;
   border: 1px solid #ededed;
-  color: #2A5580;
+  color: #2a5580;
   width: 11.438rem;
   height: 2.75rem;
   font-weight: var(--reguler);
@@ -1183,7 +1182,7 @@ h5 {
   gap: 5rem;
   width: 70%;
   margin-top: 5rem;
-} 
+}
 
 .reparation-right {
   display: flex;
@@ -1192,8 +1191,8 @@ h5 {
 }
 
 .reparation-right p {
-  font-size : 1rem ;
-  color: #686B6F;
+  font-size: 1rem;
+  color: #686b6f;
   font-weight: var(--reguler);
 }
 
@@ -1207,7 +1206,6 @@ h5 {
   font-size: 1.125rem;
   font-weight: var(--reguler);
 }
-
 
 /* -------------- SERVICE SECTION --------------  */
 .service-container {
@@ -1228,6 +1226,7 @@ h5 {
   font-size: 2rem;
   color: var(--blue);
   font-weight: var(--medium);
+  margin-bottom: 1rem;
 }
 
 .service-head p {
@@ -1367,6 +1366,7 @@ h5 {
 .faq-icon2 {
   top: 6rem;
 }
+
 .faq-icon3 {
   top: 5rem;
 }
@@ -1435,8 +1435,7 @@ footer img {
   color: white;
   font-size: 0.75rem;
   font-weight: var(--reguler);
-  position: relative;
-  top: 20rem;
+  padding-top: 20rem;
 }
 
 .contact {
@@ -1457,6 +1456,153 @@ footer img {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
+  .combo-content img {
+    width: 16.438rem;
+  }
+
+  .combo-head {
+    width: 80%;
+  }
+
+  .reparation-head {
+    width: 80%;
+  }
+
+  .reparation-content {
+    gap: 3rem;
+    width: 80%;
+  }
+
+  .reparation-left img {
+    width: 28rem;
+  }
+
+  .reparation-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .reparation-right p {
+    font-size: 1rem;
+    color: #686b6f;
+    font-weight: var(--reguler);
+  }
+
+  .reparation-right img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .benefit {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .benefit p {
+    color: #343537;
+    font-size: 1.125rem;
+    font-weight: var(--reguler);
+  }
+
+  .service-head {
+    text-align: center;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+
+  .service-card img {
+    width: 14.25rem;
+  }
+
+  .service-card {
+    height: max-content;
+    width: 14.25rem;
+  }
+
+  .service-card .card-content {
+    width: 70%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
   
- }
+  .service-path .path1 {
+    left: 15.5rem;
+    top: 7.5rem;
+  }
+  
+  .service-path .path2 {
+    left: 26rem;
+    top: 14.5rem;
+  }
+  
+  .service-path .path3 {
+    left: 37rem;
+    top: 7.5rem;
+  }
+
+  .faq-card {
+    border: 1px solid #ededed;
+    border-radius: 16px;
+    width: 49rem;
+    padding: 2rem 3rem 3rem 7rem;
+    position: relative;
+  }
+
+  .faq-icon3 {
+    top: 7rem;
+  }
+  
+
+  .footer-content {
+    margin-top: 4rem;
+    width: 85%;
+  }
+
+  .company {
+    padding-top: 8rem;
+  }
+
+  .contact {
+    bottom: 1.125rem;
+    right: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-content {
+    margin-top: 4rem;
+    width: 85%;
+  }
+
+  .company {
+    padding-top: 8rem;
+  }
+
+  .contact {
+    bottom: 1.125rem;
+    right: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer-content {
+    margin-top: 4rem;
+    width: 85%;
+  }
+
+  .company {
+    padding-top: 0rem;
+  }
+
+  .contact {
+    bottom: 1.125rem;
+    right: 1.125rem;
+  }
+
+  footer img {
+    /* width: 50%; */
+    height: 334px;
+  }
+}
