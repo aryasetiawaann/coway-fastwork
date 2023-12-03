@@ -54,4 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // setTimeout(function () {
   //   pop.style.display = 'flex';
   // }, 2000);
+
+  const beli = document.querySelectorAll('.beli');
+  
+  beli.forEach(function (el) {
+    el.addEventListener('click', function () {
+      pop.style.display = 'flex';
+    });
+  });
 });

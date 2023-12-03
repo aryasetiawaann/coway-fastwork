@@ -290,7 +290,7 @@ img {
   align-items: center;
   border-radius: 40px;
   animation-name: fadeIn;
-  animation-duration: 2s;
+  animation-duration: 1s;
   overflow-y: auto; /* Add this line */
   overflow-x: hidden;
 }
@@ -1069,6 +1069,146 @@ h5 {
   line-height: 20px;
 }
 
+/* -------------- COMBO SECTION --------------  */
+.combo-container {
+  width: 100%;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.combo-head {
+  text-align: center;
+  width: 60%;
+  margin-bottom: 2rem;  
+}
+
+.combo-head p {
+  color: #557799;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  font-weight: var(--reguler);
+}
+
+.combo-head h3 {
+  font-size: 2rem;
+  color: var(--blue);
+  font-weight: var(--medium);
+  margin-bottom: 2rem;
+}
+
+.combo-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 60%;
+  margin-top: 5rem;
+} 
+
+.combo-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.combo-card p {
+  color: #686B6F;
+  font-weight: var(--reguler);
+  font-size: 1.125rem;
+  margin-top: 2rem;
+}
+
+.combo-card h3 {
+  color: #343537;
+  font-weight: var(--semibold);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--poppins);
+}
+
+.combo-card button {
+  background-color: white;
+  border-radius: 40px;
+  border: 1px solid #ededed;
+  color: #2A5580;
+  width: 11.438rem;
+  height: 2.75rem;
+  font-weight: var(--reguler);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.combo-card svg {
+  width: 1.125rem;
+}
+
+/* -------------- REPRATION SECTION --------------  */
+.reparation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reparation-head {
+  text-align: center;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.reparation-head p {
+  color: #557799;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+  font-weight: var(--reguler);
+}
+
+.reparation-head h3 {
+  font-size: 2rem;
+  color: var(--blue);
+  font-weight: var(--medium);
+  margin-bottom: 2rem;
+}
+
+.reparation-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 70%;
+  margin-top: 5rem;
+} 
+
+.reparation-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reparation-right p {
+  font-size : 1rem ;
+  color: #686B6F;
+  font-weight: var(--reguler);
+}
+
+.benefit {
+  display: flex;
+  gap: 1rem;
+}
+
+.benefit p {
+  color: #343537;
+  font-size: 1.125rem;
+  font-weight: var(--reguler);
+}
+
+
 /* -------------- SERVICE SECTION --------------  */
 .service-container {
   margin: 10rem 0;
@@ -1316,3 +1456,7 @@ footer img {
 .contact h3 {
   font-size: 2rem;
 }
+
+@media screen and (max-width: 1200px) {
+  
+ }
