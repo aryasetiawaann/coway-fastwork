@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="bg-pop-up" id="bg-pop-up" style="display: none">
-      <div class="pop-up" id="pop-up" style="display: none">
+      <div class="pop-up" id="pop-up">
         <div class="pop-up-ornament">
           <img draggable="false" class="ornament1" src="assets/popup/ornament1.png" alt="ornament" />
           <img draggable="false" class="ornament2" src="assets/popup/ornament2.png" alt="ornament" />
@@ -23,7 +23,7 @@
           <img draggable="false" class="pop-up-image" src="assets/popup/pop-image.png" alt="ornament" />
         </div>
         <div class="pop-up-head">
-          <h5>Anda Berhak Mendapatkan</h5>
+          <h4>Anda Berhak Mendapatkan</h4>
           <h3>Voucher Belanja Senilai 300k!</h3>
           <p>Yuk Isi Form Dibawah Ini Untuk Mendapatkan Voucher</p>
         </div>
@@ -34,12 +34,12 @@
               <input type="text" id="nama" name="nama" placeholder="example" required />
             </div>
             <div class="input">
-              <label for="pekerjaan">Pekerjaan :</label>
-              <input type="text" id="pekerjaan" name="pekerjaan" placeholder="example" required />
-            </div>
-            <div class="input">
               <label for="phone">WhatsApp :</label>
               <input type="number" id="phone" name="phone" placeholder="ex. 08123456" required />
+            </div>
+            <div class="input">
+              <label for="email">Email :</label>
+              <input type="text" id="email" name="email" placeholder="example" required />
             </div>
             <button type="button" id="voucher">
               Kirim Form
@@ -50,26 +50,27 @@
           </form>
         </div>
       </div>
-
-      <div class="pop-up-success" id="pop-up-success" style="display: none">
-        <div class="success-ornament">
-          <img draggable="false" class="ornament" src="assets/popup/success/ornament.png" alt="ornament" />
-          <img draggable="false" class="success-image" src="assets/popup/success/success-image.png" alt="ornament" />
-        </div>
-        <div class="success-content">
-          <h3>Form Berhasil Dikirim 🎉</h3>
-          <h5>Terima kasih telah mengirimkan form kepada kami. Mohon tunggu informasi dari kami dan harap pastikan Nomor WhatsApp Anda aktif</h5>
-          <div class="success-info">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                fill-rule="evenodd"
-                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            <p>Silahkan baca kembali info yang ada pada Website selagi menunggu</p>
+      <div class="success-container">
+        <div class="pop-up-success" id="pop-up-success" style="display: none">
+          <div class="success-ornament">
+            <img draggable="false" class="ornament" src="assets/popup/success/ornament.png" alt="ornament" />
+            <img draggable="false" class="success-image" src="assets/popup/success/success-image.png" alt="ornament" />
           </div>
-          <a href="/">Kembali ke Website</a>
+          <div class="success-content">
+            <h3>Form Berhasil Dikirim 🎉</h3>
+            <h4>Terima kasih telah mengirimkan form kepada kami. Mohon tunggu informasi dari kami dan harap pastikan Nomor WhatsApp Anda aktif</h4>
+            <div class="success-info">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <p>Silahkan baca kembali info yang ada pada Website selagi menunggu</p>
+            </div>
+            <a href="/alatpemurni/" id="back">Kembali ke Website</a>
+          </div>
         </div>
       </div>
 
@@ -158,7 +159,8 @@
       </div>
     </div>
 
-    <div class="content">
+    <div class="content" id="content">
+      <div class="blur-content" id="blur" style="display: none;"></div>
       <div class="hero-container">
         <div class="navbar">
           <a href="/"><img src="assets/hero/Coway_logo.png" alt="Logo" /></a>
@@ -350,18 +352,17 @@
                 <p>26 x 50.5 x 50 cm</p>
               </div>
             </div>
-            
-              <button class="beli">
-                Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
-                    fill="#2A5580"
-                  />
-                </svg>
-              </button>
-            
+
+            <button class="beli">
+              Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
+                  fill="#2A5580"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div class="produk-card">
@@ -403,18 +404,17 @@
                 <p>34 x 51.8 x 52.3 cm</p>
               </div>
             </div>
-            
-              <button class="beli">
-                Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
-                    fill="#2A5580"
-                  />
-                </svg>
-              </button>
-            
+
+            <button class="beli">
+              Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
+                  fill="#2A5580"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div class="produk-card">
@@ -456,18 +456,17 @@
                 <p>34 x 51.8 x 52.3 cm</p>
               </div>
             </div>
-            
-              <button class="beli">
-                Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
-                    fill="#2A5580"
-                  />
-                </svg>
-              </button>
-            
+
+            <button class="beli">
+              Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
+                  fill="#2A5580"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div class="produk-card">
@@ -509,18 +508,17 @@
                 <p>37 x 125.7 x 49 cm</p>
               </div>
             </div>
-            
-              <button class="beli">
-                Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
-                    fill="#2A5580"
-                  />
-                </svg>
-              </button>
-            
+
+            <button class="beli">
+              Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
+                  fill="#2A5580"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -814,7 +812,7 @@
         <div class="combo-head">
           <p>LEBIH BANYAK. LEBIH HEMAT</p>
           <h3>Beli Produk Purifier Terbaik dengan Paket WOW Combo</h3>
-          <hr>
+          <hr />
         </div>
         <div class="combo-content">
           <div class="combo-card">
@@ -888,7 +886,7 @@
       <div class="service-container">
         <div class="service-head">
           <h3>Proses Heart Service untuk Water Purifier</h3>
-          <hr>
+          <hr />
           <p>
             Layanan premium pemeliharaan dengan kualitas terbaik khusus mitra coway setiap 2 bulan sekali. Dengan layanan ini, Hi-Care kami yang inovatif akan membantu mensterilkan produk Coway Anda agar terbebas dari bakteri dan
             mikroorganisme. Alhasil, kebersihan dan higienitas air yang Anda minum pun dapat terjamin.
