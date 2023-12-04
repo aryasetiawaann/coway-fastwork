@@ -17,7 +17,7 @@
     <script src="js/app.js"></script>
   </head>
   <body>
-    <div class="bg-pop-up form" id="bg-pop-up">
+    <div class="bg-pop-up" id="bg-pop-up" style="display: none">
       <div class="pop-up" id="pop-up" style="display: none">
         <div class="pop-up-ornament">
           <img draggable="false" class="ornament1" src="assets/popup/ornament1.png" alt="ornament" />
@@ -55,7 +55,7 @@
         </div>
       </div>
 
-      <div class="success-container" style="display: none">
+      <div class="success-container">
         <div class="pop-up-success" id="pop-up-success" style="display: none">
           <div class="success-ornament">
             <img draggable="false" class="ornament" src="assets/popup/success/ornament.png" alt="ornament" />
@@ -79,8 +79,8 @@
         </div>
       </div>
 
-      <div class="form-container">
-        <div class="pop-up-form" id="pop-up-form">
+      <div class="form-container" id="pop-up-form" style="display: none">
+        <div class="pop-up-form">
           <img class="ornament2" src="assets/popup/form/ornament2.png" alt="" />
           <div class="form-ornament">
             <img class="head-bg" src="assets/popup/form/mask.png" alt="" srcset="" />
@@ -122,12 +122,12 @@
             </div>
             <div class="input">
               <label for="alamat"><span>*</span> Alamat Domisili :</label>
-              <textarea id="alamat" name="alamat" placeholder="example" required></textarea>
+              <textarea id="domisili-form" name="alamat" placeholder="example" required></textarea>
             </div>
             <div class="bottom">
               <div class="bottom-left">
                 <label for="produk"><span>*</span> Tipe Produk Purifier :</label>
-                <select name="produk" id="produk">
+                <select name="produk" id="produk-form">
                   <option value="Cinnamon">Cinnamon</option>
                   <option value="Neo Plus">Neo Plus</option>
                   <option value="Villaem II">Villaem II</option>
@@ -143,7 +143,7 @@
               <div class="bottom-right">
                 <div>
                   <label for="sumber"><span>*</span> Mengetahui Website ini dari mana? :</label>
-                  <select name="sumber" id="sumber">
+                  <select name="sumber" id="website-form">
                     <option value="Google">Google</option>
                     <option value="Sosial Media">Sosial Media</option>
                     <option value="Broadcast/Pameran/Flyer">Broadcast/Pameran/Flyer</option>
@@ -152,22 +152,22 @@
                 </div>
                 <div class="input">
                   <label for="konsultan"><span>*</span> Nama Konsultan :</label>
-                  <input type="text" id="konsultan" name="konsultan" placeholder="example" required />
+                  <input type="text" id="konsultan-form" name="konsultan" placeholder="example" required />
                 </div>
               </div>
             </div>
             <div class="input">
               <label for="pertanyaan">Anda ingin bertanya tentang apa? :</label>
-              <textarea id="pertanyaan" name="pertanyaan" placeholder="example" required></textarea>
+              <textarea id="pertanyaan-form" name="pertanyaan" placeholder="example" required></textarea>
             </div>
-            <button>Submit Form</button>
+            <button id="beli-button">Beli Produk Sekarang</button>
           </div>
         </div>
       </div>
     </div>
 
     <div class="content" id="content">
-      <div class="blur-content form" id="blur"></div>
+      <div class="blur-content" id="blur" style="display: none"></div>
       <div class="hero-container">
         <div class="navbar">
           <a href="/"><img src="assets/hero/Coway_logo.png" alt="Logo" /></a>

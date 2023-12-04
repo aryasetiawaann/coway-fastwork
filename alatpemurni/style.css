@@ -44,6 +44,29 @@ img {
   }
 }
 
+.blur-content.form{
+  display: flex !important;
+  width: 100%;
+  height: 770rem;
+  position: absolute;
+  z-index: 97;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px);
+}
+
+.bg-pop-up.form {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  position: absolute;
+  z-index: 99;
+}
+
 .content.hide {
   animation-name: fadeIn;
   animation-duration: 2s;
