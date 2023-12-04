@@ -10,11 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <link rel="stylesheet" href="laptop.css" />
+    <link rel="stylesheet" href="tablet.css" />
+
     <script src="js/app.js"></script>
   </head>
   <body>
-    <div class="bg-pop-up" id="bg-pop-up" style="display: none">
-      <div class="pop-up" id="pop-up">
+    <div class="bg-pop-up form" id="bg-pop-up">
+      <div class="pop-up" id="pop-up" style="display: none">
         <div class="pop-up-ornament">
           <img draggable="false" class="ornament1" src="assets/popup/ornament1.png" alt="ornament" />
           <img draggable="false" class="ornament2" src="assets/popup/ornament2.png" alt="ornament" />
@@ -50,7 +54,8 @@
           </form>
         </div>
       </div>
-      <div class="success-container">
+
+      <div class="success-container" style="display: none">
         <div class="pop-up-success" id="pop-up-success" style="display: none">
           <div class="success-ornament">
             <img draggable="false" class="ornament" src="assets/popup/success/ornament.png" alt="ornament" />
@@ -74,97 +79,99 @@
         </div>
       </div>
 
-      <div class="pop-up-form" id="pop-up-form" style="display: none">
-        <img class="ornament2" src="assets/popup/form/ornament2.png" alt="" />
-        <div class="form-ornament">
-          <img class="head-bg" src="assets/popup/form/mask.png" alt="" srcset="" />
-        </div>
-        <div class="form-head">
-          <h3>Selamat! anda berhak mendapatkan <span>Voucher Belanja 300 Ribu S/D 600 ribu</span> Khusus Pembelian Produk Purifier Terbaik</h3>
-          <img class="ornament1" src="assets/popup/form/ornament1.png" alt="" />
-        </div>
-        <div class="form-body">
-          <div class="top">
-            <div class="top-left">
-              <div class="input">
-                <label for="nama"><span>*</span> Nama :</label>
-                <input type="text" id="nama-form" name="nama" placeholder="example" required />
-              </div>
-              <div class="input">
-                <label for="phone"><span>*</span> Nomor Handphone :</label>
-                <input type="number" id="phone-form" name="phone" placeholder="example" required />
-              </div>
-              <div class="input">
-                <label for="kota"><span>*</span> Kota :</label>
-                <input type="text" id="kota-form" name="kota" placeholder="example" required />
-              </div>
-            </div>
-            <div class="top-right">
-              <div class="input">
-                <label for="pekerjaan"><span>*</span> Pekerjaan :</label>
-                <input type="text" id="pekerjaan-form" name="pekerjaan" placeholder="example" required />
-              </div>
-              <div class="input">
-                <label for="email"><span>*</span> Email :</label>
-                <input type="email" id="email-form" name="email" placeholder="example" required />
-              </div>
-              <div class="input">
-                <label for="kode_pos"><span>*</span> Kode Pos :</label>
-                <input type="number" id="kode_pos-form" name="kode_pos" placeholder="example" required />
-              </div>
-            </div>
+      <div class="form-container">
+        <div class="pop-up-form" id="pop-up-form">
+          <img class="ornament2" src="assets/popup/form/ornament2.png" alt="" />
+          <div class="form-ornament">
+            <img class="head-bg" src="assets/popup/form/mask.png" alt="" srcset="" />
           </div>
-          <div class="input">
-            <label for="alamat"><span>*</span> Alamat Domisili :</label>
-            <textarea id="alamat" name="alamat" placeholder="example" required></textarea>
+          <div class="form-head">
+            <h3>Selamat! anda berhak mendapatkan <span>Voucher Belanja 300 Ribu S/D 600 ribu</span> Khusus Pembelian Produk Purifier Terbaik</h3>
+            <img class="ornament1" src="assets/popup/form/ornament1.png" alt="" />
           </div>
-          <div class="bottom">
-            <div class="bottom-left">
-              <label for="produk"><span>*</span> Tipe Produk Purifier :</label>
-              <select name="produk" id="produk">
-                <option value="Cinnamon">Cinnamon</option>
-                <option value="Neo Plus">Neo Plus</option>
-                <option value="Villaem II">Villaem II</option>
-                <option value="Ombak">Ombak</option>
-                <option value="Core">Core</option>
-                <option value="Storm">Storm</option>
-                <option value="Tornado">Tornado</option>
-                <option value="WOW Storm Neo">WOW Storm Neo</option>
-                <option value="WOW Storm Core">WOW Storm Core</option>
-                <option value="WOW Storm Ombak">WOW Storm Ombak</option>
-              </select>
+          <div class="form-body">
+            <div class="top">
+              <div class="top-left">
+                <div class="input">
+                  <label for="nama"><span>*</span> Nama :</label>
+                  <input type="text" id="nama-form" name="nama" placeholder="example" required />
+                </div>
+                <div class="input">
+                  <label for="phone"><span>*</span> Nomor Handphone :</label>
+                  <input type="number" id="phone-form" name="phone" placeholder="example" required />
+                </div>
+                <div class="input">
+                  <label for="kota"><span>*</span> Kota :</label>
+                  <input type="text" id="kota-form" name="kota" placeholder="example" required />
+                </div>
+              </div>
+              <div class="top-right">
+                <div class="input">
+                  <label for="pekerjaan"><span>*</span> Pekerjaan :</label>
+                  <input type="text" id="pekerjaan-form" name="pekerjaan" placeholder="example" required />
+                </div>
+                <div class="input">
+                  <label for="email"><span>*</span> Email :</label>
+                  <input type="email" id="email-form" name="email" placeholder="example" required />
+                </div>
+                <div class="input">
+                  <label for="kode_pos"><span>*</span> Kode Pos :</label>
+                  <input type="number" id="kode_pos-form" name="kode_pos" placeholder="example" required />
+                </div>
+              </div>
             </div>
-            <div class="bottom-right">
-              <div>
-                <label for="sumber"><span>*</span> Mengetahui Website ini dari mana? :</label>
-                <select name="sumber" id="sumber">
-                  <option value="Google">Google</option>
-                  <option value="Sosial Media">Sosial Media</option>
-                  <option value="Broadcast/Pameran/Flyer">Broadcast/Pameran/Flyer</option>
-                  <option value="konsultan (Harap isi nama konsultan)">Konsultan (Harap isi nama konsultan)</option>
+            <div class="input">
+              <label for="alamat"><span>*</span> Alamat Domisili :</label>
+              <textarea id="alamat" name="alamat" placeholder="example" required></textarea>
+            </div>
+            <div class="bottom">
+              <div class="bottom-left">
+                <label for="produk"><span>*</span> Tipe Produk Purifier :</label>
+                <select name="produk" id="produk">
+                  <option value="Cinnamon">Cinnamon</option>
+                  <option value="Neo Plus">Neo Plus</option>
+                  <option value="Villaem II">Villaem II</option>
+                  <option value="Ombak">Ombak</option>
+                  <option value="Core">Core</option>
+                  <option value="Storm">Storm</option>
+                  <option value="Tornado">Tornado</option>
+                  <option value="WOW Storm Neo">WOW Storm Neo</option>
+                  <option value="WOW Storm Core">WOW Storm Core</option>
+                  <option value="WOW Storm Ombak">WOW Storm Ombak</option>
                 </select>
               </div>
-              <div class="input">
-                <label for="konsultan"><span>*</span> Nama Konsultan :</label>
-                <input type="text" id="konsultan" name="konsultan" placeholder="example" required />
+              <div class="bottom-right">
+                <div>
+                  <label for="sumber"><span>*</span> Mengetahui Website ini dari mana? :</label>
+                  <select name="sumber" id="sumber">
+                    <option value="Google">Google</option>
+                    <option value="Sosial Media">Sosial Media</option>
+                    <option value="Broadcast/Pameran/Flyer">Broadcast/Pameran/Flyer</option>
+                    <option value="konsultan (Harap isi nama konsultan)">Konsultan (Harap isi nama konsultan)</option>
+                  </select>
+                </div>
+                <div class="input">
+                  <label for="konsultan"><span>*</span> Nama Konsultan :</label>
+                  <input type="text" id="konsultan" name="konsultan" placeholder="example" required />
+                </div>
               </div>
             </div>
+            <div class="input">
+              <label for="pertanyaan">Anda ingin bertanya tentang apa? :</label>
+              <textarea id="pertanyaan" name="pertanyaan" placeholder="example" required></textarea>
+            </div>
+            <button>Submit Form</button>
           </div>
-          <div class="input">
-            <label for="pertanyaan">Anda ingin bertanya tentang apa? :</label>
-            <textarea id="pertanyaan" name="pertanyaan" placeholder="example" required></textarea>
-          </div>
-          <button>Submit Form</button>
         </div>
       </div>
     </div>
 
     <div class="content" id="content">
-      <div class="blur-content" id="blur" style="display: none;"></div>
+      <div class="blur-content form" id="blur"></div>
       <div class="hero-container">
         <div class="navbar">
           <a href="/"><img src="assets/hero/Coway_logo.png" alt="Logo" /></a>
-          <ul>
+          <ul class="navbar-content">
             <li>
               <a href="#">Beranda</a>
             </li>

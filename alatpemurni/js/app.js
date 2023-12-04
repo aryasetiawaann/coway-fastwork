@@ -37,7 +37,7 @@ function sendWhatsAppVoucher() {
 
     voucher.style.display = 'none';
     success.style.display = 'flex';
-    console.log("mamang");
+    console.log('mamang');
     sessionStorage.setItem('start', 'start');
   } else {
     alert('Lengkapi Form Terlebih Dahulu');
@@ -45,77 +45,79 @@ function sendWhatsAppVoucher() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const voucherButton = document.getElementById(',m ');
+  const voucherButton = document.getElementById('voucher');
   const success = document.getElementById('pop-up-success');
 
   const pop = document.getElementById('bg-pop-up');
   const popVoucher = document.getElementById('pop-up');
   const blur = document.getElementById('blur');
-  
+
   let isButtonClick = 0;
-  
-  voucherButton.addEventListener('click', function () {
-    sendWhatsAppVoucher();
-    
-    console.log("mamang");
-    pop.style.display = 'flex';
-    // success.style.display = 'flex';
-    
-    if (window.innerWidth < 1800 && window.innerWidth > 870) {
-      blur.style.display = 'flex';
-      window.addEventListener('scroll', function () {
-        var scrollPosition = window.scrollY;
 
-        if (scrollPosition > 600) {
-          scrollToTop(160, 500);
-        }
-      });
+  if (voucherButton) {
+    voucherButton.addEventListener('click', function () {
+      sendWhatsAppVoucher();
 
-      function scrollToTop(to, duration) {
-        if (duration <= 0) return;
-        var difference = to - window.scrollY;
-        var perTick = (difference / duration) * 10;
-
-        setTimeout(function () {
-          window.scrollBy(0, perTick);
-          if (window.scrollY === to) return;
-          scrollToTop(to, duration - 10);
-        }, 10);
-      }
-    }
-  });
-
-  if (!sessionStorage.getItem('start')) {
-    setTimeout(function () {
+      console.log('mamang');
       pop.style.display = 'flex';
-      popVoucher.style.display = 'flex';
-      blur.style.display = 'flex';
+      // success.style.display = 'flex';
 
-      if (window.innerWidth < 1800 && window.innerWidth > 900) {
-        if (isButtonClick == 0) {
-          window.addEventListener('scroll', function () {
-            var scrollPosition = window.scrollY;
+      if (window.innerWidth < 1800 && window.innerWidth > 870) {
+        blur.style.display = 'flex';
+        window.addEventListener('scroll', function () {
+          var scrollPosition = window.scrollY;
 
-            if (scrollPosition > 700) {
-              scrollToTop(160, 500); // Scroll ke atas dengan durasi 500ms
-            }
-          });
-
-          function scrollToTop(to, duration) {
-            if (duration <= 0) return;
-            var difference = to - window.scrollY;
-            var perTick = (difference / duration) * 10;
-
-            setTimeout(function () {
-              window.scrollBy(0, perTick);
-              if (window.scrollY === to) return;
-              scrollToTop(to, duration - 10);
-            }, 10);
+          if (scrollPosition > 600) {
+            scrollToTop(160, 500);
           }
+        });
+
+        function scrollToTop(to, duration) {
+          if (duration <= 0) return;
+          var difference = to - window.scrollY;
+          var perTick = (difference / duration) * 10;
+
+          setTimeout(function () {
+            window.scrollBy(0, perTick);
+            if (window.scrollY === to) return;
+            scrollToTop(to, duration - 10);
+          }, 10);
         }
       }
-    }, 2000);
+    });
   }
+
+  // if (!sessionStorage.getItem('start')) {
+  // setTimeout(function () {
+  //   pop.style.display = 'flex';
+  //   popVoucher.style.display = 'flex';
+  //   blur.style.display = 'flex';
+
+  //   if (window.innerWidth < 1800 && window.innerWidth > 900) {
+  //     if (isButtonClick == 0) {
+  //       window.addEventListener('scroll', function () {
+  //         var scrollPosition = window.scrollY;
+
+  //         if (scrollPosition > 700) {
+  //           scrollToTop(160, 500); // Scroll ke atas dengan durasi 500ms
+  //         }
+  //       });
+
+  //       function scrollToTop(to, duration) {
+  //         if (duration <= 0) return;
+  //         var difference = to - window.scrollY;
+  //         var perTick = (difference / duration) * 10;
+
+  //         setTimeout(function () {
+  //           window.scrollBy(0, perTick);
+  //           if (window.scrollY === to) return;
+  //           scrollToTop(to, duration - 10);
+  //         }, 10);
+  //       }
+  //     }
+  //   }
+  // }, 2000);
+  // }
 
   const beli = document.querySelectorAll('.beli');
 
@@ -125,3 +127,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+function openLayer() {
+  var layer = document.getElementById('layer');
+  if (layer.style.display === 'block') {
+    layer.style.display = 'none';
+  } else {
+    layer.style.display = 'block';
+  }
+}
