@@ -125,6 +125,38 @@ document.addEventListener('DOMContentLoaded', function () {
   const pop = document.getElementById('bg-pop-up');
   const popVoucher = document.getElementById('pop-up');
   const blur = document.getElementById('blur');
+  const beli = document.querySelectorAll('.beli');
+  const contact = document.getElementById('contact');
+
+  function viewForm() {
+    const form = document.getElementById('pop-up-form');
+    const beliButton = document.getElementById('beli-button');
+    const contact = document.getElementById('contact');
+
+    scrollToTop(0, 500);
+    pop.classList.add('form');
+    blur.classList.add('form');
+    form.style.display = 'flex';
+    contact.style.display = 'none';
+
+    window.addEventListener('scroll', function () {
+      var scrollPosition = window.scrollY;
+
+      if (scrollPosition > 900 && window.innerWidth >= 1800) {
+        scrollToTop(0, 500); // Scroll ke atas dengan durasi 500ms
+      } else if (scrollPosition > 1000 && window.innerWidth >= 1200 && window.innerWidth < 1800) {
+        scrollToTop(0, 500); // Scroll ke atas dengan durasi 500ms
+      } else if (scrollPosition > 600 && window.innerWidth <= 900 && window.innerWidth > 600) {
+        scrollToTop(0, 500); // Scroll ke atas dengan durasi 500ms
+      } else if (scrollPosition > 1500 && window.innerWidth < 600) {
+        scrollToTop(0, 500); // Scroll ke atas dengan durasi 500ms
+      }
+    });
+
+    beliButton.addEventListener('click', function () {
+      sendWhatsAppForm();
+    });
+  }
 
   let isButtonClick = 0;
 
@@ -169,32 +201,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2000);
   }
 
-  const beli = document.querySelectorAll('.beli');
-
   beli.forEach(function (el) {
     el.addEventListener('click', function () {
-      const form = document.getElementById('pop-up-form');
-      const beliButton = document.getElementById('beli-button');
-
-      pop.classList.add('form');
-      blur.classList.add('form');
-      form.style.display = 'flex';
-
-      window.addEventListener('scroll', function () {
-        var scrollPosition = window.scrollY;
-
-        if (scrollPosition > 700 && window.innerWidth < 900 && window.innerWidth > 600) {
-          scrollToTop(0, 500); // Scroll ke atas dengan durasi 500ms
-        } else if (scrollPosition > 1500 && window.innerWidth < 600) {
-          scrollToTop(0, 500); // Scroll ke atas dengan durasi 500ms
-        }
-      });
-
-      beliButton.addEventListener('click', function () {
-        sendWhatsAppForm();
-      });
+      viewForm();
     });
   });
+
+  contact.onclick = function () {
+    viewForm();
+  };
 });
 
 // function openLayer() {

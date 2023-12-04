@@ -1565,6 +1565,9 @@ footer img {
   font-size: 2rem;
 }
 
+.contact:hover, .beli:hover {
+  cursor:pointer
+}
 
 
 @media screen and (max-width: 1250px) {
