@@ -8,7 +8,7 @@
     -webkit-backdrop-filter: blur(0);
   }
 
-  .blur-content.form{
+  .blur-content.form {
     width: 100%;
     height: 770rem;
     position: absolute;
@@ -257,6 +257,73 @@
 
   .hero-desc p {
     font-size: 0.875rem;
+  }
+
+  .produk-card {
+    position: relative;
+    width: 10rem;
+  }
+
+  .produk-card-img {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    margin-top: -10rem;
+    width: 6rem;
+    height: 12rem;
+  }
+
+  .produk-card-desc h1 {
+    font-size: 1.25rem;
+  }
+
+  .produk-harga,
+  .produk-harga-2 {
+    font-size: 0.625rem;
+  }
+
+  .produk-harga span,
+  .produk-harga-2 span {
+    font-size: 1rem;
+  }
+
+  .produk-spec {
+    padding: 0 0.5rem;
+  }
+
+  .produk-spec-row {
+    display: flex;
+    row-gap: 2rem;
+    justify-content: start;
+    align-items: start;
+    color: #818487;
+  }
+
+  .produk-spec-row img {
+    margin-top: 5px;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 0.6rem;
+  }
+
+  .produk-spec-row p {
+    width: 100%;
+    text-align: start;
+    font-size: 0.625rem;
+    line-height: 20px;
+  }
+
+  .produk-card-desc button {
+    padding: 0.3rem 0.8rem;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  .produk-card-desc button svg{
+    margin-left: 5px;
   }
 
   .fakta-cardslist {
