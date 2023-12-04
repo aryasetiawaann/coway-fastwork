@@ -10,10 +10,14 @@ a {
   cursor: pointer;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 :root {
-  --m-alertnates: 'Montserrat Alternates', 'poppins';
-  --monserate: 'Montserrat', 'poppins';
-  --poppins: 'Poppins', sans-serif;
+  --m-alertnates: "Montserrat Alternates", "poppins";
+  --monserate: "Montserrat", "poppins";
+  --poppins: "Poppins", sans-serif;
   --reguler: 400;
   --medium: 500;
   --light: 300;
@@ -479,22 +483,57 @@ select {
   right: 0;
 }
 
+.hamburger,
+.navbar-layer {
+  display: none;
+}
+
+.navbar-layer {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100dvh;
+  background-color: #024;
+}
+
+.layer-top {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layer-content {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  color: #fff;
+}
+
+.layer-content li {
+  padding: 2rem;
+  margin: 3px 0;
+  font-size: 1.3rem;
+}
+
 .navbar img {
   width: 6rem;
 }
 
-.navbar ul {
+.navbar-content {
   display: flex;
 }
 
-.navbar ul li {
+.navbar-content li {
   list-style: none;
   margin-right: 3rem;
   color: #fff;
   font-size: 1rem;
 }
 
-.navbar ul li:last-child {
+.navbar-content li:last-child {
   margin-right: 0;
 }
 
@@ -615,7 +654,7 @@ select {
 }
 
 .solusi-top {
-  background: url('assets/solusi/background.png');
+  background: url("assets/solusi/background.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -839,7 +878,7 @@ select {
 }
 
 .solusiudara-top {
-  background: url('assets/solusiudara/background.png');
+  background: url("assets/solusiudara/background.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1032,7 +1071,7 @@ h5 {
 }
 
 .why-cardlist {
-  background: url('assets/why/elements.png');
+  background: url("assets/why/elements.png");
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
@@ -1444,7 +1483,7 @@ footer img {
   width: 4.5rem;
   height: 4.5rem;
   position: fixed;
-  z-index: 99999;
+  z-index: 98;
   bottom: 3.125rem;
   right: 3.125rem;
   display: flex;
@@ -1717,7 +1756,6 @@ footer img {
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 1rem;
-    row-gap: 0rem;
   }
 
   .fakta-card {
@@ -2010,6 +2048,75 @@ footer img {
 }
 
 @media screen and (max-width: 550px) {
+  .hero-img {
+    flex-direction: column;
+  }
+
+  .hero-img img {
+    width: 100%;
+  }
+
+  .hero-desc {
+    position: absolute;
+    width: 95%;
+    bottom: 0;
+    margin-bottom: -1rem;
+    z-index: 3;
+    text-align: left;
+  }
+
+  .hero-desc h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-shade {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0.46%, rgba(255, 255, 255, 0.56) 21.37%, #fff 42.73%);
+    height: 24rem;
+    bottom: 0;
+    margin-bottom: -1rem;
+    z-index: 1;
+  }
+
+  .hero-vector {
+    height: 50%;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .solusi-water-list img {
+    width: 6rem;
+    height: 12rem;
+  }
+
+  .solusi-card {
+    width: 100%;
+  }
+
+  .solusiudara-img-list img {
+    width: 11rem;
+    height: 15rem;
+  }
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .navbar img {
+    width: 5rem;
+  }
+
+  .navbar-content {
+    display: none;
+  }
+
+  .layer-content {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
   .combo-content {
     flex-wrap: wrap;
   }
@@ -2054,14 +2161,14 @@ footer img {
     top: 12rem;
     transform: rotate(30deg);
   }
-  
+
   .service-path .path2 {
     position: relative;
     left: -5rem;
     top: 30rem;
     transform: rotate(150deg);
   }
-  
+
   .service-path .path3 {
     position: relative;
     left: 4rem;

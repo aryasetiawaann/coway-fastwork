@@ -162,7 +162,7 @@
       <div class="hero-container">
         <div class="navbar">
           <a href="/"><img src="assets/hero/Coway_logo.png" alt="Logo" /></a>
-          <ul>
+          <ul class="navbar-content">
             <li>
               <a href="#">Beranda</a>
             </li>
@@ -176,6 +176,45 @@
               <a href="#">Tentang Kami</a>
             </li>
           </ul>
+          <a class="hamburger" href="javascript:void(0);" onclick="openLayer()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="none">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.6001 2.99844C1.6001 2.66707 1.86873 2.39844 2.2001 2.39844H13.8001C14.1315 2.39844 14.4001 2.66707 14.4001 2.99844C14.4001 3.32981 14.1315 3.59844 13.8001 3.59844H2.2001C1.86873 3.59844 1.6001 3.32981 1.6001 2.99844ZM1.6001 6.33177C1.6001 6.0004 1.86873 5.73177 2.2001 5.73177H13.8001C14.1315 5.73177 14.4001 6.0004 14.4001 6.33177C14.4001 6.66314 14.1315 6.93177 13.8001 6.93177H2.2001C1.86873 6.93177 1.6001 6.66314 1.6001 6.33177ZM1.6001 9.6651C1.6001 9.33373 1.86873 9.0651 2.2001 9.0651H13.8001C14.1315 9.0651 14.4001 9.33373 14.4001 9.6651C14.4001 9.99648 14.1315 10.2651 13.8001 10.2651H2.2001C1.86873 10.2651 1.6001 9.99648 1.6001 9.6651ZM1.6001 12.9984C1.6001 12.6671 1.86873 12.3984 2.2001 12.3984H13.8001C14.1315 12.3984 14.4001 12.6671 14.4001 12.9984C14.4001 13.3298 14.1315 13.5984 13.8001 13.5984H2.2001C1.86873 13.5984 1.6001 13.3298 1.6001 12.9984Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <div class="navbar-layer" id="layer">
+            <div class="layer-top">
+              <a href="/"><img src="assets/hero/Coway_logo.png" alt="Logo" /></a>
+              <a href="javascript:void(0);" onclick="openLayer()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.46967 5.46967C5.76256 5.17678 6.23744 5.17678 6.53033 5.46967L12 10.9393L17.4697 5.46967C17.7626 5.17678 18.2374 5.17678 18.5303 5.46967C18.8232 5.76256 18.8232 6.23744 18.5303 6.53033L13.0607 12L18.5303 17.4697C18.8232 17.7626 18.8232 18.2374 18.5303 18.5303C18.2374 18.8232 17.7626 18.8232 17.4697 18.5303L12 13.0607L6.53033 18.5303C6.23744 18.8232 5.76256 18.8232 5.46967 18.5303C5.17678 18.2374 5.17678 17.7626 5.46967 17.4697L10.9393 12L5.46967 6.53033C5.17678 6.23744 5.17678 5.76256 5.46967 5.46967Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </div>
+            <ul class="layer-content">
+              <li>
+                <a href="#">Beranda</a>
+              </li>
+              <li>
+                <a href="#">Produk</a>
+              </li>
+              <li>
+                <a href="#">Service</a>
+              </li>
+              <li>
+                <a href="#">Tentang Kami</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="hero-content">
           <div class="hero-img">
@@ -350,18 +389,17 @@
                 <p>26 x 50.5 x 50 cm</p>
               </div>
             </div>
-            
-              <button class="beli">
-                Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
-                    fill="#2A5580"
-                  />
-                </svg>
-              </button>
-            
+
+            <button class="beli">
+              Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
+                  fill="#2A5580"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div class="produk-card">
@@ -403,18 +441,17 @@
                 <p>34 x 51.8 x 52.3 cm</p>
               </div>
             </div>
-            
-              <button class="beli">
-                Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
-                    fill="#2A5580"
-                  />
-                </svg>
-              </button>
-            
+
+            <button class="beli">
+              Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
+                  fill="#2A5580"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div class="produk-card">
@@ -456,18 +493,17 @@
                 <p>34 x 51.8 x 52.3 cm</p>
               </div>
             </div>
-            
-              <button class="beli">
-                Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
-                    fill="#2A5580"
-                  />
-                </svg>
-              </button>
-            
+
+            <button class="beli">
+              Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
+                  fill="#2A5580"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div class="produk-card">
@@ -509,18 +545,17 @@
                 <p>37 x 125.7 x 49 cm</p>
               </div>
             </div>
-            
-              <button class="beli">
-                Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
-                    fill="#2A5580"
-                  />
-                </svg>
-              </button>
-            
+
+            <button class="beli">
+              Beli Produk Ini<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" viewBox="0 0 18 18" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.6977 13.3023C4.96131 13.5659 5.38869 13.5659 5.6523 13.3023L12.15 6.80459V11.925C12.15 12.2978 12.4522 12.6 12.825 12.6C13.1978 12.6 13.5 12.2978 13.5 11.925V5.175C13.5 4.80221 13.1978 4.5 12.825 4.5H6.075C5.70221 4.5 5.4 4.80221 5.4 5.175C5.4 5.54779 5.70221 5.85 6.075 5.85H11.1954L4.6977 12.3477C4.4341 12.6113 4.4341 13.0387 4.6977 13.3023Z"
+                  fill="#2A5580"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -544,8 +579,8 @@
               </div>
               <h4>Menyaring Debu, Partikel, bahkan Virus</h4>
               <p>
-                Air Purifier dari Coway dilengkapi dengan 4 tahap filtrasi HEPA terbaik yang mampu menyaring debu, partikel kecil, bahkan virus sekalipun yang berkeliaran di udara. Ini akan membantu menjaga kamu dan keluarga tetap sehat
-                sepanjang hari
+                Air Purifier dari Coway dilengkapi dengan 4 tahap filtrasi HEPA terbaik yang mampu menyaring debu, partikel kecil, bahkan virus sekalipun yang berkeliaran di udara. Ini akan membantu
+                menjaga kamu dan keluarga tetap sehat sepanjang hari
               </p>
             </div>
             <div class="solusi-card">
@@ -554,8 +589,8 @@
               </div>
               <h4>Perlindungan Terhadap Bulu Hewan Peliharaan</h4>
               <p>
-                Bagi pecinta binatang berbulu, air purifier dari Coway adalah teman terbaik kamu. Produk ini akan membantu menghilangkan buludan alergen dari hewan peliharaan sehingga kamu dapat menikmati kehadiran mereka tanpa khawatir
-                akan masalah kesehatan
+                Bagi pecinta binatang berbulu, air purifier dari Coway adalah teman terbaik kamu. Produk ini akan membantu menghilangkan buludan alergen dari hewan peliharaan sehingga kamu dapat
+                menikmati kehadiran mereka tanpa khawatir akan masalah kesehatan
               </p>
             </div>
             <div class="solusi-card">
@@ -563,14 +598,19 @@
                 <img src="assets/solusiudara/icon3.png" alt="icon3" />
               </div>
               <h4>Menghilangkan Asap Rokok</h4>
-              <p>Bagi perokok pasif yang tinggal bersama dengan perokok aktif, Coway Air Purifier adalah penyelamat. Ini membantu menghilangkan asap rokok dan menjadikan udara di rumah Anda lebih segar</p>
+              <p>
+                Bagi perokok pasif yang tinggal bersama dengan perokok aktif, Coway Air Purifier adalah penyelamat. Ini membantu menghilangkan asap rokok dan menjadikan udara di rumah Anda lebih segar
+              </p>
             </div>
             <div class="solusi-card">
               <div class="solusi-card-img-container">
                 <img src="assets/solusiudara/icon4.png" alt="icon4" />
               </div>
               <h4>Mencegah Penularan Penyakit Melalui Udara</h4>
-              <p>Dalam situasi seperti sekarang ini, memiliki udara bersih dan bebas dari virus sangatlah penting. Untuk itu, Coway Air Purifiermembantu melindungi Anda dari penularan penyakit yang menular melalui udara</p>
+              <p>
+                Dalam situasi seperti sekarang ini, memiliki udara bersih dan bebas dari virus sangatlah penting. Untuk itu, Coway Air Purifiermembantu melindungi Anda dari penularan penyakit yang
+                menular melalui udara
+              </p>
             </div>
             <div class="solusi-card">
               <div class="solusi-card-img-container">
@@ -814,7 +854,7 @@
         <div class="combo-head">
           <p>LEBIH BANYAK. LEBIH HEMAT</p>
           <h3>Beli Produk Purifier Terbaik dengan Paket WOW Combo</h3>
-          <hr>
+          <hr />
         </div>
         <div class="combo-content">
           <div class="combo-card">
@@ -888,10 +928,10 @@
       <div class="service-container">
         <div class="service-head">
           <h3>Proses Heart Service untuk Water Purifier</h3>
-          <hr>
+          <hr />
           <p>
-            Layanan premium pemeliharaan dengan kualitas terbaik khusus mitra coway setiap 2 bulan sekali. Dengan layanan ini, Hi-Care kami yang inovatif akan membantu mensterilkan produk Coway Anda agar terbebas dari bakteri dan
-            mikroorganisme. Alhasil, kebersihan dan higienitas air yang Anda minum pun dapat terjamin.
+            Layanan premium pemeliharaan dengan kualitas terbaik khusus mitra coway setiap 2 bulan sekali. Dengan layanan ini, Hi-Care kami yang inovatif akan membantu mensterilkan produk Coway Anda
+            agar terbebas dari bakteri dan mikroorganisme. Alhasil, kebersihan dan higienitas air yang Anda minum pun dapat terjamin.
           </p>
         </div>
         <div>
@@ -976,9 +1016,9 @@
             </div>
             <h3>Water Purifier dengan Dispenser? Apakah sama?</h3>
             <p>
-              BEDA! Water Purifier tidak memerlukan air galon, melainkan menyaring air langsung dari sumber air. Water purifier menggunakan berbagai proses penyaringan yang canggih, termasuk penyaringan mekanis, karbon aktif, UV
-              (Ultraviolet), atau teknologi lainnya. Proses ini dirancang untuk menghilangkan kontaminan dan menjaga kualitas air. Water purifier berfokus pada peningkatan kualitas air. Air yang dihasilkan oleh water purifier cenderung
-              lebih bersih dan bebas dari kontaminan berbahaya.
+              BEDA! Water Purifier tidak memerlukan air galon, melainkan menyaring air langsung dari sumber air. Water purifier menggunakan berbagai proses penyaringan yang canggih, termasuk
+              penyaringan mekanis, karbon aktif, UV (Ultraviolet), atau teknologi lainnya. Proses ini dirancang untuk menghilangkan kontaminan dan menjaga kualitas air. Water purifier berfokus pada
+              peningkatan kualitas air. Air yang dihasilkan oleh water purifier cenderung lebih bersih dan bebas dari kontaminan berbahaya.
             </p>
           </div>
           <div class="faq-card">
@@ -987,8 +1027,9 @@
             </div>
             <h3>Apa bedanya produk Coway dengan produk water purifier lainnya?</h3>
             <p>
-              Produk-produk Coway dibuat di pabrik Coway Korea, berkualitas premium dan telah teruji serta tersertifikasi di seluruh dunia. Merupakan produk no.1 di Korea. Bukan hanya pembuatannya saja yang hebat, tapi Water Purifier Coway
-              juga menggunakan 4-5 tahap sistem Filter Reverse Osmosis, menyaring partikel hingga 0,0005 micrometer, telah mendapatkan sertifikat ANSI dan WQA sehingga kualitasnya terjamin.
+              Produk-produk Coway dibuat di pabrik Coway Korea, berkualitas premium dan telah teruji serta tersertifikasi di seluruh dunia. Merupakan produk no.1 di Korea. Bukan hanya pembuatannya
+              saja yang hebat, tapi Water Purifier Coway juga menggunakan 4-5 tahap sistem Filter Reverse Osmosis, menyaring partikel hingga 0,0005 micrometer, telah mendapatkan sertifikat ANSI dan
+              WQA sehingga kualitasnya terjamin.
             </p>
           </div>
         </div>
