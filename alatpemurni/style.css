@@ -44,7 +44,7 @@ img {
   }
 }
 
-.blur-content.form{
+.blur-content.form {
   display: flex !important;
   width: 100%;
   height: 770rem;
@@ -331,26 +331,26 @@ img {
 }
 
 .blur-content.form {
-    width: 100%;
-    height: 770rem;
-    position: absolute;
-    z-index: 97;
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px);
-  }
+  width: 100%;
+  height: 770rem;
+  position: absolute;
+  z-index: 97;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px);
+}
 
-  .bg-pop-up.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    position: absolute;
-    z-index: 99;
-  }
+.bg-pop-up.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  position: absolute;
+  z-index: 99;
+}
 
 .pop-up-form {
   position: absolute;
@@ -1121,6 +1121,10 @@ h5 {
   width: 100%;
   background-color: #ebf9fa;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .why-container h3 {
@@ -1373,7 +1377,7 @@ h5 {
 
 .service-path {
   position: absolute;
-  z-index: 999;
+  z-index: 9;
 }
 
 .service-path .path1 {
@@ -1565,133 +1569,10 @@ footer img {
   font-size: 2rem;
 }
 
-.contact:hover, .beli:hover {
-  cursor:pointer
+.contact:hover,
+.beli:hover {
+  cursor: pointer;
 }
-
-
-@media screen and (max-width: 1250px) {
-  .footer-content h3 {
-    font-size: 1.6rem;
-  }
-
-  .footer-content p {
-    margin-top: 0.8rem;
-  }
-
-  .company {
-    padding-top: 8rem;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .footer-content h3 {
-    font-size: 1.4rem;
-  }
-
-  .footer-content p {
-    margin-top: 0.5rem;
-  }
-
-  .company {
-    padding-top: 5rem;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .reparation-left img {
-    width: 24rem;
-  }
-
-  .reparation-right p {
-    font-size: 0.9rem;
-  }
-
-  .service-head p {
-    font-size: 0.9rem;
-  }
-
-  .service-content {
-    margin-top: 3rem;
-  }
-
-  .card-content p {
-    font-size: 0.8rem;
-  }
-
-  .service-card img {
-    width: 11.25rem;
-  }
-
-  .service-card {
-    width: 11.25rem;
-  }
-
-  .service-path .path1 {
-    left: 12.5rem;
-    top: 7.5rem;
-  }
-
-  .service-path .path2 {
-    left: 20rem;
-    top: 12rem;
-  }
-
-  .service-path .path3 {
-    left: 28.5rem;
-    top: 7.5rem;
-  }
-
-  .footer-content h3 {
-    font-size: 1.4rem;
-  }
-
-  .footer-content p {
-    margin-top: 0.5rem;
-  }
-
-  .company {
-    padding-top: 5rem;
-  }
-
-  .faq-container {
-    margin-top: 5rem;
-  }
-
-  .faq-head p {
-    font-size: 0.75rem;
-  }
-
-  .faq-head h3 {
-    font-size: 2rem;
-  }
-
-  .faq-card {
-    width: 40rem;
-    padding: 2rem 3rem 3rem 5rem;
-  }
-
-  .faq-card h3 {
-    font-size: 1.3rem;
-  }
-
-  .faq-card p {
-    font-size: 0.9rem;
-  }
-
-  .combo-card img {
-    width: 13.438rem;
-  }
-
-  .combo-card p {
-    font-size: 1rem;
-  }
-
-  .combo-card h3 {
-    font-size: 1.6rem;
-  }
-}
-
 
 @media screen and (max-width: 1800px) {
   .blur-content {
@@ -2137,6 +2018,128 @@ footer img {
   }
 }
 
+@media screen and (max-width: 1250px) {
+  .footer-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .footer-content p {
+    margin-top: 0.8rem;
+  }
+
+  .company {
+    padding-top: 8rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .footer-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .footer-content p {
+    margin-top: 0.5rem;
+  }
+
+  .company {
+    padding-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .reparation-left img {
+    width: 24rem;
+  }
+
+  .reparation-right p {
+    font-size: 0.9rem;
+  }
+
+  .service-head p {
+    font-size: 0.9rem;
+  }
+
+  .service-content {
+    margin-top: 3rem;
+  }
+
+  .card-content p {
+    font-size: 0.8rem;
+  }
+
+  .service-card img {
+    width: 11.25rem;
+  }
+
+  .service-card {
+    width: 11.25rem;
+  }
+
+  .service-path .path1 {
+    left: 12.5rem;
+    top: 7.5rem;
+  }
+
+  .service-path .path2 {
+    left: 20rem;
+    top: 12rem;
+  }
+
+  .service-path .path3 {
+    left: 28.5rem;
+    top: 7.5rem;
+  }
+
+  .footer-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .footer-content p {
+    margin-top: 0.5rem;
+  }
+
+  .company {
+    padding-top: 5rem;
+  }
+
+  .faq-container {
+    margin-top: 5rem;
+  }
+
+  .faq-head p {
+    font-size: 0.75rem;
+  }
+
+  .faq-head h3 {
+    font-size: 2rem;
+  }
+
+  .faq-card {
+    width: 40rem;
+    padding: 2rem 3rem 3rem 5rem;
+  }
+
+  .faq-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .faq-card p {
+    font-size: 0.9rem;
+  }
+
+  .combo-card img {
+    width: 13.438rem;
+  }
+
+  .combo-card p {
+    font-size: 1rem;
+  }
+
+  .combo-card h3 {
+    font-size: 1.6rem;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .blur-content {
     width: 100%;
@@ -2461,7 +2464,7 @@ footer img {
     align-items: center;
   }
 
-  .produk-card-desc button svg{
+  .produk-card-desc button svg {
     margin-left: 5px;
   }
 
@@ -2763,12 +2766,20 @@ footer img {
 
 @media screen and (max-width: 550px) {
   .pop-up {
-    width: 380px;
+    width: 21rem;
     height: 620px;
-    top: 100px;
+    top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .pop-up .input {
+    padding-left: 10px !important;
+  }
+
+  .pop-up input {
+    width: 90% !important;
   }
 
   .blur-content.form {
@@ -2794,9 +2805,9 @@ footer img {
   }
 
   .pop-up-form {
-    top: 0px;
-    width: 25rem !important;
-    height: 105rem !important;
+    top: 50px;
+    width: 21rem !important;
+    height:102rem !important;
     /* background-color: #555; */
     overflow-y: unset; /* Add this line */
     overflow-x: unset;
@@ -2812,29 +2823,29 @@ footer img {
 
   .pop-up-form .ornament2 {
     position: relative;
-    top: 170px !important;
+    top: 140px !important;
     right: -100px !important;
     z-index: 999;
-    width: 10rem !important;
+    width: 7rem !important;
   }
 
   .pop-up-form .ornament1 {
-    width: 4.5rem;
+    width: 3rem;
     left: 30px;
-    top: 190px;
+    top: 150px;
   }
 
   .form-ornament .head-bg {
     position: relative;
     top: 0px;
-    width: 25rem !important;
+    width: 21rem !important;
     border-top-right-radius: 24px;
   }
 
   .form-head {
     text-align: center;
     width: 87%;
-    margin-top: -120px;
+    margin-top: -60px;
     margin-bottom: 110px;
     z-index: 99;
   }
@@ -2932,6 +2943,7 @@ footer img {
 
   .form-body .bottom-right {
     width: 100% !important;
+    gap: 1rem;
   }
 
   .form-body button {
@@ -3028,9 +3040,9 @@ footer img {
   }
 
   .pop-up-success {
-    width: 390px;
+    width: 21rem;
     height: 480px;
-    top: 170px;
+    top: 140px;
     left: 4%;
   }
 
@@ -3066,8 +3078,8 @@ footer img {
   }
 
   .success-image {
-    top: -110px;
-    left: 25%;
+    top: -90px;
+    left: 23%;
     width: 13rem;
   }
 
@@ -3140,6 +3152,18 @@ footer img {
     display: block;
   }
 
+  .why-head {
+    width: 80%;
+  }
+
+  .why-cardlist {
+    gap: 2rem;
+  }
+
+  .why-card {
+    width: 16rem;
+  }
+
   .combo-content {
     flex-wrap: wrap;
   }
@@ -3156,13 +3180,13 @@ footer img {
     font-size: 1.125rem;
   }
 
+  .faq-content {
+    gap: 4rem;
+  }
+
   .service-content {
     flex-direction: column;
     gap: 3rem;
-  }
-
-  .faq-content {
-    gap: 4rem;
   }
 
   .service-content .down {
@@ -3172,6 +3196,10 @@ footer img {
 
   .service-card {
     width: 15rem;
+  }
+
+  .service-head {
+    text-align: left;
   }
 
   .service-card img {
@@ -3200,7 +3228,7 @@ footer img {
   }
 
   .faq-card {
-    width: 18rem;
+    width: 16rem;
     padding: 5rem 2rem 2rem 2rem;
   }
 
@@ -3265,7 +3293,7 @@ footer img {
   }
 
   .company {
-    padding-top: 17rem;
+    padding-top: 14rem;
   }
 
   .reparation-content {

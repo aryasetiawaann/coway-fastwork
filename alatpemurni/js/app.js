@@ -13,7 +13,7 @@ function sendWhatsAppVoucher() {
     }
 
     var cs_whatsapp = [
-      '6281387954772', //<- masukan nomor tanpa 0 / +62 & baris nomor terakhir tanpa koma
+      '6281223202218', //<- masukan nomor tanpa 0 / +62 & baris nomor terakhir tanpa koma
     ];
 
     var rkey = Math.floor(Math.random() * cs_whatsapp.length);
@@ -70,7 +70,7 @@ function sendWhatsAppForm() {
     }
 
     var cs_whatsapp = [
-      '6281387954772', //<- masukan nomor tanpa 0 / +62 & baris nomor terakhir tanpa koma
+      '6281223202218', //<- masukan nomor tanpa 0 / +62 & baris nomor terakhir tanpa koma
     ];
 
     var rkey = Math.floor(Math.random() * cs_whatsapp.length);
@@ -105,6 +105,8 @@ function sendWhatsAppForm() {
     pop.style.display = 'none';
   } else {
     alert('Lengkapi Form Terlebih Dahulu');
+
+    viewForm();
   }
 }
 
@@ -133,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const beliButton = document.getElementById('beli-button');
     const contact = document.getElementById('contact');
 
-    scrollToTop(0, 500);
+    scrollToTop(0, 2000);
     pop.classList.add('form');
     blur.classList.add('form');
     form.style.display = 'flex';
@@ -142,19 +144,26 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
       var scrollPosition = window.scrollY;
 
-      if (scrollPosition > 900 && window.innerWidth >= 1800) {
-        scrollToTop(0, 500); // Scroll ke atas dengan durasi 500ms
-      } else if (scrollPosition > 1000 && window.innerWidth >= 1200 && window.innerWidth < 1800) {
-        scrollToTop(0, 500); // Scroll ke atas dengan durasi 500ms
-      } else if (scrollPosition > 600 && window.innerWidth <= 900 && window.innerWidth > 600) {
-        scrollToTop(0, 500); // Scroll ke atas dengan durasi 500ms
-      } else if (scrollPosition > 1500 && window.innerWidth < 600) {
-        scrollToTop(0, 500); // Scroll ke atas dengan durasi 500ms
+      if (scrollPosition > 1100 && window.innerWidth >= 1800) {
+        scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
+      } else if (scrollPosition > 1200 && window.innerWidth >= 1200 && window.innerWidth < 1800) {
+        scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
+      } else if (scrollPosition > 800 && window.innerWidth <= 900 && window.innerWidth > 600) {
+        scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
+      } else if (scrollPosition > 1800 && window.innerWidth < 600) {
+        scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
       }
     });
 
     beliButton.addEventListener('click', function () {
       sendWhatsAppForm();
+
+      pop.classList.remove('form');
+      blur.classList.remove('form');
+      form.style.display = 'none';
+      contact.style.display = 'flex';
+
+      window.location.reload();
     });
   }
 
@@ -174,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
           var scrollPosition = window.scrollY;
 
           if (scrollPosition > 600) {
-            scrollToTop(160, 500);
+            scrollToTop(0, 2000);
           }
         });
       }
@@ -182,23 +191,21 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if (!sessionStorage.getItem('start')) {
-    setTimeout(function () {
-      pop.style.display = 'flex';
-      popVoucher.style.display = 'flex';
-      blur.style.display = 'flex';
+    pop.style.display = 'flex';
+    popVoucher.style.display = 'flex';
+    blur.style.display = 'flex';
 
-      if (window.innerWidth < 1800 && window.innerWidth > 900) {
-        if (isButtonClick == 0) {
-          window.addEventListener('scroll', function () {
-            var scrollPosition = window.scrollY;
+    if (window.innerWidth < 1800 && window.innerWidth > 900) {
+      if (isButtonClick == 0) {
+        window.addEventListener('scroll', function () {
+          var scrollPosition = window.scrollY;
 
-            if (scrollPosition > 700) {
-              scrollToTop(160, 500); // Scroll ke atas dengan durasi 500ms
-            }
-          });
-        }
+          if (scrollPosition > 700) {
+            scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
+          }
+        });
       }
-    }, 2000);
+    }
   }
 
   beli.forEach(function (el) {
@@ -211,19 +218,3 @@ document.addEventListener('DOMContentLoaded', function () {
     viewForm();
   };
 });
-
-// function openLayer() {
-//   // var layer = document.getElementById('bg-pop-up');
-//   const form = document.getElementById('pop-up-form');
-
-//   // if (layer.style.display === 'block') {
-//   //   layer.style.display = 'none';
-//   //   form.style.display = 'none';
-//   // } else {
-//   //   layer.style.display = 'block';
-//   //   form.style.display = 'flex';
-//   // }
-
-//   layer.style.display = 'flex';
-//   form.style.display = 'flex';
-// }
