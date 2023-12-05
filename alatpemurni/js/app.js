@@ -1,3 +1,20 @@
+function cekPenggunaBaru() {
+  var penggunaBaru = document.cookie.indexOf('pengguna_baru=yes') === -1;
+
+  if (penggunaBaru) {
+    var now = new Date();
+    var expire = new Date();
+    expire.setFullYear(now.getFullYear() + 10);
+
+    document.cookie = 'pengguna_baru=yes; expires=' + expire.toUTCString();
+
+    viewVoucher();
+    console.log('Selamat datang!');
+  } else {
+    console.log('Selamat datang kembali!');
+  }
+}
+
 function sendWhatsAppVoucher() {
   const voucher = document.getElementById('pop-up');
   const success = document.getElementById('pop-up-success');
@@ -41,6 +58,8 @@ function sendWhatsAppVoucher() {
     console.log('mamang');
     pop.style.display = 'none';
     sessionStorage.setItem('start', 'start');
+
+    cekPenggunaBaru();
   } else {
     alert('Lengkapi Form Terlebih Dahulu');
   }
@@ -122,6 +141,31 @@ function scrollToTop(to, duration) {
   }, 10);
 }
 
+let isButtonClick = 0;
+
+function viewVoucher() {
+  const pop = document.getElementById('bg-pop-up');
+  const popVoucher = document.getElementById('pop-up');
+  const blur = document.getElementById('blur');
+
+  pop.style.display = 'flex';
+  popVoucher.style.display = 'flex';
+  blur.style.display = 'flex';
+
+  // BIAR SCROLL NAIK KE ATAS LAGI KETIKA LAPTOP VIEW
+  if (window.innerWidth < 1800 && window.innerWidth > 900) {
+    if (isButtonClick == 0) {
+      window.addEventListener('scroll', function () {
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition > 700) {
+          scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
+        }
+      });
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const voucherButton = document.getElementById('voucher');
   const pop = document.getElementById('bg-pop-up');
@@ -141,6 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
     form.style.display = 'flex';
     contact.style.display = 'none';
 
+    //LIMIT SCROLL
     window.addEventListener('scroll', function () {
       var scrollPosition = window.scrollY;
 
@@ -155,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
+    // EVENT KLIK BUTTON KIRIM (POP UP FORM BUTTON)
     beliButton.addEventListener('click', function () {
       sendWhatsAppForm();
 
@@ -167,14 +213,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  let isButtonClick = 0;
-
+  // EVENT KLIK BUTTON KIRIM VOUCHER (POP UP VOUCHER BUTTON)
   if (voucherButton) {
     voucherButton.addEventListener('click', function () {
       sendWhatsAppVoucher();
 
       console.log('mamang');
       pop.style.display = 'flex';
+      popVoucher.style.display = 'none';
       // success.style.display = 'flex';
 
       if (window.innerWidth < 1800 && window.innerWidth > 870) {
@@ -190,30 +236,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // EVENT WEB PERTAMA KALI DILOAD
   if (!sessionStorage.getItem('start')) {
-    pop.style.display = 'flex';
-    popVoucher.style.display = 'flex';
-    blur.style.display = 'flex';
-
-    if (window.innerWidth < 1800 && window.innerWidth > 900) {
-      if (isButtonClick == 0) {
-        window.addEventListener('scroll', function () {
-          var scrollPosition = window.scrollY;
-
-          if (scrollPosition > 700) {
-            scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
-          }
-        });
-      }
-    }
+    cekPenggunaBaru();
   }
 
+  // EVENT KLIK BUTTON BELI DI PAGE
   beli.forEach(function (el) {
     el.addEventListener('click', function () {
       viewForm();
     });
   });
 
+  //EVENT KLIK CONTACT
   contact.onclick = function () {
     viewForm();
   };
