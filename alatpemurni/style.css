@@ -1735,6 +1735,7 @@ footer img {
     border: none;
     margin: 48px auto 48px auto;
     position: relative;
+    cursor: pointer;
   }
 
   .form-body span {
