@@ -315,6 +315,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     } else {
       document.getElementById('konsultan-container').style.display = 'none';  
+      formElement.classList.remove('konsultan');
     }
   });
 });
