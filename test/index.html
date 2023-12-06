@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </head>
+    <body>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject"/>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="button" value="Send Email" />
+    </body>
+
+    <script>
+        const button = document.querySelector('input[type="button"]');
+
+        button.onclick = () => {
+            let subject = document.getElementById('subject').value;
+            console.log(subject);
+            sendEmail(subject);
+        };
+
+        function sendEmail(subject) {
+            if (subject) {
+                Email.send({
+                    Host: 'smtp.elasticemail.com',
+                    Username: 'kafaw28571@lanxi8.com',
+                    Password: '449F2C7999F1D6FC7FD560DE8BC4B360BD1F',
+                    To: 'kafaw28571@lanxi8.com',
+                    From: 'kafaw28571@lanxi8.com',
+                    Subject: subject,
+                    Body: 'And this is the body',
+                }).then((message) => alert(message));
+            }
+        }
+    </script>
+</html>

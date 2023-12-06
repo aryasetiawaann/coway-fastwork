@@ -745,8 +745,16 @@ select {
 }
 
 .solusi-water-list img {
-  width: 14rem;
-  height: 28rem;
+  width: 11.5rem;
+  height: 19rem;
+}
+
+#solusi-air4 {
+  width: 9rem;
+}
+
+#air-4 {
+  width: 8rem;
 }
 
 .solusi-bottom {
@@ -836,8 +844,8 @@ select {
   left: 0;
   margin: 0 auto;
   margin-top: -10rem;
-  width: 10rem;
-  height: 20rem;
+  width: 9.5rem;
+  height: 15.5rem;
 }
 
 .produk-card-desc {
@@ -967,9 +975,14 @@ select {
   justify-content: center;
 }
 
-.solusiudara-img-list img {
-  width: 20rem;
+.solusiudara-img-list .img-1 {
+  width: 25rem;
   height: 26rem;
+}
+
+.solusiudara-img-list .img-2 {
+  width: 21rem;
+  height: 28rem;
 }
 
 /* -------------- PRODUKUDARA SECTION --------------  */
@@ -997,14 +1010,25 @@ select {
   width: 5rem;
 }
 
-.produkudara-img {
+.produkudara-img1 {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10px;
   right: 0;
   margin: 0 auto;
   width: 20rem;
-  height: 25rem;
+  height: 20rem;
+  margin-top: -12rem;
+}
+
+.produkudara-img2 {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 0;
+  margin: 0 auto;
+  width: 15rem;
+  height: 20rem;
   margin-top: -12rem;
 }
 
@@ -2413,8 +2437,12 @@ footer img {
     left: 0;
     margin: 0 auto;
     margin-top: -10rem;
-    width: 6rem;
-    height: 12rem;
+    width: 6.3rem;
+    height: 10rem;
+  }
+
+  #air-4 {
+    width: 5rem;
   }
 
   .produk-card-desc h1 {
@@ -2506,11 +2534,21 @@ footer img {
 
   .solusi-water-list img {
     width: 8rem;
-    height: 16rem;
+    height: 13rem;
+  }
+
+  #solusi-air4 {
+    width: 6.5rem;
   }
 
   .solusiudara-top {
     height: 27.5rem;
+  }
+
+  .solusiudara-img-list {
+    display: flex;
+    align-items: end;
+    justify-content: center;
   }
 
   .solusiudara-img-list img {
@@ -2807,7 +2845,7 @@ footer img {
   .pop-up-form {
     top: 50px;
     width: 21rem !important;
-    height:102rem !important;
+    height: 102rem !important;
     /* background-color: #555; */
     overflow-y: unset; /* Add this line */
     overflow-x: unset;
@@ -3120,7 +3158,11 @@ footer img {
 
   .solusi-water-list img {
     width: 6rem;
-    height: 12rem;
+    height: 9.5rem;
+  }
+
+  #solusi-air4 {
+    width: 4.5rem;
   }
 
   .solusi-card {
