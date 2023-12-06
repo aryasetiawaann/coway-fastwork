@@ -292,15 +292,15 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   wowCoreButton.onclick = function () {
     viewForm();
-    selectProduct.value = 'Wow Storm Core';
+    selectProduct.value = 'WOW Storm Core';
   };
   wowOmbakButton.onclick = function () {
     viewForm();
-    selectProduct.value = 'Wow Storm Ombak';
+    selectProduct.value = 'WOW Storm Ombak';
   };
   wowNeoButton.onclick = function () {
     viewForm();
-    selectProduct.value = 'Wow Storm Neo';
+    selectProduct.value = 'WOW Storm Neo';
   };
 
   const sumber = document.getElementById('website-form');
