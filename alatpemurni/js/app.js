@@ -21,7 +21,7 @@ function sendWhatsAppVoucher() {
 
     var params = {
       sendername: email,
-      to: 'alatpemurni@gmail.com',
+      to: 'budakit.id@gmail.com',
       subject: email + ' mendapatkan voucher!',
       name: name,
       phone: phone,
@@ -64,13 +64,13 @@ function sendWhatsAppForm() {
   const konsultan = document.getElementById('konsultan-form').value;
   const pertanyaan = document.getElementById('pertanyaan-form').value;
 
-  if (nama && pekerjaan && phone && email && kota && kodePos && domisili && produk && website && konsultan) {
+  if (nama && pekerjaan && phone && email && kota && kodePos && domisili && produk && website) {
     (function () {
       emailjs.init('LFwaN_GV_dJS6er5v');
 
       var params2 = {
         sendername: email,
-        to: 'alatpemurni@gmail.com',
+        to: 'budakit.id@gmail.com',
         subject: 'Mendapatkan Pesan dari ' + email,
         name: nama,
         phone: phone,
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
       } else if (scrollPosition > 1200 && window.innerWidth >= 1200 && window.innerWidth < 1800) {
         scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
-      } else if (scrollPosition > 800 && window.innerWidth <= 900 && window.innerWidth > 600) {
+      } else if (scrollPosition > 800 && window.innerWidth < 1200 && window.innerWidth > 600) {
         scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
       } else if (scrollPosition > 1800 && window.innerWidth < 600) {
         scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
