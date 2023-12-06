@@ -21,7 +21,7 @@ function sendWhatsAppVoucher() {
 
     var params = {
       sendername: email,
-      to: 'budakit.id@gmail.com',
+      to: 'alatpemurni@gmail.com',
       subject: email + ' mendapatkan voucher!',
       name: name,
       phone: phone,
@@ -70,7 +70,7 @@ function sendWhatsAppForm() {
 
       var params2 = {
         sendername: email,
-        to: 'budakit.id@gmail.com',
+        to: 'alatpemurni@gmail.com',
         subject: 'Mendapatkan Pesan dari ' + email,
         name: nama,
         phone: phone,
@@ -86,7 +86,6 @@ function sendWhatsAppForm() {
       };
 
       emailjs.send('service_1ez7pob', 'template_uy8h4gm', params2);
-      alert('Pesan terkirim, terima kasih');
     })();
 
     var url_wa = 'https://web.whatsapp.com/send';
@@ -131,6 +130,7 @@ function sendWhatsAppForm() {
   } else {
     alert('Lengkapi Form Terlebih Dahulu');
 
+    window.location.href = 'https://alatpemurni.com/#form';
     viewForm();
   }
 }
@@ -153,23 +153,25 @@ function viewVoucher() {
   const pop = document.getElementById('bg-pop-up');
   const popVoucher = document.getElementById('pop-up');
   const blur = document.getElementById('blur');
+  const content = document.getElementById('content');
 
   pop.style.display = 'flex';
   popVoucher.style.display = 'flex';
   blur.style.display = 'flex';
+  content.style.display = 'none';
 
   // BIAR SCROLL NAIK KE ATAS LAGI KETIKA LAPTOP VIEW
-  if (window.innerWidth < 1800 && window.innerWidth > 900) {
-    if (isButtonClick == 0) {
-      window.addEventListener('scroll', function () {
-        var scrollPosition = window.scrollY;
+  // if (window.innerWidth < 1800 && window.innerWidth > 900) {
+  //   if (isButtonClick == 0) {
+  //     window.addEventListener('scroll', function () {
+  //       var scrollPosition = window.scrollY;
 
-        if (scrollPosition > 700) {
-          scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
-        }
-      });
-    }
-  }
+  //       if (scrollPosition > 700) {
+  //         scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
+  //       }
+  //     });
+  //   }
+  // }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -184,27 +186,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('pop-up-form');
     const beliButton = document.getElementById('beli-button');
     const contact = document.getElementById('contact');
+    const content = document.getElementById('content');
 
     scrollToTop(0, 2000);
     pop.classList.add('form');
     blur.classList.add('form');
     form.style.display = 'flex';
     contact.style.display = 'none';
+    content.style.display = 'none';
 
     //LIMIT SCROLL
-    window.addEventListener('scroll', function () {
-      var scrollPosition = window.scrollY;
+    // window.addEventListener('scroll', function () {
+    //   var scrollPosition = window.scrollY;
 
-      if (scrollPosition > 1100 && window.innerWidth >= 1800) {
-        scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
-      } else if (scrollPosition > 1200 && window.innerWidth >= 1200 && window.innerWidth < 1800) {
-        scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
-      } else if (scrollPosition > 800 && window.innerWidth < 1200 && window.innerWidth > 600) {
-        scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
-      } else if (scrollPosition > 1800 && window.innerWidth < 600) {
-        scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
-      }
-    });
+    //   if (scrollPosition > 1100 && window.innerWidth >= 1800) {
+    //     scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
+    //   } else if (scrollPosition > 1200 && window.innerWidth >= 1200 && window.innerWidth < 1800) {
+    //     scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
+    //   } else if (scrollPosition > 800 && window.innerWidth < 1200 && window.innerWidth > 600) {
+    //     scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
+    //   } else if (scrollPosition > 1800 && window.innerWidth < 600) {
+    //     scrollToTop(0, 2000); // Scroll ke atas dengan durasi 2000ms
+    //   }
+    // });
 
     // EVENT KLIK BUTTON KIRIM (POP UP FORM BUTTON)
     beliButton.addEventListener('click', function () {
@@ -228,16 +232,16 @@ document.addEventListener('DOMContentLoaded', function () {
       popVoucher.style.display = 'none';
       // success.style.display = 'flex';
 
-      if (window.innerWidth < 1800 && window.innerWidth > 870) {
-        blur.style.display = 'flex';
-        window.addEventListener('scroll', function () {
-          var scrollPosition = window.scrollY;
+      // if (window.innerWidth < 1800 && window.innerWidth > 870) {
+      //   blur.style.display = 'flex';
+      //   window.addEventListener('scroll', function () {
+      //     var scrollPosition = window.scrollY;
 
-          if (scrollPosition > 600) {
-            scrollToTop(0, 2000);
-          }
-        });
-      }
+      //     if (scrollPosition > 600) {
+      //       scrollToTop(0, 2000);
+      //     }
+      //   });
+      // }
     });
   }
 
@@ -252,6 +256,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //EVENT KLIK CONTACT
   contact.onclick = function () {
+    window.location.href = 'https://alatpemurni.com/#form';
+
     viewForm();
   };
 
@@ -267,38 +273,47 @@ document.addEventListener('DOMContentLoaded', function () {
   const selectProduct = document.getElementById('produk-form');
 
   neoButton.onclick = function () {
+    window.location.href = 'https://alatpemurni.com/#form';
     viewForm();
     selectProduct.value = 'Neo Plus';
   };
   villaemButton.onclick = function () {
+    window.location.href = 'https://alatpemurni.com/#form';
     viewForm();
     selectProduct.value = 'Villaem II';
   };
   ombakButton.onclick = function () {
+    window.location.href = 'https://alatpemurni.com/#form';
     viewForm();
     selectProduct.value = 'Ombak';
   };
   coreButton.onclick = function () {
+    window.location.href = 'https://alatpemurni.com/#form';
     viewForm();
     selectProduct.value = 'Core';
   };
   stormButton.onclick = function () {
+    window.location.href = 'https://alatpemurni.com/#form';
     viewForm();
     selectProduct.value = 'Storm';
   };
   tornadoButton.onclick = function () {
+    window.location.href = 'https://alatpemurni.com/#form';
     viewForm();
     selectProduct.value = 'Tornado';
   };
   wowCoreButton.onclick = function () {
+    window.location.href = 'https://alatpemurni.com/#form';
     viewForm();
     selectProduct.value = 'WOW Storm Core';
   };
   wowOmbakButton.onclick = function () {
+    window.location.href = 'https://alatpemurni.com/#form';
     viewForm();
     selectProduct.value = 'WOW Storm Ombak';
   };
   wowNeoButton.onclick = function () {
+    window.location.href = 'https://alatpemurni.com/#form';
     viewForm();
     selectProduct.value = 'WOW Storm Neo';
   };
@@ -314,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function () {
         formElement.classList.add('konsultan');
       }
     } else {
-      document.getElementById('konsultan-container').style.display = 'none';  
+      document.getElementById('konsultan-container').style.display = 'none';
       formElement.classList.remove('konsultan');
     }
   });
@@ -328,3 +343,24 @@ function openLayer() {
     layer.style.display = 'block';
   }
 }
+
+window.addEventListener('popstate', function (event) {
+  const targetURL = 'https://alatpemurni.com/';
+  const form = document.getElementById('pop-up-form');
+  const contact = document.getElementById('contact');
+  const pop = document.getElementById('bg-pop-up');
+  const blur = document.getElementById('blur');
+  const content = document.getElementById('content');
+
+  // Memeriksa apakah URL saat ini sama dengan targetURL
+  if (window.location.href === targetURL) {
+    // Merefresh halaman jika URL-nya sama
+    // window.location.reload();
+    console.log('mamang');
+    pop.classList.remove('form');
+    blur.classList.remove('form');
+    form.style.display = 'none';
+    contact.style.display = 'flex';
+    content.style.display = 'block';
+  }
+});

@@ -79,7 +79,7 @@ img {
   font-size: 1.3rem;
 }
 
-.blur-content.form {
+/* .blur-content.form {
   display: flex !important;
   width: 100%;
   height: 770rem;
@@ -87,6 +87,21 @@ img {
   z-index: 97;
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px);
+} */
+
+.bg-pop-up {
+  position: absolute;
+  z-index: 98;
+  height: 60rem !important;
+  background-image: url('bg-voucher.png');
+  background-size: cover;
+}
+
+.bg-pop-up.form {
+  position: absolute;
+  z-index: 98;
+  height: 100rem !important;
+  background-image: url('bg-form.png');
 }
 
 .bg-pop-up.form {
@@ -1650,18 +1665,33 @@ footer img {
 @media screen and (max-width: 1800px) {
   .blur-content {
     width: 100%;
-    height: 770rem;
+    height: 100rem !important;
     position: absolute;
     z-index: 97;
-    backdrop-filter: blur(80px);
+    backdrop-filter: blur(80px) ;
     -webkit-backdrop-filter: blur(80px);
   }
 
-  .bg-pop-up {
+  /* .bg-pop-up {
     position: absolute;
     z-index: 98;
     backdrop-filter: unset;
     -webkit-backdrop-filter: unset;
+  } */
+
+  .bg-pop-up {
+    position: absolute;
+    z-index: 98;
+    height: 60rem !important;
+    background-image: url('bg-voucher.png');
+    background-size: cover;
+  }
+
+  .bg-pop-up.form {
+    position: absolute;
+    z-index: 98;
+    height: 100rem !important;
+    background-image: url('bg-form.png');
   }
 
   .pop-up-form {
@@ -1823,30 +1853,6 @@ footer img {
     color: #e74c3c;
   }
 
-  .pop-up-form::-webkit-scrollbar {
-    width: 8px;
-    height: 50%;
-    z-index: 9999; /* Tambahkan z-index di sini */
-    display: none;
-  }
-
-  .pop-up-form::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 20px;
-    height: 50%;
-    display: none;
-  }
-
-  .pop-up-form::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-    height: 50%; /* Set the height to 50% */
-  }
-
-  .pop-up-form::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
-
   .pop-up {
     position: absolute;
     width: 690px;
@@ -1888,15 +1894,12 @@ footer img {
 
   .pop-up-image {
     width: 13rem;
+    top: -85px;
+    left: 36%;
   }
 
   .pop-up-head {
     margin-top: 50px;
-  }
-
-  .pop-up-image {
-    top: -85px;
-    left: 35%;
   }
 
   .pop-up .ornament3 {
@@ -2101,6 +2104,21 @@ footer img {
 }
 
 @media screen and (max-width: 1250px) {
+  .bg-pop-up {
+    position: absolute;
+    z-index: 98;
+    height: 60rem !important;
+    background-image: url('bg-voucher.png');
+    background-size: cover;
+  }
+
+  .bg-pop-up.form {
+    position: absolute;
+    z-index: 98;
+    height: 120rem !important;
+    background-image: url('bg-form.png');
+  }
+
   .footer-content h3 {
     font-size: 1.6rem;
   }
@@ -2354,6 +2372,8 @@ footer img {
   .company {
     padding-top: 5rem;
   }
+
+
 }
 
 @media screen and (max-width: 1050px) {
@@ -2475,7 +2495,9 @@ footer img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100vh !important;
+    background-image: url('bg-long.png');
+    background-size: cover;
     backdrop-filter: blur(80px);
     -webkit-backdrop-filter: blur(80px);
     position: fixed;
@@ -2488,7 +2510,7 @@ footer img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 90rem !important;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     position: absolute;
@@ -3106,7 +3128,7 @@ footer img {
 @media screen and (max-width: 550px) {
   .pop-up {
     width: 21rem;
-    height: 620px;
+    height: 34rem;
     top: 80px;
     display: flex;
     justify-content: center;
@@ -3130,13 +3152,28 @@ footer img {
     -webkit-backdrop-filter: blur(80px);
   }
 
+  .bg-pop-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh !important;
+    background-image: url('bg-voucher-mobile.png');
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
+    position: absolute;
+    z-index: 99;
+    overflow-y: hidden;
+  }
+
   .bg-pop-up.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 112rem !important;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     position: absolute;
@@ -3194,7 +3231,7 @@ footer img {
     width: 87%;
     margin-top: -60px;
     margin-bottom: 110px;
-    z-index: 99;
+    z-index: 999;
   }
 
   .form-head img {
@@ -3321,16 +3358,17 @@ footer img {
   }
 
   .pop-up-head {
-    margin-top: 40px;
+    margin-top: 10px;
     width: 85%;
+    position: relative;
   }
 
   .pop-up-head h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .pop-up-head h3 {
-    font-size: 20px;
+    font-size:20px;
   }
 
   .pop-up-head p {
@@ -3340,7 +3378,7 @@ footer img {
 
   .pop-up-body {
     width: 80%;
-    margin-top: 43px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
   }
@@ -3362,7 +3400,7 @@ footer img {
   .pop-up button {
     width: 305px;
     height: 44px;
-    margin: 25px auto 0 auto;
+    margin: 10px auto 0 auto;
   }
 
   .pop-up-ornament {
@@ -3374,8 +3412,8 @@ footer img {
 
   .pop-up-image {
     top: -70px;
-    left: 30%;
-    width: 10rem;
+    left: 33%;
+    width: 8rem;
   }
 
   .pop-up .ornament1 {
