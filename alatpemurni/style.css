@@ -515,6 +515,20 @@ select {
   margin-top: 35px;
 }
 
+.bottom-right .input {
+  margin-top: 3px;
+}
+
+.form-body .bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+#konsultan-container {
+  margin-top: 35px;
+}
+
 .form-body .bottom-left {
   width: 48%;
 }
@@ -1744,6 +1758,20 @@ footer img {
     margin-top: 35px;
   }
 
+  .bottom-right .input {
+    margin-top: 0px;
+  }
+
+  .form-body .bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+  }
+
+  #konsultan-container {
+    margin-top: 35px;
+  }
+
   .form-body input,
   select {
     width: 100%;
@@ -1765,12 +1793,6 @@ footer img {
     padding-left: 20px;
     padding-top: 10px;
     resize: vertical;
-  }
-
-  .form-body .bottom {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 35px;
   }
 
   .form-body .bottom-left {
@@ -2311,6 +2333,20 @@ footer img {
     z-index: 99;
   }
 
+  .bottom-right .input {
+    margin-top: 3px !important;
+  }
+  
+  .form-body .bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+  }
+  
+  #konsultan-container {
+    margin-top: 35px !important;
+  }
+
   .form-body input {
     display: flex;
   }
@@ -2362,12 +2398,6 @@ footer img {
     padding-left: 20px;
     padding-top: 10px;
     resize: vertical;
-  }
-
-  .form-body .bottom {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 35px;
   }
 
   .form-body .bottom-left {
@@ -2888,9 +2918,17 @@ footer img {
   .pop-up-form {
     top: 50px;
     width: 21rem !important;
+    height: 96rem !important;
+    overflow-y: unset;
+    overflow-x: unset;
+    border-radius: 24px;
+  }
+
+  .pop-up-form.konsultan {
+    top: 50px;
+    width: 21rem !important;
     height: 102rem !important;
-    /* background-color: #555; */
-    overflow-y: unset; /* Add this line */
+    overflow-y: unset;
     overflow-x: unset;
     border-radius: 24px;
   }
@@ -3016,6 +3054,14 @@ footer img {
     display: flex;
     flex-direction: column;
     margin-top: 35px;
+  }
+
+  #konsultan-container {
+    margin-top: 35px !important;
+  }
+
+  .bottom-right .input {
+    margin-top: 35px !important;
   }
 
   .form-body .bottom-left {

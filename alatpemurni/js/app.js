@@ -244,16 +244,79 @@ document.addEventListener('DOMContentLoaded', function () {
   cekPenggunaBaru();
 
   // EVENT KLIK BUTTON BELI DI PAGE
-  beli.forEach(function (el) {
-    el.addEventListener('click', function () {
-      viewForm();
-    });
-  });
+  // beli.forEach(function (el) {
+  //   el.addEventListener('click', function () {
+  //     viewForm();
+  //   });
+  // });
 
   //EVENT KLIK CONTACT
   contact.onclick = function () {
     viewForm();
   };
+
+  const neoButton = document.getElementById('neo-button');
+  const villaemButton = document.getElementById('villaem-button');
+  const ombakButton = document.getElementById('ombak-button');
+  const coreButton = document.getElementById('core-button');
+  const stormButton = document.getElementById('storm-button');
+  const tornadoButton = document.getElementById('tornado-button');
+  const wowCoreButton = document.getElementById('wowCore-button');
+  const wowOmbakButton = document.getElementById('wowOmbak-button');
+  const wowNeoButton = document.getElementById('wowNeo-button');
+  const selectProduct = document.getElementById('produk-form');
+
+  neoButton.onclick = function () {
+    viewForm();
+    selectProduct.value = 'Neo Plus';
+  };
+  villaemButton.onclick = function () {
+    viewForm();
+    selectProduct.value = 'Villaem II';
+  };
+  ombakButton.onclick = function () {
+    viewForm();
+    selectProduct.value = 'Ombak';
+  };
+  coreButton.onclick = function () {
+    viewForm();
+    selectProduct.value = 'Core';
+  };
+  stormButton.onclick = function () {
+    viewForm();
+    selectProduct.value = 'Storm';
+  };
+  tornadoButton.onclick = function () {
+    viewForm();
+    selectProduct.value = 'Tornado';
+  };
+  wowCoreButton.onclick = function () {
+    viewForm();
+    selectProduct.value = 'Wow Storm Core';
+  };
+  wowOmbakButton.onclick = function () {
+    viewForm();
+    selectProduct.value = 'Wow Storm Ombak';
+  };
+  wowNeoButton.onclick = function () {
+    viewForm();
+    selectProduct.value = 'Wow Storm Neo';
+  };
+
+  const sumber = document.getElementById('website-form');
+  const formElement = document.querySelector('.pop-up-form');
+
+  sumber.addEventListener('change', function () {
+    if (sumber.value == 'konsultan') {
+      document.getElementById('konsultan-container').style.display = 'flex';
+
+      if (window.innerWidth <= 550) {
+        formElement.classList.add('konsultan');
+      }
+    } else {
+      document.getElementById('konsultan-container').style.display = 'none';  
+    }
+  });
 });
 
 function openLayer() {
