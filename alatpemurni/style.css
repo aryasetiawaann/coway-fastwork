@@ -44,6 +44,41 @@ img {
   }
 }
 
+.hamburger,
+.navbar-layer {
+  display: none;
+}
+
+.navbar-layer {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100dvh;
+  background-color: #024;
+}
+
+.layer-top {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layer-content {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  color: #fff;
+}
+
+.layer-content li {
+  padding: 2rem;
+  margin: 3px 0;
+  font-size: 1.3rem;
+}
+
 .blur-content.form {
   display: flex !important;
   width: 100%;
