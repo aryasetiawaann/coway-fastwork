@@ -21,7 +21,7 @@ function sendWhatsAppVoucher() {
 
     var params = {
       sendername: email,
-      to: "budakit.id@gmail.com",
+      to: "alatpemurni@gmail.com",
       subject: email + " mendapatkan voucher!",
       name: name,
       phone: phone,
@@ -71,7 +71,7 @@ function sendWhatsAppForm() {
       
       var params2 = {
         sendername: email,
-        to: "budakit.id@gmail.com",
+        to: "alatpemurni@gmail.com",
         subject: "Mendapatkan Pesan dari " + email,
         name: nama,
         phone: phone,
