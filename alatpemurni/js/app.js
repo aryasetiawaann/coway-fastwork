@@ -181,6 +181,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const blur = document.getElementById('blur');
   const beli = document.querySelectorAll('.beli');
   const contact = document.getElementById('contact');
+  const instagram = document.getElementById('instagram');
+
+  instagram.onclick = function () {
+    window.location.href = 'https://www.instagram.com/alatpemurni/';
+  };
 
   function viewForm() {
     const form = document.getElementById('pop-up-form');
