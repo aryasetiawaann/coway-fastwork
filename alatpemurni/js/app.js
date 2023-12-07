@@ -179,13 +179,18 @@ function viewVoucher() {
   // }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const voucherButton = document.getElementById("voucher");
-  const pop = document.getElementById("bg-pop-up");
-  const popVoucher = document.getElementById("pop-up");
-  const blur = document.getElementById("blur");
-  const beli = document.querySelectorAll(".beli");
-  const contact = document.getElementById("contact");
+document.addEventListener('DOMContentLoaded', function () {
+  const voucherButton = document.getElementById('voucher');
+  const pop = document.getElementById('bg-pop-up');
+  const popVoucher = document.getElementById('pop-up');
+  const blur = document.getElementById('blur');
+  const beli = document.querySelectorAll('.beli');
+  const contact = document.getElementById('contact');
+  const instagram = document.getElementById('instagram');
+
+  instagram.onclick = function () {
+    window.location.href = 'https://www.instagram.com/alatpemurni/';
+  };
 
   function viewForm() {
     const form = document.getElementById("pop-up-form");
