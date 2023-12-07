@@ -28,6 +28,7 @@
   </head>
   <body>
     <div class="bg-pop-up" id="bg-pop-up" style="display: none">
+      <div class="blur"></div>
       <div class="pop-up" id="pop-up" style="display: none">
         <div class="pop-up-ornament">
           <img draggable="false" class="ornament1" src="assets/popup/ornament1.png" alt="ornament" />
@@ -178,21 +179,21 @@
 
     <div class="content" id="content" style="overflow-x: hidden;">
       <div class="blur-content" id="blur" style="display: none"></div>
-      <div class="hero-container">
+      <div class="hero-container" id="hero-container">
         <div class="navbar">
           <a href="/"><img src="assets/hero/Coway_logo.png" alt="Logo" /></a>
           <ul class="navbar-content">
             <li>
-              <a href="#">Beranda</a>
+              <a href="#hero-container">Beranda</a>
             </li>
             <li>
-              <a href="#">Produk</a>
+              <a href="#produk-container">Produk</a>
             </li>
             <li>
-              <a href="#">Service</a>
+              <a href="#reparation-container">Service</a>
             </li>
             <li>
-              <a href="#">Tentang Kami</a>
+              <a href="#why-container">Tentang Kami</a>
             </li>
           </ul>
           <a class="hamburger" href="javascript:void(0);" onclick="openLayer()">
@@ -221,16 +222,16 @@
             </div>
             <ul class="layer-content">
               <li>
-                <a href="#">Beranda</a>
+                <a href="#hero-container">Beranda</a>
               </li>
               <li>
-                <a href="#">Produk</a>
+                <a href="#produk-container">Produk</a>
               </li>
               <li>
-                <a href="#">Service</a>
+                <a href="#reparation-container">Service</a>
               </li>
               <li>
-                <a href="#">Tentang Kami</a>
+                <a href="#why-container">Tentang Kami</a>
               </li>
             </ul>
           </div>
@@ -368,7 +369,7 @@
         </div>
       </div>
 
-      <div class="produk-container">
+      <div class="produk-container" id="produk-container">
         <div class="produk-card">
           <img class="produk-card-img" src="assets/solusi/air1.png" alt="air1" />
           <div class="produk-card-desc">
@@ -825,7 +826,7 @@
         </div>
       </div>
 
-      <div class="why-container">
+      <div class="why-container" id="why-container">
         <div class="why-head">
           <h3>KENAPA</h3>
           <h1>Harus Memilih Air Purifier dari Coway?</h1>
@@ -907,7 +908,7 @@
         </div>
       </div>
 
-      <div class="reparation-container">
+      <div class="reparation-container" id="reparation-container">
         <div class="reparation-head">
           <p>KAMI SIAP MEMBANTU ANDA</p>
           <h3>Nikmati Pelayanan Hearts Service yang Luar Biasa!</h3>

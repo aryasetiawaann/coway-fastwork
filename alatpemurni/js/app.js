@@ -21,7 +21,7 @@ function sendWhatsAppVoucher() {
 
     var params = {
       sendername: email,
-      to: "alatpemurni@gmail.com",
+      to: "budakit.id@gmail.com",
       subject: email + " mendapatkan voucher!",
       name: name,
       phone: phone,
@@ -32,7 +32,7 @@ function sendWhatsAppVoucher() {
     var templateID = "template_xiw5njp";
 
     emailjs.send(serviceID, templateID, params);
-    alert("Permintaan berhasil terkirim");
+    alert("Pesan berhasil terkirim");
     
     var now = new Date();
     var expire = new Date();
@@ -71,7 +71,7 @@ function sendWhatsAppForm() {
       
       var params2 = {
         sendername: email,
-        to: "alatpemurni@gmail.com",
+        to: "budakit.id@gmail.com",
         subject: "Mendapatkan Pesan dari " + email,
         name: nama,
         phone: phone,
@@ -87,7 +87,7 @@ function sendWhatsAppForm() {
       };
       
       emailjs.send("service_1ez7pob", "template_uy8h4gm", params2);
-      alert("Permintaan berhasil terkirim");
+      alert("Pesan berhasil terkirim");
     })();
     
     var url_wa = "https://web.whatsapp.com/send";
