@@ -32,14 +32,14 @@ function sendWhatsAppVoucher() {
     var templateID = "template_xiw5njp";
 
     emailjs.send(serviceID, templateID, params);
-    alert("Email berhasil terkirim");
-
+    alert("Permintaan berhasil terkirim");
+    
     var now = new Date();
     var expire = new Date();
     expire.setFullYear(now.getFullYear() + 10);
-
+    
     document.cookie = "pengguna_baru=yes; expires=" + expire.toUTCString();
-
+    
     voucher.style.display = "none";
     success.style.display = "flex";
     pop.style.display = "none";
@@ -51,7 +51,7 @@ function sendWhatsAppVoucher() {
 function sendWhatsAppForm() {
   const form = document.getElementById("pop-up-form");
   const pop = document.getElementById("bg-pop-up");
-
+  
   // FORM VALUE
   const nama = document.getElementById("nama-form").value;
   const pekerjaan = document.getElementById("pekerjaan-form").value;
@@ -64,11 +64,11 @@ function sendWhatsAppForm() {
   const website = document.getElementById("website-form").value;
   const konsultan = document.getElementById("konsultan-form").value;
   const pertanyaan = document.getElementById("pertanyaan-form").value;
-
+  
   if (nama && pekerjaan && phone && email && kota && kodePos && domisili && produk && website) {
     (function () {
       emailjs.init("LFwaN_GV_dJS6er5v");
-
+      
       var params2 = {
         sendername: email,
         to: "alatpemurni@gmail.com",
@@ -85,10 +85,11 @@ function sendWhatsAppForm() {
         konsultan: konsultan,
         pertanyaan: pertanyaan,
       };
-
+      
       emailjs.send("service_1ez7pob", "template_uy8h4gm", params2);
+      alert("Permintaan berhasil dibuat");
     })();
-
+    
     var url_wa = "https://web.whatsapp.com/send";
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       url_wa = "whatsapp://send";
