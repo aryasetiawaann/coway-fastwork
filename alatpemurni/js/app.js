@@ -1,5 +1,5 @@
 function cekPenggunaBaru() {
-  var penggunaBaru = document.cookie.indexOf('pengguna_baru=yes') === -1;
+  var penggunaBaru = document.cookie.indexOf("pengguna_baru=yes") === -1;
 
   if (penggunaBaru) {
     viewVoucher();
@@ -7,71 +7,72 @@ function cekPenggunaBaru() {
 }
 
 function sendWhatsAppVoucher() {
-  const voucher = document.getElementById('pop-up');
-  const success = document.getElementById('pop-up-success');
-  const name = document.getElementById('nama').value;
-  const phone = document.getElementById('phone').value;
-  const email = document.getElementById('email').value;
-  const pop = document.getElementById('bg-pop-up');
+  const voucher = document.getElementById("pop-up");
+  const success = document.getElementById("pop-up-success");
+  const name = document.getElementById("nama").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const pop = document.getElementById("bg-pop-up");
 
   if (name && phone && email) {
     (function () {
-      emailjs.init('LFwaN_GV_dJS6er5v');
+      emailjs.init("LFwaN_GV_dJS6er5v");
     })();
 
     var params = {
       sendername: email,
-      to: 'alatpemurni@gmail.com',
-      subject: email + ' mendapatkan voucher!',
+      to: "alatpemurni@gmail.com",
+      subject: email + " mendapatkan voucher!",
       name: name,
       phone: phone,
       email: email,
     };
 
-    var serviceID = 'service_1ez7pob';
-    var templateID = 'template_xiw5njp';
+    var serviceID = "service_1ez7pob";
+    var templateID = "template_xiw5njp";
 
     emailjs.send(serviceID, templateID, params);
+    alert("Email berhasil terkirim");
 
     var now = new Date();
     var expire = new Date();
     expire.setFullYear(now.getFullYear() + 10);
 
-    document.cookie = 'pengguna_baru=yes; expires=' + expire.toUTCString();
+    document.cookie = "pengguna_baru=yes; expires=" + expire.toUTCString();
 
-    voucher.style.display = 'none';
-    success.style.display = 'flex';
-    pop.style.display = 'none';
+    voucher.style.display = "none";
+    success.style.display = "flex";
+    pop.style.display = "none";
   } else {
-    alert('Lengkapi Form Terlebih Dahulu');
+    alert("Lengkapi Form Terlebih Dahulu");
   }
 }
 
 function sendWhatsAppForm() {
-  const form = document.getElementById('pop-up-form');
-  const pop = document.getElementById('bg-pop-up');
+  const form = document.getElementById("pop-up-form");
+  const pop = document.getElementById("bg-pop-up");
 
   // FORM VALUE
-  const nama = document.getElementById('nama-form').value;
-  const pekerjaan = document.getElementById('pekerjaan-form').value;
-  const phone = document.getElementById('phone-form').value;
-  const email = document.getElementById('email-form').value;
-  const kota = document.getElementById('kota-form').value;
-  const kodePos = document.getElementById('kode_pos-form').value;
-  const domisili = document.getElementById('domisili-form').value;
-  const produk = document.getElementById('produk-form').value;
-  const website = document.getElementById('website-form').value;
-  const konsultan = document.getElementById('konsultan-form').value;
-  const pertanyaan = document.getElementById('pertanyaan-form').value;
+  const nama = document.getElementById("nama-form").value;
+  const pekerjaan = document.getElementById("pekerjaan-form").value;
+  const phone = document.getElementById("phone-form").value;
+  const email = document.getElementById("email-form").value;
+  const kota = document.getElementById("kota-form").value;
+  const kodePos = document.getElementById("kode_pos-form").value;
+  const domisili = document.getElementById("domisili-form").value;
+  const produk = document.getElementById("produk-form").value;
+  const website = document.getElementById("website-form").value;
+  const konsultan = document.getElementById("konsultan-form").value;
+  const pertanyaan = document.getElementById("pertanyaan-form").value;
 
   if (nama && pekerjaan && phone && email && kota && kodePos && domisili && produk && website) {
     (function () {
-      emailjs.init('LFwaN_GV_dJS6er5v');
+      emailjs.init("LFwaN_GV_dJS6er5v");
 
       var params2 = {
         sendername: email,
-        to: 'alatpemurni@gmail.com',
-        subject: 'Mendapatkan Pesan dari ' + email,
+        to: "alatpemurni@gmail.com",
+        subject: "Mendapatkan Pesan dari " + email,
         name: nama,
         phone: phone,
         email: email,
@@ -85,16 +86,16 @@ function sendWhatsAppForm() {
         pertanyaan: pertanyaan,
       };
 
-      emailjs.send('service_1ez7pob', 'template_uy8h4gm', params2);
+      emailjs.send("service_1ez7pob", "template_uy8h4gm", params2);
     })();
 
-    var url_wa = 'https://web.whatsapp.com/send';
+    var url_wa = "https://web.whatsapp.com/send";
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      url_wa = 'whatsapp://send';
+      url_wa = "whatsapp://send";
     }
 
     var cs_whatsapp = [
-      '6281223202218', //<- masukan nomor tanpa 0 / +62 & baris nomor terakhir tanpa koma
+      "6281223202218", //<- masukan nomor tanpa 0 / +62 & baris nomor terakhir tanpa koma
     ];
 
     var rkey = Math.floor(Math.random() * cs_whatsapp.length);
@@ -102,9 +103,9 @@ function sendWhatsAppForm() {
 
     var link =
       url_wa +
-      '?phone=' +
+      "?phone=" +
       random_cs +
-      '&text=' +
+      "&text=" +
       encodeURIComponent(`Halo, saya ${nama}
       *Pekerjaan :* ${pekerjaan}
       *Phone :* ${phone}
@@ -121,16 +122,20 @@ function sendWhatsAppForm() {
       h = 540,
       left = Number(screen.width / 2 - w / 2),
       tops = Number(screen.height / 2 - h / 2),
-      popupWindow = window.open(link, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=1, copyhistory=no, width=' + w + ', height=' + h + ', top=' + tops + ', left=' + left);
+      popupWindow = window.open(
+        link,
+        "",
+        "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=1, copyhistory=no, width=" + w + ", height=" + h + ", top=" + tops + ", left=" + left
+      );
 
     popupWindow.focus();
 
-    form.style.display = 'none';
-    pop.style.display = 'none';
+    form.style.display = "none";
+    pop.style.display = "none";
   } else {
-    alert('Lengkapi Form Terlebih Dahulu');
+    alert("Lengkapi Form Terlebih Dahulu");
 
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "https://alatpemurni.com/#form";
     viewForm();
   }
 }
@@ -150,15 +155,15 @@ function scrollToTop(to, duration) {
 let isButtonClick = 0;
 
 function viewVoucher() {
-  const pop = document.getElementById('bg-pop-up');
-  const popVoucher = document.getElementById('pop-up');
-  const blur = document.getElementById('blur');
-  const content = document.getElementById('content');
+  const pop = document.getElementById("bg-pop-up");
+  const popVoucher = document.getElementById("pop-up");
+  const blur = document.getElementById("blur");
+  const content = document.getElementById("content");
 
-  pop.style.display = 'flex';
-  popVoucher.style.display = 'flex';
-  blur.style.display = 'flex';
-  content.style.display = 'none';
+  pop.style.display = "flex";
+  popVoucher.style.display = "flex";
+  blur.style.display = "flex";
+  content.style.display = "none";
 
   // BIAR SCROLL NAIK KE ATAS LAGI KETIKA LAPTOP VIEW
   // if (window.innerWidth < 1800 && window.innerWidth > 900) {
@@ -174,26 +179,26 @@ function viewVoucher() {
   // }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const voucherButton = document.getElementById('voucher');
-  const pop = document.getElementById('bg-pop-up');
-  const popVoucher = document.getElementById('pop-up');
-  const blur = document.getElementById('blur');
-  const beli = document.querySelectorAll('.beli');
-  const contact = document.getElementById('contact');
+document.addEventListener("DOMContentLoaded", function () {
+  const voucherButton = document.getElementById("voucher");
+  const pop = document.getElementById("bg-pop-up");
+  const popVoucher = document.getElementById("pop-up");
+  const blur = document.getElementById("blur");
+  const beli = document.querySelectorAll(".beli");
+  const contact = document.getElementById("contact");
 
   function viewForm() {
-    const form = document.getElementById('pop-up-form');
-    const beliButton = document.getElementById('beli-button');
-    const contact = document.getElementById('contact');
-    const content = document.getElementById('content');
+    const form = document.getElementById("pop-up-form");
+    const beliButton = document.getElementById("beli-button");
+    const contact = document.getElementById("contact");
+    const content = document.getElementById("content");
 
     scrollToTop(0, 2000);
-    pop.classList.add('form');
-    blur.classList.add('form');
-    form.style.display = 'flex';
-    contact.style.display = 'none';
-    content.style.display = 'none';
+    pop.classList.add("form");
+    blur.classList.add("form");
+    form.style.display = "flex";
+    contact.style.display = "none";
+    content.style.display = "none";
 
     //LIMIT SCROLL
     // window.addEventListener('scroll', function () {
@@ -211,13 +216,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // });
 
     // EVENT KLIK BUTTON KIRIM (POP UP FORM BUTTON)
-    beliButton.addEventListener('click', function () {
+    beliButton.addEventListener("click", function () {
       sendWhatsAppForm();
 
-      pop.classList.remove('form');
-      blur.classList.remove('form');
-      form.style.display = 'none';
-      contact.style.display = 'flex';
+      pop.classList.remove("form");
+      blur.classList.remove("form");
+      form.style.display = "none";
+      contact.style.display = "flex";
 
       window.location.reload();
     });
@@ -225,11 +230,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // EVENT KLIK BUTTON KIRIM VOUCHER (POP UP VOUCHER BUTTON)
   if (voucherButton) {
-    voucherButton.addEventListener('click', function () {
+    voucherButton.addEventListener("click", function () {
       sendWhatsAppVoucher();
 
-      pop.style.display = 'flex';
-      popVoucher.style.display = 'none';
+      pop.style.display = "flex";
+      popVoucher.style.display = "none";
       // success.style.display = 'flex';
 
       // if (window.innerWidth < 1800 && window.innerWidth > 870) {
@@ -256,111 +261,111 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //EVENT KLIK CONTACT
   contact.onclick = function () {
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "#form";
 
     viewForm();
   };
 
-  const neoButton = document.getElementById('neo-button');
-  const villaemButton = document.getElementById('villaem-button');
-  const ombakButton = document.getElementById('ombak-button');
-  const coreButton = document.getElementById('core-button');
-  const stormButton = document.getElementById('storm-button');
-  const tornadoButton = document.getElementById('tornado-button');
-  const wowCoreButton = document.getElementById('wowCore-button');
-  const wowOmbakButton = document.getElementById('wowOmbak-button');
-  const wowNeoButton = document.getElementById('wowNeo-button');
-  const selectProduct = document.getElementById('produk-form');
+  const neoButton = document.getElementById("neo-button");
+  const villaemButton = document.getElementById("villaem-button");
+  const ombakButton = document.getElementById("ombak-button");
+  const coreButton = document.getElementById("core-button");
+  const stormButton = document.getElementById("storm-button");
+  const tornadoButton = document.getElementById("tornado-button");
+  const wowCoreButton = document.getElementById("wowCore-button");
+  const wowOmbakButton = document.getElementById("wowOmbak-button");
+  const wowNeoButton = document.getElementById("wowNeo-button");
+  const selectProduct = document.getElementById("produk-form");
 
   neoButton.onclick = function () {
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "https://alatpemurni.com/#form";
     viewForm();
-    selectProduct.value = 'Neo Plus';
+    selectProduct.value = "Neo Plus";
   };
   villaemButton.onclick = function () {
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "https://alatpemurni.com/#form";
     viewForm();
-    selectProduct.value = 'Villaem II';
+    selectProduct.value = "Villaem II";
   };
   ombakButton.onclick = function () {
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "https://alatpemurni.com/#form";
     viewForm();
-    selectProduct.value = 'Ombak';
+    selectProduct.value = "Ombak";
   };
   coreButton.onclick = function () {
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "https://alatpemurni.com/#form";
     viewForm();
-    selectProduct.value = 'Core';
+    selectProduct.value = "Core";
   };
   stormButton.onclick = function () {
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "https://alatpemurni.com/#form";
     viewForm();
-    selectProduct.value = 'Storm';
+    selectProduct.value = "Storm";
   };
   tornadoButton.onclick = function () {
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "https://alatpemurni.com/#form";
     viewForm();
-    selectProduct.value = 'Tornado';
+    selectProduct.value = "Tornado";
   };
   wowCoreButton.onclick = function () {
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "https://alatpemurni.com/#form";
     viewForm();
-    selectProduct.value = 'WOW Storm Core';
+    selectProduct.value = "WOW Storm Core";
   };
   wowOmbakButton.onclick = function () {
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "https://alatpemurni.com/#form";
     viewForm();
-    selectProduct.value = 'WOW Storm Ombak';
+    selectProduct.value = "WOW Storm Ombak";
   };
   wowNeoButton.onclick = function () {
-    window.location.href = 'https://alatpemurni.com/#form';
+    window.location.href = "https://alatpemurni.com/#form";
     viewForm();
-    selectProduct.value = 'WOW Storm Neo';
+    selectProduct.value = "WOW Storm Neo";
   };
 
-  const sumber = document.getElementById('website-form');
-  const formElement = document.querySelector('.pop-up-form');
+  const sumber = document.getElementById("website-form");
+  const formElement = document.querySelector(".pop-up-form");
 
-  sumber.addEventListener('change', function () {
-    if (sumber.value == 'konsultan') {
-      document.getElementById('konsultan-container').style.display = 'flex';
+  sumber.addEventListener("change", function () {
+    if (sumber.value == "konsultan") {
+      document.getElementById("konsultan-container").style.display = "flex";
 
       if (window.innerWidth <= 550) {
-        formElement.classList.add('konsultan');
+        formElement.classList.add("konsultan");
       }
     } else {
-      document.getElementById('konsultan-container').style.display = 'none';
-      formElement.classList.remove('konsultan');
+      document.getElementById("konsultan-container").style.display = "none";
+      formElement.classList.remove("konsultan");
     }
   });
 });
 
 function openLayer() {
-  var layer = document.getElementById('layer');
-  if (layer.style.display === 'block') {
-    layer.style.display = 'none';
+  var layer = document.getElementById("layer");
+  if (layer.style.display === "block") {
+    layer.style.display = "none";
   } else {
-    layer.style.display = 'block';
+    layer.style.display = "block";
   }
 }
 
-window.addEventListener('popstate', function (event) {
-  const targetURL = 'https://alatpemurni.com/';
-  const form = document.getElementById('pop-up-form');
-  const contact = document.getElementById('contact');
-  const pop = document.getElementById('bg-pop-up');
-  const blur = document.getElementById('blur');
-  const content = document.getElementById('content');
+window.addEventListener("popstate", function (event) {
+  const targetURL = "https://alatpemurni.com/";
+  const form = document.getElementById("pop-up-form");
+  const contact = document.getElementById("contact");
+  const pop = document.getElementById("bg-pop-up");
+  const blur = document.getElementById("blur");
+  const content = document.getElementById("content");
 
   // Memeriksa apakah URL saat ini sama dengan targetURL
   if (window.location.href === targetURL) {
     // Merefresh halaman jika URL-nya sama
     // window.location.reload();
-    console.log('mamang');
-    pop.classList.remove('form');
-    blur.classList.remove('form');
-    form.style.display = 'none';
-    contact.style.display = 'flex';
-    content.style.display = 'block';
+    console.log("mamang");
+    pop.classList.remove("form");
+    blur.classList.remove("form");
+    form.style.display = "none";
+    contact.style.display = "flex";
+    content.style.display = "block";
   }
 });
