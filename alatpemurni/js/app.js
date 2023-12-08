@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const instagram = document.getElementById('instagram');
 
   instagram.onclick = function () {
-    window.location.href = 'https://www.instagram.com/alatpemurni/';
+    window.location.href = '';
   };
 
   function viewForm() {
